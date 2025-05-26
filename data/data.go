@@ -15,7 +15,7 @@ type Experience struct {
 // TODO: educations struct sec
 type Education struct {
 	School, Degree, Major string
-	Year   int
+	Year                  int
 }
 
 // TODO: Skill sec

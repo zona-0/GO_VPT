@@ -1,7 +1,8 @@
 package modules
+
 import (
-	"fmt"
 	"CAREER-EDGE/data"
+	"fmt"
 )
 
 func ManageEducation() {
@@ -14,27 +15,27 @@ func ManageEducation() {
 		fmt.Println("╔══════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                      [Education Manager]                     ║")
 		fmt.Println("╠══════════════════════════════════════════════════════════════╣")
-		fmt.Println("║ 1. Add    - Tambah pendidikan baru                           ║")
-		fmt.Println("║ 2. Edit   - Ubah data pendidikan yang sudah dimasukkan       ║")
-		fmt.Println("║ 3. List   - Lihat semua pendidikan                           ║")
-		fmt.Println("║ 4. Delete - Hapus salah satu data pendidikan                 ║")
-		fmt.Println("║ 5. Done   - Selesai dan simpan                               ║")
+		fmt.Println("║ 1. [Add]    Tambah pendidikan baru                           ║")
+		fmt.Println("║ 2. [Edit]   Ubah data pendidikan yang sudah dimasukkan       ║")
+		fmt.Println("║ 3. [List]   Lihat semua riwayat pendidikan                   ║")
+		fmt.Println("║ 4. [Delete] Hapus salah satu data pendidikan                 ║")
+		fmt.Println("║ 5. [Done]   Selesai dan simpan                               ║")
 		fmt.Println("╚══════════════════════════════════════════════════════════════╝")
 		fmt.Print("Pilih menu: ")
 		fmt.Scan(&command)
 
 		if command == 1 {
-			if data.EducationCount >= 10 {
-				fmt.Println("[!] Pendidikan sudah mencapai batas maksimum (10)")
+			if data.EducationCount >= 1000000 {
+				fmt.Println("[!] Pendidikan sudah mencapai batas maksimum")
 			} else {
 				SuggestionEducation()
-				fmt.Print("[>>] School/University: ")
+				fmt.Print("[>>] Universitas: ")
 				fmt.Scan(&school)
-				fmt.Print("[>>] Degree: ")
+				fmt.Print("[>>] Derajat: ")
 				fmt.Scan(&degree)
-				fmt.Print("[>>] Major: ")
+				fmt.Print("[>>] Gelar: ")
 				fmt.Scan(&major)
-				fmt.Print("[>>] Year of Graduation (contoh: 2024): ")
+				fmt.Print("[>>] Tahun lulus: ")
 				fmt.Scan(&year)
 
 				newEducation.School = school
@@ -128,7 +129,7 @@ func ManageEducation() {
 		} else if command == 5 {
 			fmt.Println("[V] Sesi input pendidikan selesai")
 			running = false
-			
+
 		} else {
 			fmt.Println("[!] Pilihan tidak dikenali. Masukkan angka <1 - 5>")
 		}

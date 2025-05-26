@@ -1,10 +1,11 @@
 package modules
+
 import (
-	"fmt"
 	"CAREER-EDGE/data"
+	"fmt"
 )
 
-func AddSkill() {
+func ManageSkill() {
 	var command, index, i int
 	var nameSkill string
 	var newSkill data.Skill
@@ -14,25 +15,24 @@ func AddSkill() {
 		fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                          [Skill Manager]                           ║")
 		fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
-		fmt.Println("║ 1. Add    - Tambah skill baru <max 10 total>                       ║")
-		fmt.Println("║ 2. Edit   - Ubah skill yang sudah dimasukkan                       ║")
-		fmt.Println("║ 3. List   - Lihat semua skill saat ini                             ║")
-		fmt.Println("║ 4. Delete - Hapus salah satu skill                                 ║")
-		fmt.Println("║ 5. Done   - Selesai dan simpan skill                               ║")
+		fmt.Println("║ 1. [Add]     Tambah skill baru <max 50>                            ║")
+		fmt.Println("║ 2. [Edit]    Ubah skill yang sudah dimasukkan                      ║")
+		fmt.Println("║ 3. [List]    Lihat semua skill saat ini                            ║")
+		fmt.Println("║ 4. [Delete]  Hapus salah satu skill                                ║")
+		fmt.Println("║ 5. [Done]    Selesai dan simpan skill                              ║")
 		fmt.Println("╚════════════════════════════════════════════════════════════════════╝")
 		fmt.Print("Pilih menu: ")
 		fmt.Scan(&command)
 
 		if command == 1 {
-			if data.SkillCount >= 10 {
-				fmt.Println("[!] Skill sudah mencapai batas maksimum (10)")
+			if data.SkillCount >= 50 {
+				fmt.Println("[!] Skill sudah mencapai batas maksimum")
 			} else {
 				SuggestionSkill()
 				fmt.Println("Ketikkan beberapa skill satu per satu. Ketik 'done' jika sudah selesai")
-				for data.SkillCount < 10 {
+				for data.SkillCount < 50 {
 					fmt.Print("Masukkan nama skill >>> ")
 					fmt.Scan(&nameSkill)
-					nameSkill = nameSkill
 
 					if nameSkill == "done" {
 						break
@@ -42,8 +42,8 @@ func AddSkill() {
 					data.Skills[data.SkillCount] = newSkill
 					data.SkillCount = data.SkillCount + 1
 
-					if data.SkillCount == 10 {
-						fmt.Println("[!] Sudah mencapai maksimum 10 skill.")
+					if data.SkillCount == 50 {
+						fmt.Println("[!] Sudah mencapai maksimum 50 skill")
 					}
 				}
 				fmt.Println("[V] Skill berhasil ditambahkan")
@@ -73,7 +73,6 @@ func AddSkill() {
 				} else {
 					fmt.Print("Masukkan skill baru >>> ")
 					fmt.Scan(&nameSkill)
-					nameSkill = nameSkill
 					data.Skills[index-1].Name = nameSkill
 					fmt.Println("[V] Skill berhasil diubah")
 					Clear()

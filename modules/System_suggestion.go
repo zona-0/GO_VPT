@@ -1,15 +1,16 @@
 package modules
+
 import "fmt"
 
-func Header(){
+func Header() {
 	fmt.Println("╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
 }
 
-func endSec(){
+func endSec() {
 	fmt.Println("╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝")
 }
 
-func SuggestionAI(){
+func SuggestionAI() {
 	fmt.Println("╔════════════════════════════════════════════════════════════════════════╗")
 	fmt.Println("                         C A R E E R  E D G E                            ")
 	fmt.Println("         AI Assistant for Smart Resumes & Cover Letter Creation          ")
@@ -22,7 +23,7 @@ func SuggestionSkill() {
 	fmt.Println("║ <Skill Suggestions> : Golang, Backend, HTML, CSS, SQL,               ║")
 	fmt.Println("║              		CreativeWriting, Public_Speaking, Marketing    ║")
 	fmt.Println("║              		Photoshop, Excel, UI_UX, Data_Analysis, Design ║")
-	fmt.Println("║ Catatan: Gunakan huruf kecil                                        ║")
+	fmt.Println("║ Catatan: Gunakan huruf kecil                                         ║")
 	fmt.Println("╚══════════════════════════════════════════════════════════════════════╝")
 }
 

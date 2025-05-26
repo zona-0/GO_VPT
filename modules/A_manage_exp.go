@@ -1,8 +1,8 @@
 package modules
 
 import (
-	"fmt"
 	"CAREER-EDGE/data"
+	"fmt"
 )
 
 func ManageExperience() {
@@ -15,27 +15,25 @@ func ManageExperience() {
 		fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                      [Experience Manager]                          ║")
 		fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
-		fmt.Println("║ 1. Add    - Tambah pengalaman kerja baru                           ║")
-		fmt.Println("║ 2. Edit   - Ubah pengalaman kerja yang sudah dimasukkan            ║")
-		fmt.Println("║ 3. List   - Lihat semua pengalaman kerja saat ini                  ║") 
-		fmt.Println("║ 4. Delete - Hapus salah satu pengalaman                            ║") 
-		fmt.Println("║ 5. Done   - Selesai dan simpan pengalaman                          ║")
+		fmt.Println("║ 1. [Add]    Tambah pengalaman kerja baru                           ║")
+		fmt.Println("║ 2. [Edit]   Ubah pengalaman kerja yang sudah dimasukkan            ║")
+		fmt.Println("║ 3. [List]   Lihat semua pengalaman kerja                           ║")
+		fmt.Println("║ 4. [Delete] Hapus salah satu pengalaman                            ║")
+		fmt.Println("║ 5. [Done]   Selesai dan simpan                                     ║")
 		fmt.Println("╚════════════════════════════════════════════════════════════════════╝")
 		fmt.Print("Pilih menu: ")
 		fmt.Scan(&command)
 
 		if command == 1 {
-			if data.ExperienceCount >= 10 {
-				fmt.Println("[!] Pengalaman sudah mencapai batas maksimum (10)")
+			if data.ExperienceCount >= 1000000 {
+				fmt.Println("[!] Pengalaman sudah mencapai batas maksimum")
 			} else {
 				SuggestionExperience()
 				fmt.Print("[>>] Job Title: ")
 				fmt.Scan(&title)
-				title = title
 
 				fmt.Print("[>>] Company Name: ")
 				fmt.Scan(&company)
-				company = company
 
 				newExperience.Title = title
 				newExperience.Company = company
@@ -67,11 +65,9 @@ func ManageExperience() {
 					SuggestionExperience()
 					fmt.Print("[>>] Job Title Baru: ")
 					fmt.Scan(&title)
-					title = title
 
 					fmt.Print("[>>] Company Name Baru: ")
 					fmt.Scan(&company)
-					company = company
 
 					data.Experiences[index-1].Title = title
 					data.Experiences[index-1].Company = company
@@ -130,4 +126,3 @@ func ManageExperience() {
 		}
 	}
 }
-

@@ -1,8 +1,8 @@
 package modules
 
 import (
-	"fmt"
 	"CAREER-EDGE/data"
+	"fmt"
 )
 
 func ShowAllUserData() {
@@ -22,7 +22,7 @@ func ShowAllUserData() {
 	} else {
 		i = 0
 		for i < data.SkillCount {
-			fmt.Printf("║  %-1d. %-34s ║\n", i+1, data.Skills[i].Name)
+			fmt.Printf("║  %-1d. %-58s ║\n", i+1, data.Skills[i].Name)
 			i += 1
 		}
 	}

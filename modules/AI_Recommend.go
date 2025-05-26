@@ -1,20 +1,20 @@
 package modules
 
 import (
-	"fmt"
 	"CAREER-EDGE/data"
+	"fmt"
 )
 
 func RecommendJob() {
 	var i, j,
-	backend, frontend, analyst, writer, teacher, marketing, designer, devops, mobile, security, management, finance, customer_service,
-	game, video, law, health, admin, logistics, hr, psychology, chef, events, cashier, operator, fnb, creator, total,
-	fullstack, it, companyScore,
-	educationScore int
+		backend, frontend, analyst, writer, teacher, marketing, designer, devops, mobile, security, management, finance, customer_service,
+		game, video, law, health, admin, logistics, hr, psychology, chef, events, cashier, operator, fnb, creator, total,
+		fullstack, it, companyScore,
+		educationScore int
 	var name, title, school, degree, major, company string
 
-	fmt.Println("\n╔════════════════════════════════════════════════════╗")
-	fmt.Println("║             AI CAREER SUGGESTION ENGINE            ║")
+	fmt.Println("╔════════════════════════════════════════════════════╗")
+	fmt.Println("║               AI CAREER SUGGESTION                 ║")
 	fmt.Println("╠════════════════════════════════════════════════════╣")
 	fmt.Println("║ [SYSTEM] Analyzing profile: Skills, Experience,    ║")
 	fmt.Println("║         and Education to generate recommendations  ║")
@@ -22,7 +22,7 @@ func RecommendJob() {
 
 	for i = 0; i < data.SkillCount; i++ {
 		name = data.Skills[i].Name
-		
+
 		if name == "go" || name == "golang" || name == "backend" || name == "java" || name == "python" || name == "csharp" || name == "nodejs" || name == "restapi" || name == "spring" || name == "laravel" || name == "pengembang_backend" {
 			backend += 1
 		}
@@ -140,12 +140,12 @@ func RecommendJob() {
 			company == "pertamina" || company == "bank_mandiri" || company == "bca" || company == "bni" || company == "indosat" || company == "xl" ||
 			company == "astra_international" || company == "unilever_indonesia" || company == "indomie" || company == "indofood" || company == "mayora" ||
 			company == "djarum" || company == "kalbe_farmina" || company == "mandiri_sekuritas" || company == "bpjs_kesehatan" || company == "bpjs_ketenagakerjaan" ||
-			company == "bank_bri" || company == "pegadaian" || company == "wings_group" || company == "kimia_farma" || company == "blue_bird" || 
-			company == "traveloka" || company == "tiket_com" || company == "pln" || company == "pelni" || company == "garuda_indonesia" || 
-			company == "citilink" || company == "angkasapura" || company == "kai" || company == "pertani" || company == "bumn" || 
+			company == "bank_bri" || company == "pegadaian" || company == "wings_group" || company == "kimia_farma" || company == "blue_bird" ||
+			company == "traveloka" || company == "tiket_com" || company == "pln" || company == "pelni" || company == "garuda_indonesia" ||
+			company == "citilink" || company == "angkasapura" || company == "kai" || company == "pertani" || company == "bumn" ||
 			company == "antarakita" || company == "sampoerna" || company == "gudang_garam" || company == "lippo_group" || company == "sinarmas" ||
-			company == "pakuwon_group" || company == "agung_podomoro" || company == "summarecon" || company == "maspion" || company == "adaro" || 
-			company == "freeport_indonesia" || company == "mnc_group" || company == "transcorp" || company == "net_tv" || company == "tvri" || 
+			company == "pakuwon_group" || company == "agung_podomoro" || company == "summarecon" || company == "maspion" || company == "adaro" ||
+			company == "freeport_indonesia" || company == "mnc_group" || company == "transcorp" || company == "net_tv" || company == "tvri" ||
 			company == "kompas_gramedia" || company == "detik_com" || company == "tribunnews" || company == "kumparan" || company == "liputan6" {
 			companyScore += 5
 		} else if company != "" {
@@ -269,34 +269,34 @@ func RecommendJob() {
 		major = data.Educations[j].Major
 
 		if school == "universitas_indonesia" || school == "ui" ||
-		school == "gadjah_mada_university" || school == "universitas_gadjah_mada" || school == "ugm" ||
-		school == "bandung_institute_of_technology" || school == "institut_teknologi_bandung" || school == "itb" ||
-		school == "airlangga_university" || school == "universitas_airlangga" || school == "unair" ||
-		school == "ipb_university" || school == "bogor_agricultural_university" || school == "ipb" {
+			school == "gajah_mada_university" || school == "universitas_gajah_mada" || school == "ugm" ||
+			school == "bandung_institute_of_technology" || school == "institut_teknologi_bandung" || school == "itb" ||
+			school == "airlangga_university" || school == "universitas_airlangga" || school == "unair" ||
+			school == "ipb_university" || school == "bogor_agricultural_university" || school == "ipb" {
 			educationScore += 5
 		} else if school == "institut_teknologi_sepuluh_nopember" || school == "its" ||
-				school == "universitas_padjadjaran" || school == "unpad" ||
-				school == "diponegoro_university" || school == "universitas_diponegoro" || school == "undip" ||
-				school == "universitas_brawijaya" || school == "ub" ||
-				school == "bina_nusantara_university" || school == "binus" {
+			school == "universitas_padjadjaran" || school == "unpad" ||
+			school == "diponegoro_university" || school == "universitas_diponegoro" || school == "undip" ||
+			school == "universitas_brawijaya" || school == "ub" ||
+			school == "bina_nusantara_university" || school == "binus" {
 			educationScore += 3
 		} else if school == "telkom_university" || school == "telkom" ||
-				school == "universitas_hasanuddin" || school == "unhas" ||
-				school == "universitas_sebelas_maret" || school == "uns" ||
-				school == "atma_jaya_catholic_university_jakarta" || school == "atma_jaya" ||
-				school == "universitas_islam_indonesia" || school == "uii" ||
-				school == "universitas_muhammadiyah_yogyakarta" || school == "umy" ||
-				school == "universitas_pendidikan_indonesia" || school == "upi" ||
-				school == "universitas_sumatera_utara" || school == "usu" ||
-				school == "yogyakarta_state_university" || school == "universitas_negeri_yogyakarta" || school == "uny" {
+			school == "universitas_hasanuddin" || school == "unhas" ||
+			school == "universitas_sebelas_maret" || school == "uns" ||
+			school == "atma_jaya_catholic_university_jakarta" || school == "atma_jaya" ||
+			school == "universitas_islam_indonesia" || school == "uii" ||
+			school == "universitas_muhammadiyah_yogyakarta" || school == "umy" ||
+			school == "universitas_pendidikan_indonesia" || school == "upi" ||
+			school == "universitas_sumatera_utara" || school == "usu" ||
+			school == "yogyakarta_state_university" || school == "universitas_negeri_yogyakarta" || school == "uny" {
 			educationScore += 2
 		} else if school == "state_university_of_malang" || school == "universitas_negeri_malang" || school == "um" ||
-				school == "udayana_university" || school == "universitas_udayana" ||
-				school == "universitas_andalas" || school == "unand" ||
-				school == "universitas_kristen_petra" || school == "ukp" ||
-				school == "universitas_muhammadiyah_surakarta" || school == "ums" ||
-				school == "university_of_lampung" || school == "universitas_lampung" || school == "unila" ||
-				school == "university_of_mataram" || school == "universitas_mataram" || school == "unram" {
+			school == "udayana_university" || school == "universitas_udayana" ||
+			school == "universitas_andalas" || school == "unand" ||
+			school == "universitas_kristen_petra" || school == "ukp" ||
+			school == "universitas_muhammadiyah_surakarta" || school == "ums" ||
+			school == "university_of_lampung" || school == "universitas_lampung" || school == "unila" ||
+			school == "university_of_mataram" || school == "universitas_mataram" || school == "unram" {
 			educationScore += 1
 		} else {
 			educationScore += 0
@@ -315,455 +315,457 @@ func RecommendJob() {
 		}
 
 		if major == "pendidikan" {
-   			teacher += 1    
+			teacher += 1
 		} else if major == "hukum" {
-			law += 1      
+			law += 1
 		} else if major == "ekonomi" {
-			finance += 1    
+			finance += 1
 		} else if major == "akuntansi" {
-			finance += 1    
+			finance += 1
 		} else if major == "manajemen" {
-			management += 1 
+			management += 1
 		} else if major == "komputer" {
 			backend += 1
 			frontend += 1
 			fullstack += 1
-			analyst += 1    
+			analyst += 1
 		} else if major == "teknik" {
 			operator += 1
-			designer += 1  
+			designer += 1
 		} else if major == "sains" {
-			analyst += 1   
+			analyst += 1
 		} else if major == "sosial" {
-			analyst += 1    
+			analyst += 1
 		} else if major == "seni" {
 			designer += 1
-			writer += 1     
+			writer += 1
 		} else if major == "sastra" {
-			writer += 1    
-		} 
+			writer += 1
+		}
 	}
 
 	fmt.Println("═════════════════════════════════════════════════════════════════════════════")
-fmt.Println(">> AI Suggestion Summary:")
-fmt.Println("═════════════════════════════════════════════════════════════════════════════")
+	fmt.Println(">> Saran AI:")
+	fmt.Println("═════════════════════════════════════════════════════════════════════════════")
 
-total = backend + frontend + analyst + writer + teacher + marketing + designer + devops + mobile +
-    security + management + finance + customer_service + game + video + law + health + admin +
-    logistics + hr + psychology + chef + events + cashier + operator + fnb + creator + educationScore
+	total = backend + frontend + analyst + writer + teacher + marketing + designer + devops + mobile +
+		security + management + finance + customer_service + game + video + law + health + admin +
+		logistics + hr + psychology + chef + events + cashier + operator + fnb + creator + educationScore
 
 	if total == 0 {
-		fmt.Println("[!!] No relevant suggestions found. Please input more profile data.")
+		fmt.Println("[!!] Tidak ada rekomendasi. Silakan lengkapi data profil Anda")
 	} else {
-		fmt.Println("[!!] AI has analyzed your profile. Based on your skills, experience, and education level,")
-		fmt.Println("[!!] here are the best career paths and recommended companies for you:\n")
+		fmt.Println("[!!] AI telah menganalisis profil Anda. Berdasarkan skill, pengalaman, dan pendidikan,")
+		fmt.Println("[!!] berikut jalur karier dan perusahaan terbaik yang direkomendasikan untuk Anda:")
 
+		// TODO: Backend Sec
 		if backend >= 5 {
-			fmt.Println("[Big Company] Backend Developer at Tokopedia, Gojek, Bukalapak")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", backend)
-			fmt.Println("[••] Rekomendasi: Highlight your experience with scalable systems and microservices.\n")
+			fmt.Println("[Perusahaan Besar] Backend Developer di Tokopedia, Gojek, Bukalapak")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", backend)
+			fmt.Println("[••] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices.")
 		} else if backend >= 3 {
-			fmt.Println("[Medium Company] Backend Developer at Ruangguru, Qasir, Mamikos")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", backend)
-			fmt.Println("[••] Rekomendasi: Highlight your experience with scalable systems and microservices.\n")
+			fmt.Println("[Perusahaan Menengah] Backend Developer di Ruangguru, Qasir, Mamikos")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", backend)
+			fmt.Println("[••] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices.")
 		} else if backend > 0 {
-			fmt.Println("[Startup] Backend Developer at LocalTech, NextDev")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", backend)
-			fmt.Println("[••] Rekomendasi: Highlight your experience with scalable systems and microservices.\n")
+			fmt.Println("[Startup] Backend Developer di LocalTech, NextDev")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", backend)
+			fmt.Println("[••] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices.")
 		}
 
+		// TODO: Frontend Sec
 		if frontend >= 5 {
-			fmt.Println("[Big Company] Frontend Developer at Traveloka, Blibli, Gojek")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", frontend)
-			fmt.Println("[••] Rekomendasi: Improve UI/UX skills and use React/Vue in your portfolio.\n")
+			fmt.Println("[Perusahaan Besar] Frontend Developer di Traveloka, Blibli, Gojek")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", frontend)
+			fmt.Println("[••] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda.")
 		} else if frontend >= 3 {
-			fmt.Println("[Medium Company] Frontend Developer at KlikDokter, Sayurbox")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", frontend)
-			fmt.Println("[••] Rekomendasi: Improve UI/UX skills and use React/Vue in your portfolio.\n")
+			fmt.Println("[Perusahaan Menengah] Frontend Developer di KlikDokter, Sayurbox")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", frontend)
+			fmt.Println("[••] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda.")
 		} else if frontend > 0 {
-			fmt.Println("[Startup] Frontend Developer at CodeCraft, DevStart")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", frontend)
-			fmt.Println("[••] Rekomendasi: Improve UI/UX skills and use React/Vue in your portfolio.\n")
+			fmt.Println("[Startup] Frontend Developer di CodeCraft, DevStart")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", frontend)
+			fmt.Println("[••] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda.")
 		}
 
 		// TODO: Data Analyst
 		if analyst >= 5 {
-			fmt.Println("[Big Company] Data Analyst at Telkom Indonesia, Shopee, Bank BCA")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", analyst)
-			fmt.Println("[••] Rekomendasi: Practice SQL and dashboarding with Power BI or Tableau.\n")
+			fmt.Println("[Perusahaan Besar] Data Analyst di Telkom Indonesia, Shopee, Bank BCA")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", analyst)
+			fmt.Println("[••] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
 		} else if analyst >= 3 {
-			fmt.Println("[Medium Company] Data Analyst at Xendit, Sociolla")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", analyst)
-			fmt.Println("[••] Rekomendasi: Practice SQL and dashboarding with Power BI or Tableau.\n")
+			fmt.Println("[Perusahaan Menengah] Data Analyst di Xendit, Sociolla")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", analyst)
+			fmt.Println("[••] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
 		} else if analyst > 0 {
-			fmt.Println("[Startup] Data Analyst at AnalytIQ, StatLab")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", analyst)
-			fmt.Println("[••] Rekomendasi: Practice SQL and dashboarding with Power BI or Tableau.\n")
+			fmt.Println("[Startup] Data Analyst di AnalytIQ, StatLab")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", analyst)
+			fmt.Println("[••] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
 		}
 
 		// TODO: Content Writer / Editor
 		if writer >= 5 {
-			fmt.Println("[Big Company] Content Writer / Editor at Kumparan, IDN Media, Zenius")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", writer)
-			fmt.Println("[••] Rekomendasi: Build a portfolio and strengthen SEO writing.\n")
+			fmt.Println("[Perusahaan Besar] Content Writer / Editor di Kumparan, IDN Media, Zenius")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", writer)
+			fmt.Println("[••] Saran: Bangun portofolio dan perkuat penulisan SEO")
 		} else if writer >= 3 {
-			fmt.Println("[Medium Company] Content Writer / Editor at Hipwee, FemaleDaily")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", writer)
-			fmt.Println("[••] Rekomendasi: Build a portfolio and strengthen SEO writing.\n")
+			fmt.Println("[Perusahaan Menengah] Content Writer / Editor di Hipwee, FemaleDaily")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", writer)
+			fmt.Println("[••] Saran: Bangun portofolio dan perkuat penulisan SEO")
 		} else if writer > 0 {
-			fmt.Println("[Startup] Content Writer / Editor at BlogHive, LocalStory")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", writer)
-			fmt.Println("[••] Rekomendasi: Build a portfolio and strengthen SEO writing.\n")
+			fmt.Println("[Startup] Content Writer / Editor di BlogHive, LocalStory")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", writer)
+			fmt.Println("[••] Saran: Bangun portofolio dan perkuat penulisan SEO")
 		}
 
 		// TODO: Teacher / Lecturer
 		if teacher >= 5 {
-			fmt.Println("[Big Company] Teacher / Lecturer at Binus, Universitas Indonesia, Ruangguru")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", teacher)
-			fmt.Println("[••] Rekomendasi: Showcase your teaching materials and get certified.\n")
+			fmt.Println("[Perusahaan Besar] Guru / Dosen di Binus, Universitas Indonesia, Ruangguru")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", teacher)
+			fmt.Println("[••] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 		} else if teacher >= 3 {
-			fmt.Println("[Medium Company] Teacher / Lecturer at HarukaEdu, Zenius")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", teacher)
-			fmt.Println("[••] Rekomendasi: Showcase your teaching materials and get certified.\n")
+			fmt.Println("[Perusahaan Menengah] Guru / Dosen di HarukaEdu, Zenius")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", teacher)
+			fmt.Println("[••] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 		} else if teacher > 0 {
-			fmt.Println("[Startup] Teacher / Lecturer at KelasKita, EduStart")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", teacher)
-			fmt.Println("[••] Rekomendasi: Showcase your teaching materials and get certified.\n")
+			fmt.Println("[Startup] Guru / Dosen di KelasKita, EduStart")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", teacher)
+			fmt.Println("[••] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 		}
 
 		// TODO: Marketing Specialist
 		if marketing >= 5 {
-			fmt.Println("[Big Company] Marketing Specialist at Grab, Shopee, TikTok Indonesia")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", marketing)
-			fmt.Println("[••] Rekomendasi: Demonstrate social media campaigns and analytics knowledge.\n")
+			fmt.Println("[Perusahaan Besar] Marketing Specialist di Grab, Shopee, TikTok Indonesia")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", marketing)
+			fmt.Println("[••] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 		} else if marketing >= 3 {
-			fmt.Println("[Medium Company] Marketing Specialist at Evermos, Sirclo")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", marketing)
-			fmt.Println("[••] Rekomendasi: Demonstrate social media campaigns and analytics knowledge.\n")
+			fmt.Println("[Perusahaan Menengah] Marketing Specialist di Evermos, Sirclo")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", marketing)
+			fmt.Println("[••] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 		} else if marketing > 0 {
-			fmt.Println("[Startup] Marketing Specialist at PromoPilot, StartSell")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", marketing)
-			fmt.Println("[••] Rekomendasi: Demonstrate social media campaigns and analytics knowledge.\n")
+			fmt.Println("[Startup] Marketing Specialist di PromoPilot, StartSell")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", marketing)
+			fmt.Println("[••] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 		}
 
 		// TODO: Graphic Designer
 		if designer >= 5 {
-			fmt.Println("[Big Company] Graphic Designer at Tokopedia, Bukalapak, Netflix ID")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", designer)
-			fmt.Println("[••] Rekomendasi: Polish your Behance/Dribbble portfolio.\n")
+			fmt.Println("[Perusahaan Besar] Graphic Designer di Tokopedia, Bukalapak, Netflix ID")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", designer)
+			fmt.Println("[••] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 		} else if designer >= 3 {
-			fmt.Println("[Medium Company] Graphic Designer at Jakmall, Warung Pintar")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", designer)
-			fmt.Println("[••] Rekomendasi: Polish your Behance/Dribbble portfolio.\n")
+			fmt.Println("[Perusahaan Menengah] Graphic Designer di Jakmall, Warung Pintar")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", designer)
+			fmt.Println("[••] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 		} else if designer > 0 {
-			fmt.Println("[Startup] Graphic Designer at PixelCraft, LokalDesign")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", designer)
-			fmt.Println("[••] Rekomendasi: Polish your Behance/Dribbble portfolio.\n")
+			fmt.Println("[Startup] Graphic Designer di PixelCraft, LokalDesign")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", designer)
+			fmt.Println("[••] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 		}
 
 		// TODO: DevOps Engineer
 		if devops >= 5 {
-			fmt.Println("[Big Company] DevOps Engineer at Blibli, Gojek, JNE")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", devops)
-			fmt.Println("[••] Rekomendasi: Demonstrate CI/CD pipelines and infrastructure as code.\n")
+			fmt.Println("[Perusahaan Besar] DevOps Engineer di Blibli, Gojek, JNE")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", devops)
+			fmt.Println("[••] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 		} else if devops >= 3 {
-			fmt.Println("[Medium Company] DevOps Engineer at Alterra, Nodeflux")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", devops)
-			fmt.Println("[••] Rekomendasi: Demonstrate CI/CD pipelines and infrastructure as code.\n")
+			fmt.Println("[Perusahaan Menengah] DevOps Engineer di Alterra, Nodeflux")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", devops)
+			fmt.Println("[••] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 		} else if devops > 0 {
-			fmt.Println("[Startup] DevOps Engineer at InfraEdge, LiteOps")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", devops)
-			fmt.Println("[••] Rekomendasi: Demonstrate CI/CD pipelines and infrastructure as code.\n")
+			fmt.Println("[Startup] DevOps Engineer di InfraEdge, LiteOps")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", devops)
+			fmt.Println("[••] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 		}
 
 		// TODO: Mobile App Developer
 		if mobile >= 5 {
-			fmt.Println("[Big Company] Mobile App Developer at Traveloka, TikTok, Tokopedia")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", mobile)
-			fmt.Println("[••] Rekomendasi: Build Flutter/React Native projects.\n")
+			fmt.Println("[Perusahaan Besar] Mobile App Developer di Traveloka, TikTok, Tokopedia")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", mobile)
+			fmt.Println("[••] Saran: Bangun proyek Flutter/React Native")
 		} else if mobile >= 3 {
-			fmt.Println("[Medium Company] Mobile App Developer at Kulina, MySkill")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", mobile)
-			fmt.Println("[••] Rekomendasi: Build Flutter/React Native projects.\n")
+			fmt.Println("[Perusahaan Menengah] Mobile App Developer di Kulina, MySkill")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", mobile)
+			fmt.Println("[••] Saran: Bangun proyek Flutter/React Native")
 		} else if mobile > 0 {
-			fmt.Println("[Startup] Mobile App Developer at AppHero, NextMob")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", mobile)
-			fmt.Println("[••] Rekomendasi: Build Flutter/React Native projects.\n")
+			fmt.Println("[Startup] Mobile App Developer di AppHero, NextMob")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", mobile)
+			fmt.Println("[••] Saran: Bangun proyek Flutter/React Native")
 		}
 
 		// TODO: Cybersecurity Specialist
 		if security >= 5 {
-			fmt.Println("[Big Company] Cybersecurity Specialist at Bank Indonesia, Tokopedia, Kominfo")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", security)
-			fmt.Println("[••] Rekomendasi: Earn cybersecurity certifications and join CTFs.\n")
+			fmt.Println("[Perusahaan Besar] Cybersecurity Specialist di Bank Indonesia, Tokopedia, Kominfo")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", security)
+			fmt.Println("[••] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 		} else if security >= 3 {
-			fmt.Println("[Medium Company] Cybersecurity Specialist at Vaksincom, Privy ID")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", security)
-			fmt.Println("[••] Rekomendasi: Earn cybersecurity certifications and join CTFs.\n")
+			fmt.Println("[Perusahaan Menengah] Cybersecurity Specialist di Vaksincom, Privy ID")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", security)
+			fmt.Println("[••] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 		} else if security > 0 {
-			fmt.Println("[Startup] Cybersecurity Specialist at SecuStart, ByteSecure")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", security)
-			fmt.Println("[••] Rekomendasi: Earn cybersecurity certifications and join CTFs.\n")
+			fmt.Println("[Startup] Cybersecurity Specialist di SecuStart, ByteSecure")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", security)
+			fmt.Println("[••] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 		}
 
 		// TODO: Project Manager
 		if management >= 5 {
-			fmt.Println("[Big Company] Project Manager at Telkomsel, Pertamina, BRI")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", management)
-			fmt.Println("[••] Rekomendasi: Highlight project planning, leadership, and agile methods.\n")
+			fmt.Println("[Perusahaan Besar] Project Manager di Telkomsel, Pertamina, BRI")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", management)
+			fmt.Println("[••] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 		} else if management >= 3 {
-			fmt.Println("[Medium Company] Project Manager at HappyFresh, Pinhome")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", management)
-			fmt.Println("[••] Rekomendasi: Highlight project planning, leadership, and agile methods.\n")
+			fmt.Println("[Perusahaan Menengah] Project Manager di HappyFresh, Pinhome")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", management)
+			fmt.Println("[••] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 		} else if management > 0 {
-			fmt.Println("[Startup] Project Manager at ManageOne, AgileStudio")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", management)
-			fmt.Println("[••] Rekomendasi: Highlight project planning, leadership, and agile methods.\n")
+			fmt.Println("[Startup] Project Manager di ManageOne, AgileStudio")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", management)
+			fmt.Println("[••] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 		}
 
 		// TODO: Financial Analyst
 		if finance >= 5 {
-			fmt.Println("[Big Company] Financial Analyst at Bank Mandiri, OJK, PwC")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", finance)
-			fmt.Println("[••] Rekomendasi: Sharpen Excel and financial modeling skills\n")
+			fmt.Println("[Perusahaan Besar] Financial Analyst di Bank Mandiri, OJK, PwC")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", finance)
+			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling\n")
 		} else if finance >= 3 {
-			fmt.Println("[Medium Company] Financial Analyst at Bibit, TernakUang")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", finance)
-			fmt.Println("[••] Rekomendasi: Sharpen Excel and financial modeling skills\n")
+			fmt.Println("[Perusahaan Menengah] Financial Analyst di Bibit, TernakUang")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", finance)
+			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling\n")
 		} else if finance > 0 {
-			fmt.Println("[Startup] Financial Analyst at FinPilot, BudgetBuddy")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", finance)
-			fmt.Println("[••] Rekomendasi: Sharpen Excel and financial modeling skills\n")
+			fmt.Println("[Startup] Financial Analyst di FinPilot, BudgetBuddy")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", finance)
+			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling\n")
 		}
 
 		// TODO: Customer Service
 		if customer_service >= 5 {
-			fmt.Println("[Big Company] Customer Service at Shopee, Tokopedia, Traveloka")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", customer_service)
-			fmt.Println("[••] Rekomendasi: Improve communication skills and empathy.\n")
+			fmt.Println("[Perusahaan Besar] Customer Service di Shopee, Tokopedia, Traveloka")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", customer_service)
+			fmt.Println("[••] Saran: Tingkatkan kemampuan komunikasi dan empati")
 		} else if customer_service >= 3 {
-			fmt.Println("[Medium Company] Customer Service at Sirclo, Evermos")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", customer_service)
-			fmt.Println("[••] Rekomendasi: Improve communication skills and empathy.\n")
+			fmt.Println("[Perusahaan Menengah] Customer Service di Sirclo, Evermos")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", customer_service)
+			fmt.Println("[••] Saran: Tingkatkan kemampuan komunikasi dan empati")
 		} else if customer_service > 0 {
-			fmt.Println("[Startup] Customer Service at HelpLine, FastDesk")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", customer_service)
-			fmt.Println("[••] Rekomendasi: Improve communication skills and empathy.\n")
+			fmt.Println("[Startup] Customer Service di HelpLine, FastDesk")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", customer_service)
+			fmt.Println("[••] Saran: Tingkatkan kemampuan komunikasi dan empati")
 		}
 
 		// TODO: Game Developer
 		if game >= 5 {
-			fmt.Println("[Big Company] Game Developer at ArenaNet ID, Agate Studio, Garena")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", game)
-			fmt.Println("[••] Rekomendasi: Master Unity or Unreal and build small games.\n")
+			fmt.Println("[Perusahaan Besar] Game Developer di ArenaNet ID, Agate Studio, Garena")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", game)
+			fmt.Println("[••] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 		} else if game >= 3 {
-			fmt.Println("[Medium Company] Game Developer at Toge Productions, Digital Happiness")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", game)
-			fmt.Println("[••] Rekomendasi: Master Unity or Unreal and build small games.\n")
+			fmt.Println("[Perusahaan Menengah] Game Developer di Toge Productions, Digital Happiness")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", game)
+			fmt.Println("[••] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 		} else if game > 0 {
-			fmt.Println("[Startup] Game Developer at PixelPlay, IndieDev")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", game)
-			fmt.Println("[••] Rekomendasi: Master Unity or Unreal and build small games.\n")
+			fmt.Println("[Startup] Game Developer di PixelPlay, IndieDev")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", game)
+			fmt.Println("[••] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 		}
 
 		//TODO:  Video Editor
 		if video >= 5 {
-			fmt.Println("[Big Company] Video Editor at NET TV, Narasi, IDN Media")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", video)
-			fmt.Println("[••] Rekomendasi: Create a showreel and learn motion graphics tools.\n")
+			fmt.Println("[Perusahaan Besar] Video Editor di NET TV, Narasi, IDN Media")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", video)
+			fmt.Println("[••] Saran: Buat showreel dan pelajari motion graphics")
 		} else if video >= 3 {
-			fmt.Println("[Medium Company] Video Editor at Kreator.ID, LokalTV")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", video)
-			fmt.Println("[••] Rekomendasi: Create a showreel and learn motion graphics tools.\n")
+			fmt.Println("[Perusahaan Menengah] Video Editor di Kreator.ID, LokalTV")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", video)
+			fmt.Println("[••] Saran: Buat showreel dan pelajari motion graphics")
 		} else if video > 0 {
-			fmt.Println("[Startup] Video Editor at VideoVibe, ClipStart")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", video)
-			fmt.Println("[••] Rekomendasi: Create a showreel and learn motion graphics tools.\n")
+			fmt.Println("[Startup] Video Editor di VideoVibe, ClipStart")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", video)
+			fmt.Println("[••] Saran: Buat showreel dan pelajari motion graphics")
 		}
 
 		//TODO:  Legal Advisor
 		if law >= 5 {
-			fmt.Println("[Big Company] Legal Advisor at Mahkamah Agung, Kantor Hukum Ternama")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", law)
-			fmt.Println("[••] Rekomendasi: Deepen knowledge of regulations and legal writing.\n")
+			fmt.Println("[Perusahaan Besar] Legal Advisor di Mahkamah Agung, Kantor Hukum Ternama")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", law)
+			fmt.Println("[••] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 		} else if law >= 3 {
-			fmt.Println("[Medium Company] Legal Advisor at Startup Hukum Lokal")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", law)
-			fmt.Println("[••] Rekomendasi: Deepen knowledge of regulations and legal writing.\n")
+			fmt.Println("[Perusahaan Menengah] Legal Advisor di Startup Hukum Lokal")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", law)
+			fmt.Println("[••] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 		} else if law > 0 {
-			fmt.Println("[Startup] Legal Advisor at LegalEase, LawEntry")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", law)
-			fmt.Println("[••] Rekomendasi: Deepen knowledge of regulations and legal writing.\n")
+			fmt.Println("[Startup] Legal Advisor di LegalEase, LawEntry")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", law)
+			fmt.Println("[••] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 		}
 
 		//TODO: Healthcare Worker
 		if health >= 5 {
-			fmt.Println("[Big Company] Healthcare Worker at RSUPN, Siloam, Halodoc")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", health)
-			fmt.Println("[••] Rekomendasi: Showcase certifications and patient care experience.\n")
+			fmt.Println("[Perusahaan Besar] Tenaga Kesehatan di RSUPN, Siloam, Halodoc")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", health)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 		} else if health >= 3 {
-			fmt.Println("[Medium Company] Healthcare Worker at Good Doctor, ProSehat")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", health)
-			fmt.Println("[••] Rekomendasi: Showcase certifications and patient care experience.\n")
+			fmt.Println("[Perusahaan Menengah] Tenaga Kesehatan di Good Doctor, ProSehat")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", health)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 		} else if health > 0 {
-			fmt.Println("[Startup] Healthcare Worker at HealthStart, KlinikKita")
-			fmt.Printf("[!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", health)
-			fmt.Println("[••] Rekomendasi: Showcase certifications and patient care experience.\n")
+			fmt.Println("[Startup] Tenaga Kesehatan di HealthStart, KlinikKita")
+			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", health)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 		}
 
 		//TODO: Administrative Staff
 		if admin >= 5 {
-			fmt.Println("[Big Company] Administrative Staff at Pertamina, PLN, Bank Mandiri")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", admin)
-		fmt.Println("[••] Rekomendasi: Strengthen MS Office and organizational skills\n")
+			fmt.Println("[Perusahaan Besar] Staf Administrasi di Pertamina, PLN, Bank Mandiri")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", admin)
+			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi\n")
 		} else if admin >= 3 {
-		fmt.Println("[Medium Company] Administrative Staff at DANA, OVO")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", admin)
-		fmt.Println("[••] Rekomendasi: Strengthen MS Office and organizational skills\n")
+			fmt.Println("[Perusahaan Menengah] Staf Administrasi di DANA, OVO")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", admin)
+			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi\n")
 		} else if admin > 0 {
-		fmt.Println("[Startup] Administrative Staff at OfficeHub, AdminPro")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", admin)
-		fmt.Println("[••] Rekomendasi: Strengthen MS Office and organizational skills\n")
+			fmt.Println("[Startup] Staf Administrasi di OfficeHub, AdminPro")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", admin)
+			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi\n")
 		}
 
 		//TODO: Logistics Coordinator
 		if logistics >= 5 {
-		fmt.Println("[Big Company] Logistics Coordinator at JNE, TIKI, Gojek")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", logistics)
-		fmt.Println("[••] Rekomendasi: Focus on supply chain management skills\n")
+			fmt.Println("[Perusahaan Besar] Koordinator Logistik di JNE, TIKI, Gojek")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", logistics)
+			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok\n")
 		} else if logistics >= 3 {
-		fmt.Println("[Medium Company] Logistics Coordinator at Deliveree, Lalamove")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", logistics)
-		fmt.Println("[••] Rekomendasi: Focus on supply chain management skills\n")
+			fmt.Println("[Perusahaan Menengah] Koordinator Logistik di Deliveree, Lalamove")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", logistics)
+			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok\n")
 		} else if logistics > 0 {
-		fmt.Println("[Startup] Logistics Coordinator at FastLog, QuickShip")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", logistics)
-		fmt.Println("[••] Rekomendasi: Focus on supply chain management skills\n")
+			fmt.Println("[Startup] Koordinator Logistik di FastLog, QuickShip")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", logistics)
+			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok\n")
 		}
 
 		//TODO:  HR Specialist
 		if hr >= 5 {
-		fmt.Println("[Big Company] HR Specialist at Unilever, Telkom Indonesia, Danone")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", hr)
-		fmt.Println("[••] Rekomendasi: Develop interview and employee relations skills\n")
+			fmt.Println("[Perusahaan Besar] HR Specialist di Unilever, Telkom Indonesia, Danone")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", hr)
+			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan\n")
 		} else if hr >= 3 {
-		fmt.Println("[Medium Company] HR Specialist at Modalku, Kredivo")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", hr)
-		fmt.Println("[••] Rekomendasi: Develop interview and employee relations skills\n")
+			fmt.Println("[Perusahaan Menengah] HR Specialist di Modalku, Kredivo")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", hr)
+			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan\n")
 		} else if hr > 0 {
-		fmt.Println("[Startup] HR Specialist at PeopleOps, HRStart")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", hr)
-		fmt.Println("[••] Rekomendasi: Develop interview and employee relations skills\n")
+			fmt.Println("[Startup] HR Specialist di PeopleOps, HRStart")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", hr)
+			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan\n")
 		}
 
 		//TODO:  Psychologist / Counselor
 		if psychology >= 5 {
-		fmt.Println("[Big Company] Psychologist / Counselor at RSJ, Klinik Pratama, Sekolah")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", psychology)
-		fmt.Println("[••] Rekomendasi: Highlight counseling certifications and experience.\n")
+			fmt.Println("[Perusahaan Besar] Psikolog / Konselor di RSJ, Klinik Pratama, Sekolah")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", psychology)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 		} else if psychology >= 3 {
-		fmt.Println("[Medium Company] Psychologist / Counselor at Klinik Prima, Sekolah Alam")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", psychology)
-		fmt.Println("[••] Rekomendasi: Highlight counseling certifications and experience.\n")
+			fmt.Println("[Perusahaan Menengah] Psikolog / Konselor di Klinik Prima, Sekolah Alam")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", psychology)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 		} else if psychology > 0 {
-		fmt.Println("[Startup] Psychologist / Counselor at MindCare, SafeTalk")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", psychology)
-		fmt.Println("[••] Rekomendasi: Highlight counseling certifications and experience.\n")
+			fmt.Println("[Startup] Psikolog / Konselor di MindCare, SafeTalk")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", psychology)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 		}
 
 		//TODO: Chef / Cook
 		if chef >= 5 {
-		fmt.Println("[Big Company] Chef / Cook at Hotel Mulia, Ritz Carlton, Local Restaurant Chain")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", chef)
-		fmt.Println("[••] Rekomendasi: Showcase culinary certifications and special dishes.\n")
+			fmt.Println("[Perusahaan Besar] Koki / Juru Masak di Hotel Mulia, Ritz Carlton, Resto Lokal")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", chef)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 		} else if chef >= 3 {
-		fmt.Println("[Medium Company] Chef / Cook at Hotel Santika, Local Bistro")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", chef)
-		fmt.Println("[••] Rekomendasi: Showcase culinary certifications and special dishes.\n")
+			fmt.Println("[Perusahaan Menengah] Koki / Juru Masak di Hotel Santika, Bistro Lokal")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", chef)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 		} else if chef > 0 {
-		fmt.Println("[Startup] Chef / Cook at FoodieStart, HomeKitchen")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", chef)
-		fmt.Println("[••] Rekomendasi: Showcase culinary certifications and special dishes.\n")
+			fmt.Println("[Startup] Koki / Juru Masak di FoodieStart, HomeKitchen")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", chef)
+			fmt.Println("[••] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 		}
 
 		//TODO:  Event Organizer
 		if events >= 5 {
-		fmt.Println("[Big Company] Event Organizer at Dyandra, Rajawali Corpora")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", events)
-		fmt.Println("[••] Rekomendasi: Show event portfolio and negotiation skills\n")
+			fmt.Println("[Perusahaan Besar] Event Organizer di Dyandra, Rajawali Corpora")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", events)
+			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi\n")
 		} else if events >= 3 {
-		fmt.Println("[Medium Company] Event Organizer at EO Lokal, PartyUp")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", events)
-		fmt.Println("[••] Rekomendasi: Show event portfolio and negotiation skills\n")
+			fmt.Println("[Perusahaan Menengah] Event Organizer di EO Lokal, PartyUp")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", events)
+			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi\n")
 		} else if events > 0 {
-		fmt.Println("[Startup] Event Organizer at SmallEvents, FestStart")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", events)
-		fmt.Println("[••] Rekomendasi: Show event portfolio and negotiation skills\n")
+			fmt.Println("[Startup] Event Organizer di SmallEvents, FestStart")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", events)
+			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi\n")
 		}
 
 		//TODO: Cashier
 		if cashier >= 5 {
-		fmt.Println("[Big Company] Cashier at Indomaret, Alfamart, Circle K")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", cashier)
-		fmt.Println("[••] Rekomendasi: Focus on accuracy and customer service skills\n")
+			fmt.Println("[Perusahaan Besar] Kasir di Indomaret, Alfamart, Circle K")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", cashier)
+			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan\n")
 		} else if cashier >= 3 {
-		fmt.Println("[Medium Company] Cashier at Minimart Lokal, Toko Sembako")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", cashier)
-		fmt.Println("[••] Rekomendasi: Focus on accuracy and customer service skills\n")
+			fmt.Println("[Perusahaan Menengah] Kasir di Minimart Lokal, Toko Sembako")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", cashier)
+			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan\n")
 		} else if cashier > 0 {
-		fmt.Println("[Startup] Cashier at LocalStore, QuickMart")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", cashier)
-		fmt.Println("[••] Rekomendasi: Focus on accuracy and customer service skills\n")
+			fmt.Println("[Startup] Kasir di LocalStore, QuickMart")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", cashier)
+			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan\n")
 		}
 
 		//TODO: Machine Operator
 		if operator >= 5 {
-		fmt.Println("[Big Company] Machine Operator at Indofood, Unilever, Astra")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", operator)
-		fmt.Println("[••] Rekomendasi: Emphasize machine handling certifications.\n")
+			fmt.Println("[Perusahaan Besar] Operator Mesin di Indofood, Unilever, Astra")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", operator)
+			fmt.Println("[••] Saran: Tonjolkan sertifikasi penanganan mesin")
 		} else if operator >= 3 {
-		fmt.Println("[Medium Company] Machine Operator at LocalFactory, PlantX")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", operator)
-		fmt.Println("[••] Rekomendasi: Emphasize machine handling certifications.\n")
+			fmt.Println("[Perusahaan Menengah] Operator Mesin di LocalFactory, PlantX")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", operator)
+			fmt.Println("[••] Saran: Tonjolkan sertifikasi penanganan mesin")
 		} else if operator > 0 {
-		fmt.Println("[Startup] Machine Operator at SmallPlant, MachPro")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", operator)
-		fmt.Println("[••] Rekomendasi: Emphasize machine handling certifications.\n")
+			fmt.Println("[Startup] Operator Mesin di SmallPlant, MachPro")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", operator)
+			fmt.Println("[••] Saran: Tonjolkan sertifikasi penanganan mesin")
 		}
 
 		//TODO: Food & Beverage Staff section
 		if fnb >= 5 {
-		fmt.Println("[Big Company] Food & Beverage Staff at Hotel Indonesia Kempinski, Marriott")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", fnb)
-		fmt.Println("[••] Rekomendasi: Highlight service skills and certifications.\n")
+			fmt.Println("[Perusahaan Besar] Staf F&B di Hotel Indonesia Kempinski, Marriott")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", fnb)
+			fmt.Println("[••] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 		} else if fnb >= 3 {
-		fmt.Println("[Medium Company] Food & Beverage Staff at Local Cafe, Bistro X")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", fnb)
-		fmt.Println("[••] Rekomendasi: Highlight service skills and certifications.\n")
+			fmt.Println("[Perusahaan Menengah] Staf F&B di Local Cafe, Bistro X")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", fnb)
+			fmt.Println("[••] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 		} else if fnb > 0 {
-		fmt.Println("[Startup] Food & Beverage Staff at QuickBite, FoodStart")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", fnb)
-		fmt.Println("[••] Rekomendasi: Highlight service skills and certifications.\n")
+			fmt.Println("[Startup] Staf F&B di QuickBite, FoodStart")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", fnb)
+			fmt.Println("[••] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 		}
 
 		//TODO: Content Creator / Influencer section
 		if creator >= 5 {
-		fmt.Println("[Big Company] Content Creator / Influencer at YouTube, TikTok, Instagram")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 75%% - 100%%\n", creator)
-		fmt.Println("[••] Rekomendasi: Build consistent content and follower base.\n")
+			fmt.Println("[Perusahaan Besar] Content Creator / Influencer di YouTube, TikTok, Instagram")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", creator)
+			fmt.Println("[••] Saran: Bangun konten konsisten dan basis pengikut")
 		} else if creator >= 3 {
-		fmt.Println("[Medium Company] Content Creator / Influencer at Local Media, Blog")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 50%% - 75%%\n", creator)
-		fmt.Println("[••] Rekomendasi: Build consistent content and follower base.\n")
+			fmt.Println("[Perusahaan Menengah] Content Creator / Influencer di Media Lokal, Blog")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", creator)
+			fmt.Println("[••] Saran: Bangun konten konsisten dan basis pengikut")
 		} else if creator > 0 {
-		fmt.Println("[Startup] Content Creator / Influencer at IndieVlog, MiniBlog")
-		fmt.Printf("     [!!!] Point: %d/10 | Kesempatan diterima: 15%% - 50%%\n", creator)
-		fmt.Println("[••] Rekomendasi: Build consistent content and follower base.\n")
+			fmt.Println("[Startup] Content Creator / Influencer di IndieVlog, MiniBlog")
+			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", creator)
+			fmt.Println("[••] Saran: Bangun konten konsisten dan basis pengikut")
 		}
 
 		fmt.Println("═════════════════════════════════════════════════════════════════════════════")
-		fmt.Println("[INFO] These are AI-driven suggestions. Keep improving your profile,")
-		fmt.Println("       and Career-Edge will update your opportunities in real-time!")
+		fmt.Println("[INFO] Ini adalah saran berbasis AI. Terus tingkatkan profil Anda,")
+		fmt.Println("       dan Career-Edge akan memperbarui peluang Anda secara real-time!")
 		fmt.Println("═════════════════════════════════════════════════════════════════════════════")
 	}
 }
