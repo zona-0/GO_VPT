@@ -1,10 +1,9 @@
 package modules
-
 import "fmt"
 
 func BackToMenu() {
 	var backMenu string
-	fmt.Println("[XX] Type 'pback' to return to the main menu")
+	fmt.Println("[System] Type 'pback' to return to the main menu")
 	for {
 		fmt.Scanln(&backMenu)
 		if backMenu == "pback" {
@@ -13,4 +12,5 @@ func BackToMenu() {
 			fmt.Println()
 		}
 	}
+	Clear()
 }

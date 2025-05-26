@@ -1,0 +1,6 @@
+TO DO LIST:
+    2. ADD CLEAR MENU (FUNC JOBLIST)
+    3. Selection Sort
+    4. Insertion Sort
+    5. Letter Confirmation
+    6. Validation on multiple func
