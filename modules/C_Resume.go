@@ -1,7 +1,8 @@
 package modules
+
 import (
-	"fmt"
 	"CAREER-EDGE/data"
+	"fmt"
 )
 
 func CreateResume() {
@@ -40,7 +41,6 @@ func CreateResume() {
 				i += 1
 			}
 		}
-
 
 		// TODO: PENGALAMAN KERJA
 		fmt.Println("[E] Pengalaman Kerja: ")
@@ -81,13 +81,13 @@ func CreateResume() {
 
 		fmt.Println(">> Tentang Saya: ")
 		fmt.Println("   [HELP] Akhiri dengan tanda '.' untuk mengakhiri")
-		for selesai == false{
+		for !selesai {
 			fmt.Scan(&kata)
 
-			if kata == "."{
+			if kata == "." {
 				selesai = true
 			} else {
-				if aboutme == ""{
+				if aboutme == "" {
 					aboutme = kata
 				} else {
 					aboutme = aboutme + " " + kata
@@ -99,19 +99,17 @@ func CreateResume() {
 		fmt.Print(">> Sertifikat: ")
 		fmt.Scan(&sertifikat)
 
-
 		// TODO: RESUME PRINT SECTION
 		fmt.Printf("\n\n")
 		fmt.Println(">> Berikut ini adalah resume yang berhasil saya susun berdasarkan data yang Anda berikan.")
 		fmt.Println(">> Silakan periksa di bawah ini. Jika ada yang ingin direvisi, Anda bisa kembali kapan saja.")
 		fmt.Printf("\n\n")
-		fmt.Println("==================================================================\n")
+		fmt.Println("==================================================================")
 		fmt.Printf("Nama: %s\nAlamat: %s\n\nTelp: %s | Email: %s\n", nama, alamat, hp, email)
 
 		fmt.Println("------------------------------------------------------------")
 		fmt.Println("Tentang Saya: ")
 		fmt.Println(aboutme)
-
 
 		fmt.Println("------------------------------------------------------------")
 		fmt.Println("KETERAMPILAN:")
@@ -187,7 +185,7 @@ func CreateResume() {
 		// fmt.Println("[A] Informasi Pribadi: ")
 		// fmt.Printf("	[X] Nama: %s\n	[X] Alamat: %s\n	[X] No. HP: %s\n	[X] Email: %s\n", nama, alamat, hp, email)
 		//ManageEducation()
-	}else {
+	} else {
 		fmt.Println()
 		fmt.Println("[HELP] ketik 'resume' untuk bantuan membuat resume atau ketik 'suratkerja' untuk bantuan membuat surat lamaran kerja")
 	}

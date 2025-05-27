@@ -530,15 +530,15 @@ func RecommendJob() {
 		if finance >= 5 {
 			fmt.Println("[Perusahaan Besar] Financial Analyst di Bank Mandiri, OJK, PwC")
 			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", finance)
-			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling\n")
+			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling")
 		} else if finance >= 3 {
 			fmt.Println("[Perusahaan Menengah] Financial Analyst di Bibit, TernakUang")
 			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", finance)
-			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling\n")
+			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling")
 		} else if finance > 0 {
 			fmt.Println("[Startup] Financial Analyst di FinPilot, BudgetBuddy")
 			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", finance)
-			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling\n")
+			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling")
 		}
 
 		// TODO: Customer Service
@@ -620,45 +620,45 @@ func RecommendJob() {
 		if admin >= 5 {
 			fmt.Println("[Perusahaan Besar] Staf Administrasi di Pertamina, PLN, Bank Mandiri")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", admin)
-			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi\n")
+			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi")
 		} else if admin >= 3 {
 			fmt.Println("[Perusahaan Menengah] Staf Administrasi di DANA, OVO")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", admin)
-			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi\n")
+			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi")
 		} else if admin > 0 {
 			fmt.Println("[Startup] Staf Administrasi di OfficeHub, AdminPro")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", admin)
-			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi\n")
+			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi")
 		}
 
 		//TODO: Logistics Coordinator
 		if logistics >= 5 {
 			fmt.Println("[Perusahaan Besar] Koordinator Logistik di JNE, TIKI, Gojek")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", logistics)
-			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok\n")
+			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok")
 		} else if logistics >= 3 {
 			fmt.Println("[Perusahaan Menengah] Koordinator Logistik di Deliveree, Lalamove")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", logistics)
-			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok\n")
+			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok")
 		} else if logistics > 0 {
 			fmt.Println("[Startup] Koordinator Logistik di FastLog, QuickShip")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", logistics)
-			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok\n")
+			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok")
 		}
 
 		//TODO:  HR Specialist
 		if hr >= 5 {
 			fmt.Println("[Perusahaan Besar] HR Specialist di Unilever, Telkom Indonesia, Danone")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", hr)
-			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan\n")
+			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan")
 		} else if hr >= 3 {
 			fmt.Println("[Perusahaan Menengah] HR Specialist di Modalku, Kredivo")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", hr)
-			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan\n")
+			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan")
 		} else if hr > 0 {
 			fmt.Println("[Startup] HR Specialist di PeopleOps, HRStart")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", hr)
-			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan\n")
+			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan")
 		}
 
 		//TODO:  Psychologist / Counselor

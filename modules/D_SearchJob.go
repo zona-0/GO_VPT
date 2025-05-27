@@ -136,18 +136,32 @@ func searchJobBinary() {
 }
 
 func sortJobTitle() {
-	var i int
-	for i < jobCount-1 {
-		var j int = i + 1
-		for j < jobCount {
+	var i, j int
+	var temp JobListing
+	for i = 0; i < jobCount-1; i++ {
+		for j = i + 1; j < jobCount; j++ {
 			if jobListings[i].Title > jobListings[j].Title {
-				var temp JobListing
 				temp = jobListings[i]
 				jobListings[i] = jobListings[j]
 				jobListings[j] = temp
 			}
-			j++
 		}
-		i++
 	}
 }
+
+// func sortJobTitle() {
+// 	var i int
+// 	for i < jobCount-1 {
+// 		var j int = i + 1
+// 		for j < jobCount {
+// 			if jobListings[i].Title > jobListings[j].Title {
+// 				var temp JobListing
+// 				temp = jobListings[i]
+// 				jobListings[i] = jobListings[j]
+// 				jobListings[j] = temp
+// 			}
+// 			j++
+// 		}
+// 		i++
+// 	}
+// }
