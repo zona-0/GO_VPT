@@ -41,7 +41,7 @@ func main() {
 		// fmt.Println("║ [8] Cari Lowongan Pekerjaan             | Search Job Listing           ║")
 		//fmt.Println("║ [9] Cari Posisi Pekerjaan               | Searh Job                    ║")
 		// fmt.Println("║ [10] Urutkan Kata Kunci <Insertion>     | Sort by Keyword     ║")
-		fmt.Println("║ [99] Help                               | Bantuan                      ║")
+		fmt.Println("║ [9] Help                                | Bantuan                      ║")
 		fmt.Println("║ [0] Exit                                | Keluar                       ║")
 		fmt.Println("╚════════════════════════════════════════════════════════════════════════╝")
 		fmt.Print("[!!!] Choose option / Pilih Menu: ")

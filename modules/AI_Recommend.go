@@ -268,6 +268,7 @@ func RecommendJob() {
 		degree = data.Educations[j].Degree
 		major = data.Educations[j].Major
 
+		// Data Source: https://institutbanten.ac.id/26-universitas-terbaik-di-indonesia-tahun-2025-versi-qs-world-university-rankings/
 		if school == "universitas_indonesia" || school == "ui" ||
 			school == "gajah_mada_university" || school == "universitas_gajah_mada" || school == "ugm" ||
 			school == "bandung_institute_of_technology" || school == "institut_teknologi_bandung" || school == "itb" ||
@@ -353,8 +354,10 @@ func RecommendJob() {
 		logistics + hr + psychology + chef + events + cashier + operator + fnb + creator + educationScore
 
 	if total == 0 {
+		fmt.Println()
 		fmt.Println("[!!] Tidak ada rekomendasi. Silakan lengkapi data profil Anda")
 	} else {
+		fmt.Println()
 		fmt.Println("[!!] AI telah menganalisis profil Anda. Berdasarkan skill, pengalaman, dan pendidikan,")
 		fmt.Println("[!!] berikut jalur karier dan perusahaan terbaik yang direkomendasikan untuk Anda:")
 

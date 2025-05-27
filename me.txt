@@ -1,5 +1,5 @@
 TO DO LIST:
-    3. Selection Sort
-    4. Insertion Sort
-    5. Letter Confirmation
-    6. Validation on multiple func
+    1. Sequential Search
+    2. Relevansi || Selection Sort
+    3. Letter Confirmation
+    4. Validation

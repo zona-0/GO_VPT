@@ -17,7 +17,7 @@ func ManageJob() {
 		fmt.Println("║ 4. [Show]   List data pekerjaan                                    ║")
 		fmt.Println("║ 5. [Done]   Selesai dan simpan                                     ║")
 		fmt.Println("╚════════════════════════════════════════════════════════════════════╝")
-		fmt.Print("Pilih menu: ")
+		fmt.Print(">> Pilih menu: ")
 		fmt.Scan(&input)
 
 		if input == 1 {
@@ -25,12 +25,14 @@ func ManageJob() {
 			JobMenu()
 		} else if input == 2 {
 			Clear()
+			listJobListings()
 			SearchJob()
 		} else if input == 3 {
-			Clear()
-		} else if input == 4 {
 			listJobListings()
+			SortBySalary()
+		} else if input == 4 {
 			Clear()
+			listJobListings()
 		} else if input == 5 {
 			running = false
 		} else {

@@ -128,7 +128,7 @@ func editJobListing() {
 				jobListings[idx].Industry = industry
 			}
 
-			fmt.Printf("Gaji (sekarang: %d). Ubah gaji? (y/n): ", jobListings[idx].Salary)
+			fmt.Printf("Gaji (sekarang: RP %d). Ubah gaji? (Y/N): ", jobListings[idx].Salary)
 			fmt.Scan(&choice)
 			if choice == "y" || choice == "Y" {
 				fmt.Print("Masukkan Gaji baru: ")
@@ -166,19 +166,19 @@ func listJobListings() {
 	}
 }
 
-func sortJobMenu() {
-	var choose int
-	if jobCount == 0 {
-		fmt.Println("[!] Belum ada data lowongan untuk diurutkan")
-		BackToMenu()
-	}
+// func sortJobMenu() {
+// 	var choose int
+// 	if jobCount == 0 {
+// 		fmt.Println("[!] Belum ada data lowongan untuk diurutkan")
+// 		BackToMenu()
+// 	}
 
-	fmt.Scan(&choose)
-	if choose == 55 {
-		SortBySalary()
-	} else if choose == 56 {
-		// SortByReleveance() // REVISION SELECTED FROM RECOMMENDATION JOB
-	}
+// 	fmt.Scan(&choose)
+// 	if choose == 55 {
+// 		SortBySalary()
+// 	} else if choose == 56 {
+// 		// SortByReleveance()
+// 	}
 
-	listJobListings()
-}
+// 	listJobListings()
+// }
