@@ -10,6 +10,7 @@ func ManageSkill() {
 	var nameSkill string
 	var newSkill data.Skill
 	var running bool = true
+	var selesai bool = false
 
 	for running {
 		fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
@@ -30,12 +31,12 @@ func ManageSkill() {
 			} else {
 				SuggestionSkill()
 				fmt.Println("Ketikkan beberapa skill satu per satu. Ketik 'done' jika sudah selesai")
-				for data.SkillCount < 50 {
+				for data.SkillCount < 50 && !selesai {
 					fmt.Print("Masukkan nama skill >>> ")
 					fmt.Scan(&nameSkill)
 
 					if nameSkill == "done" {
-						break
+						selesai = true
 					}
 
 					newSkill.Name = nameSkill

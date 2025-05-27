@@ -695,30 +695,30 @@ func RecommendJob() {
 		if events >= 5 {
 			fmt.Println("[Perusahaan Besar] Event Organizer di Dyandra, Rajawali Corpora")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", events)
-			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi\n")
+			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi")
 		} else if events >= 3 {
 			fmt.Println("[Perusahaan Menengah] Event Organizer di EO Lokal, PartyUp")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", events)
-			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi\n")
+			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi")
 		} else if events > 0 {
 			fmt.Println("[Startup] Event Organizer di SmallEvents, FestStart")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", events)
-			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi\n")
+			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi")
 		}
 
 		//TODO: Cashier
 		if cashier >= 5 {
 			fmt.Println("[Perusahaan Besar] Kasir di Indomaret, Alfamart, Circle K")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", cashier)
-			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan\n")
+			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 		} else if cashier >= 3 {
 			fmt.Println("[Perusahaan Menengah] Kasir di Minimart Lokal, Toko Sembako")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", cashier)
-			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan\n")
+			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 		} else if cashier > 0 {
 			fmt.Println("[Startup] Kasir di LocalStore, QuickMart")
 			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", cashier)
-			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan\n")
+			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 		}
 
 		//TODO: Machine Operator

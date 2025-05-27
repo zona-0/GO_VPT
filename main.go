@@ -57,6 +57,9 @@ func main() {
 		} else if menu == 3 {
 			modules.RecommendJob()
 			modules.BackToMenu()
+		} else if menu == 9 {
+			modules.Help()
+			modules.BackToMenu()
 		}
 
 		// } else if menu == 6 {
