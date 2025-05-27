@@ -8,6 +8,7 @@ import (
 func main() {
 	var menu int
 
+	// SOURCE: https://symbl.cc/en/unicode/blocks/box-drawing/
 	fmt.Println("╔═══════════════════════════════════════════════════════════════╗")
 	fmt.Println("║                 <>   SYSTEM INITIALIZATION    <>              ║")
 	fmt.Println("╠═══════════════════════════════════════════════════════════════╣")

@@ -10,28 +10,65 @@ func SearchJob() {
 		fmt.Println("╔══════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                   [MENU] Pencarian Lowongan                  ║")
 		fmt.Println("╠══════════════════════════════════════════════════════════════╣")
-		fmt.Println("║ 1. [Search]  Cari berdasarkan kata kunci industri            ║")
-		fmt.Println("║ 2. [SEARCH]  Cari berdasarkan title pekerjaan                ║")
-		fmt.Println("║ 3. [Done]    Selesai / Kembali                               ║")
+		fmt.Println("║ 1. [Search]  Cari berdasarkan posisi pekerjaan               ║")
+		fmt.Println("║ 2. [Search]  Cari berdasarkan kata kunci industri            ║")
+		fmt.Println("║ 3. [Search]  Cari posisi pekerjaan berdasarkan gaji          ║")
+		fmt.Println("║ 4. [Search]  Cari posisi pekerjaan berdasarkan relevansi     ║")
+		fmt.Println("║ 5. [Show]    List data pekerjaan                             ║")
+		fmt.Println("║ 6. [Done]    Selesai dan Kembali                             ║")
 		fmt.Println("╠══════════════════════════════════════════════════════════════╣")
 		fmt.Println("Pilih menu: ")
 		fmt.Scan(&choose)
 
 		if choose == 1 {
-			//serachJobSequential()
-		} else if choose == 2 {
+			listJobListings()
 			searchJobBinary()
+		} else if choose == 2 {
+			listJobListings()
+			searchByIndustry()
 		} else if choose == 3 {
+			//listJobListings()
+			SortBySalary()
+		} else if choose == 4 {
+			listJobListings()
+		} else if choose == 5 {
+			listJobListings()
+		} else if choose == 6 {
 			running = false
 		} else {
-			fmt.Println("[HELP] Pilih dari angka 1 sampai 3 untuk memilih menu")
+			fmt.Println("[HELP] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
 		}
 	}
 }
 
-// func serachJobSequential() {
-// STUCK
-// }
+func searchByIndustry() {
+	if jobCount == 0 {
+		fmt.Println("[!] Belum ada data lowongan untuk dicari")
+	}
+
+	var industryCode int
+	fmt.Print("Masukkan Kode Industri yang dicari: ")
+	fmt.Scan(&industryCode)
+
+	var found bool = false
+	fmt.Println("╔═════════╦════════════════════════╦═════════════════╦══════════════╗")
+	fmt.Println("║   No    ║        Title           ║    Industri     ║     Gaji     ║")
+	fmt.Println("╠═════════╬════════════════════════╬═════════════════╬══════════════╣")
+	for i := 0; i < jobCount; i++ {
+		if jobListings[i].Industry == industryCode {
+			fmt.Printf("║  %-6d ║ %-22s ║ %-15d ║ Rp %-9d ║\n",
+				i+1,
+				jobListings[i].Title,
+				jobListings[i].Industry,
+				jobListings[i].Salary)
+			found = true
+		}
+	}
+	if !found {
+		fmt.Println("║                Tidak ditemukan lowongan dengan kode industri ini              ║")
+	}
+	fmt.Println("╚═════════╩════════════════════════╩═════════════════╩══════════════╝")
+}
 
 func searchJobBinary() {
 	if jobCount == 0 {
@@ -72,7 +109,7 @@ func searchJobBinary() {
 		var i int = mid
 		var no int = 1
 		for i >= 0 && jobListings[i].Title == keyword {
-			fmt.Printf("╠ %-7d ╠ %-22s ╠ %-15s ╠ Rp %-9d ╠\n",
+			fmt.Printf("╠ %-7d ╠ %-22s ╠ %-15d ╠ Rp %-9d ╠\n",
 				no,
 				jobListings[i].Title,
 				jobListings[i].Industry,
@@ -83,7 +120,7 @@ func searchJobBinary() {
 
 		i = mid + 1
 		for i < jobCount && jobListings[i].Title == keyword {
-			fmt.Printf("╠ %-7d ╠ %-22s ╠ %-15s ╠ Rp %-9d ╠\n",
+			fmt.Printf("╠ %-7d ╠ %-22s ╠ %-15d ╠ Rp %-9d ╠\n",
 				no,
 				jobListings[i].Title,
 				jobListings[i].Industry,

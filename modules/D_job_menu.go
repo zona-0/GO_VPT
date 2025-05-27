@@ -7,8 +7,8 @@ import (
 const maxJobs = 100
 
 type JobListing struct {
-	Title, Industry string
-	Salary          int
+	Title            string
+	Salary, Industry int
 }
 
 var jobListings [maxJobs]JobListing
@@ -28,7 +28,7 @@ func JobMenu() {
 		fmt.Println("║ 2. [Edit]   Ubah data lowongan pekerjaan                     ║")
 		fmt.Println("║ 3. [Delete] Hapus data                                       ║")
 		fmt.Println("║ 4. [List]   Tampilkan Data                                   ║")
-		fmt.Println("║ 5. [Done]   Selesai / Kembali                                ║")
+		fmt.Println("║ 5. [Done]   Selesai dan Kembali                                ║")
 		fmt.Println("╠══════════════════════════════════════════════════════════════╣")
 		fmt.Print("Pilih menu: ")
 		fmt.Scan(&choice)
@@ -54,13 +54,18 @@ func addJobListing() {
 	if jobCount >= maxJobs {
 		fmt.Println("[!] Kapasitas lowongan penuh, tidak bisa tambah")
 	} else {
-		var title, industry string
-		var salary int
+		var title string
+		var salary, industry int
 		fmt.Print(">> Nama Lowongan: ")
 		//hJob_NamaLowongan()
 		fmt.Scan(&title)
-		fmt.Print(">> Kode Industri: ")
-		//hJob_KodeIndustri()
+		Header()
+		fmt.Println(">> Kode Industri: ")
+		fmt.Println("[Suggestion] Gunakan 3 angka (Contoh: 241, 294, 129)")
+		fmt.Println("[HELP] Angka tidak boleh mengandung unsur '0'")
+		fmt.Println()
+		fmt.Print(">> Input: ")
+		endSec()
 		fmt.Scan(&industry)
 		fmt.Print(">> Gaji: ")
 		fmt.Scan(&salary)
@@ -91,7 +96,7 @@ func deleteJobListing() {
 				i++
 			}
 			jobListings[jobCount-1].Title = ""
-			jobListings[jobCount-1].Industry = ""
+			jobListings[jobCount-1].Industry = 0
 			jobListings[jobCount-1].Salary = 0
 
 			jobCount--
@@ -113,8 +118,8 @@ func editJobListing() {
 			fmt.Println("[!] Nomor tidak valid")
 		} else {
 			idx = idx - 1
-			var title, industry, choice string
-			var salary int
+			var title, choice string
+			var salary, industry int
 
 			fmt.Printf("Judul Lowongan (sekarang: %s): ", jobListings[idx].Title)
 			fmt.Scan(&title)
@@ -122,9 +127,9 @@ func editJobListing() {
 				jobListings[idx].Title = title
 			}
 
-			fmt.Printf("Kode Industri (sekarang: %s): ", jobListings[idx].Industry)
+			fmt.Printf("Kode Industri (sekarang: %d): ", jobListings[idx].Industry)
 			fmt.Scan(&industry)
-			if industry != "" {
+			if industry != 0 {
 				jobListings[idx].Industry = industry
 			}
 
@@ -155,7 +160,7 @@ func listJobListings() {
 		fmt.Println("╠═════════╬════════════════════════╬═════════════════╬══════════════╣")
 		i = 0
 		for i < jobCount {
-			fmt.Printf("║  %-6d ║ %-22s ║ %-15s ║ Rp %-9d ║\n",
+			fmt.Printf("║  %-6d ║ %-22s ║ %-15d ║ Rp %-9d ║\n",
 				i+1,
 				jobListings[i].Title,
 				jobListings[i].Industry,
