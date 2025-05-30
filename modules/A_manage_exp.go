@@ -26,7 +26,7 @@ func ManageExperience() {
 
 		if command == 1 {
 			if data.ExperienceCount >= 1000000 {
-				fmt.Println("[!] Pengalaman sudah mencapai batas maksimum")
+				fmt.Println("[System] Pengalaman sudah mencapai batas maksimum")
 			} else {
 				SuggestionExperience()
 				fmt.Print("[>>] Job Title: ")
@@ -40,12 +40,12 @@ func ManageExperience() {
 				data.Experiences[data.ExperienceCount] = newExperience
 				data.ExperienceCount += 1
 
-				fmt.Println("[V] Pengalaman berhasil ditambahkan")
+				fmt.Println("[System] Pengalaman berhasil ditambahkan")
 				Clear()
 			}
 		} else if command == 2 {
 			if data.ExperienceCount == 0 {
-				fmt.Println("[!] Belum ada pengalaman untuk diubah")
+				fmt.Println("[System] Belum ada pengalaman untuk diubah")
 			} else {
 				fmt.Println("╔═══════╦════════════════════════╦════════════════════════╗")
 				fmt.Println("║  No.  ║        Jabatan         ║        Perusahaan      ║")
@@ -60,7 +60,7 @@ func ManageExperience() {
 				fmt.Print("Masukkan nomor pengalaman yang ingin diubah (1-", data.ExperienceCount, "): ")
 				fmt.Scan(&index)
 				if index < 1 || index > data.ExperienceCount {
-					fmt.Println("[!] Nomor tidak valid")
+					fmt.Println("[System] Nomor tidak valid")
 				} else {
 					SuggestionExperience()
 					fmt.Print("[>>] Job Title Baru: ")
@@ -71,13 +71,13 @@ func ManageExperience() {
 
 					data.Experiences[index-1].Title = title
 					data.Experiences[index-1].Company = company
-					fmt.Println("[V] Pengalaman berhasil diubah")
+					fmt.Println("[System] Pengalaman berhasil diubah")
 				}
 				Clear()
 			}
 		} else if command == 3 {
 			if data.ExperienceCount == 0 {
-				fmt.Println("[!] Belum ada pengalaman yang dimasukkan")
+				fmt.Println("[System] Belum ada pengalaman yang dimasukkan")
 			} else {
 				fmt.Println("╔═══════╦════════════════════════╦════════════════════════╗")
 				fmt.Println("║  No.  ║        Jabatan         ║        Perusahaan      ║")
@@ -91,7 +91,7 @@ func ManageExperience() {
 			}
 		} else if command == 4 {
 			if data.ExperienceCount == 0 {
-				fmt.Println("[!] Belum ada pengalaman untuk dihapus")
+				fmt.Println("[System] Belum ada pengalaman untuk dihapus")
 			} else {
 				fmt.Println("╔═══════╦════════════════════════╦════════════════════════╗")
 				fmt.Println("║  No.  ║        Jabatan         ║        Perusahaan      ║")
@@ -106,7 +106,7 @@ func ManageExperience() {
 				fmt.Print("Masukkan nomor pengalaman yang ingin dihapus (1-", data.ExperienceCount, "): ")
 				fmt.Scan(&index)
 				if index < 1 || index > data.ExperienceCount {
-					fmt.Println("[!] Nomor tidak valid")
+					fmt.Println("[System] Nomor tidak valid")
 				} else {
 					i = index - 1
 					for i < data.ExperienceCount-1 {
@@ -114,15 +114,15 @@ func ManageExperience() {
 						i += 1
 					}
 					data.ExperienceCount -= 1
-					fmt.Println("[V] Pengalaman berhasil dihapus")
+					fmt.Println("[System] Pengalaman berhasil dihapus")
 				}
 				Clear()
 			}
 		} else if command == 5 {
-			fmt.Println("[V] Sesi input pengalaman selesai")
+			fmt.Println("[System] Sesi input pengalaman selesai")
 			running = false
 		} else {
-			fmt.Println("[!] Pilihan tidak dikenali. Masukkan angka <1 - 5>")
+			fmt.Println("[System] Pilihan tidak dikenali. Masukkan angka <1 - 5>")
 		}
 	}
 }

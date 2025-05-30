@@ -28,7 +28,7 @@ func JobMenu() {
 		fmt.Println("║ 2. [Edit]   Ubah data lowongan pekerjaan                     ║")
 		fmt.Println("║ 3. [Delete] Hapus data                                       ║")
 		fmt.Println("║ 4. [List]   Tampilkan Data                                   ║")
-		fmt.Println("║ 5. [Done]   Selesai dan Kembali                                ║")
+		fmt.Println("║ 5. [Done]   Selesai dan Kembali                              ║")
 		fmt.Println("╠══════════════════════════════════════════════════════════════╣")
 		fmt.Print("Pilih menu: ")
 		fmt.Scan(&choice)
@@ -45,14 +45,14 @@ func JobMenu() {
 			running = false
 			// sortJobMenu()
 		} else {
-			fmt.Println("[!] Pilihan tidak valid")
+			fmt.Println("[System] Pilihan tidak valid")
 		}
 	}
 }
 
 func addJobListing() {
 	if jobCount >= maxJobs {
-		fmt.Println("[!] Kapasitas lowongan penuh, tidak bisa tambah")
+		fmt.Println("[System] Kapasitas lowongan penuh, tidak bisa tambah")
 	} else {
 		var title string
 		var salary, industry int
@@ -62,10 +62,10 @@ func addJobListing() {
 		Header()
 		fmt.Println(">> Kode Industri: ")
 		fmt.Println("[Suggestion] Gunakan 3 angka (Contoh: 241, 294, 129)")
-		fmt.Println("[HELP] Angka tidak boleh mengandung unsur '0'")
+		fmt.Println("[System] Angka tidak boleh mengandung unsur '0'")
 		fmt.Println()
-		fmt.Print(">> Input: ")
 		endSec()
+		fmt.Print(">> Input: ")
 		fmt.Scan(&industry)
 		fmt.Print(">> Gaji: ")
 		fmt.Scan(&salary)
@@ -74,21 +74,21 @@ func addJobListing() {
 		jobListings[jobCount].Industry = industry
 		jobListings[jobCount].Salary = salary
 		jobCount++
-		fmt.Println("[V] Lowongan berhasil ditambahkan")
+		fmt.Println("[System] Lowongan berhasil ditambahkan")
 		Clear()
 	}
 }
 
 func deleteJobListing() {
 	if jobCount == 0 {
-		fmt.Println("[!] Tidak ada lowongan untuk dihapus")
+		fmt.Println("[System] Tidak ada lowongan untuk dihapus")
 	} else {
 		listJobListings()
 		var idx, i int
 		fmt.Print("Masukkan nomor lowongan yang ingin dihapus: ")
 		fmt.Scan(&idx)
 		if idx < 1 || idx > jobCount {
-			fmt.Println("[!] Nomor tidak valid.")
+			fmt.Println("[System] Nomor tidak valid.")
 		} else {
 			i = idx - 1
 			for i < jobCount-1 {
@@ -100,50 +100,50 @@ func deleteJobListing() {
 			jobListings[jobCount-1].Salary = 0
 
 			jobCount--
-			fmt.Println("[V] Lowongan berhasil dihapus")
+			fmt.Println("[System] Lowongan berhasil dihapus")
 		}
 	}
 }
 
 func editJobListing() {
 	if jobCount == 0 {
-		fmt.Println("[!] Tidak ada lowongan untuk diedit.")
+		fmt.Println("[System] Tidak ada lowongan untuk diedit.")
 	} else {
 		listJobListings()
 		var idx int
-		fmt.Print("Masukkan nomor lowongan yang ingin diedit: ")
+		fmt.Print(">> Masukkan nomor lowongan yang ingin diedit: ")
 		fmt.Scan(&idx)
 
 		if idx < 1 || idx > jobCount {
-			fmt.Println("[!] Nomor tidak valid")
+			fmt.Println("[System] Nomor tidak valid")
 		} else {
 			idx = idx - 1
 			var title, choice string
 			var salary, industry int
 
-			fmt.Printf("Judul Lowongan (sekarang: %s): ", jobListings[idx].Title)
+			fmt.Printf(">> Judul Lowongan (sekarang: %s): ", jobListings[idx].Title)
 			fmt.Scan(&title)
 			if title != "" {
 				jobListings[idx].Title = title
 			}
 
-			fmt.Printf("Kode Industri (sekarang: %d): ", jobListings[idx].Industry)
+			fmt.Printf(">> Kode Industri (sekarang: %d): ", jobListings[idx].Industry)
 			fmt.Scan(&industry)
 			if industry != 0 {
 				jobListings[idx].Industry = industry
 			}
 
-			fmt.Printf("Gaji (sekarang: RP %d). Ubah gaji? (Y/N): ", jobListings[idx].Salary)
+			fmt.Printf(">> Gaji (sekarang: RP %d). Ubah gaji? (Y/N): ", jobListings[idx].Salary)
 			fmt.Scan(&choice)
 			if choice == "y" || choice == "Y" {
-				fmt.Print("Masukkan Gaji baru: ")
+				fmt.Print(">> Masukkan Gaji baru: ")
 				fmt.Scan(&salary)
 				jobListings[idx].Salary = salary
 			} else {
-				fmt.Println("Gaji tidak diubah")
+				fmt.Println("[System] Gaji tidak diubah")
 			}
 
-			fmt.Println("[V] Lowongan berhasil diperbarui")
+			fmt.Println("[System] Lowongan berhasil diperbarui")
 		}
 	}
 }
@@ -153,7 +153,7 @@ func listJobListings() {
 	var i int
 
 	if jobCount == 0 {
-		fmt.Println("[!] Belum ada data lowongan")
+		fmt.Println("[System] Belum ada data lowongan")
 	} else {
 		fmt.Println("╔═════════╦════════════════════════╦═════════════════╦══════════════╗")
 		fmt.Println("║   No    ║        Title           ║    Industri     ║     Gaji     ║")
@@ -174,7 +174,7 @@ func listJobListings() {
 // func sortJobMenu() {
 // 	var choose int
 // 	if jobCount == 0 {
-// 		fmt.Println("[!] Belum ada data lowongan untuk diurutkan")
+// 		fmt.Println("[System] Belum ada data lowongan untuk diurutkan")
 // 		BackToMenu()
 // 	}
 

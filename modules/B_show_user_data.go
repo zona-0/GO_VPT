@@ -10,7 +10,7 @@ func ShowAllUserData() {
 	var edu data.Education
 
 	fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
-	fmt.Println("║                        [ RINGKASAN DATA USER ]                     ║")
+	fmt.Println("║                        [ RINGKASAN USER DATA	 ]                     ║")
 	fmt.Println("╚════════════════════════════════════════════════════════════════════╝")
 
 	// TODO: Show skill data
@@ -18,7 +18,7 @@ func ShowAllUserData() {
 	fmt.Println("║                           [ SKILL USER ]                           ║")
 	fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
 	if data.SkillCount == 0 {
-		fmt.Println("║              [!] Belum ada data skill                              ║")
+		fmt.Println("║              [System] Belum ada data sk1ill                        ║")
 	} else {
 		i = 0
 		for i < data.SkillCount {
@@ -33,7 +33,7 @@ func ShowAllUserData() {
 	fmt.Println("║                        [ PENGALAMAN KERJA ]                        ║")
 	fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
 	if data.ExperienceCount == 0 {
-		fmt.Println("║              [!] Belum ada pengalaman kerja                        ║")
+		fmt.Println("║              [System] Belum ada pengalaman kerja                   ║")
 	} else {
 		fmt.Println("║  No.  ║        Jabatan         ║         Perusahaan                ║")
 		fmt.Println("╠═══════╬════════════════════════╬═══════════════════════════════════╣")
@@ -52,7 +52,7 @@ func ShowAllUserData() {
 	fmt.Println("║                        [ RIWAYAT PENDIDIKAN ]                      ║")
 	fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
 	if data.EducationCount == 0 {
-		fmt.Println("║              [!] Belum ada data pendidikan                         ║")
+		fmt.Println("║              [System] Belum ada data pendidikan                    ║")
 	} else {
 		fmt.Println("║  No.  ║       Sekolah/Universitas        ║     Gelar     ║ Tahun   ║")
 		fmt.Println("╠═══════╬══════════════════════════════════╬═══════════════╬═════════╣")

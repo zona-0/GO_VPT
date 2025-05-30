@@ -12,7 +12,7 @@ func endSec() {
 
 func SuggestionAI() {
 	fmt.Println("╔════════════════════════════════════════════════════════════════════════╗")
-	fmt.Println("                         C A R E E R  E D G E                            ")
+	fmt.Println("                      Vitae Pre-Trained Transformer                      ")
 	fmt.Println("         AI Assistant for Smart Resumes & Cover Letter Creation          ")
 	fmt.Println("╠════════════════════════════════════════════════════════════════════════╣")
 	fmt.Printf(">> Apa yang bisa saya bantu?\n")

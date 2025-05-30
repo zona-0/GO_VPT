@@ -5,7 +5,7 @@ import "fmt"
 func BackToMenu() {
 	var backMenu string
 	fmt.Println()
-	fmt.Println("[HELP] Type 'pback' to return to the main menu")
+	fmt.Println("[System] Type 'pback' to return to the main menu")
 	for {
 		fmt.Scanln(&backMenu)
 		if backMenu == "pback" {

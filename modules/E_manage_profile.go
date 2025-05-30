@@ -35,7 +35,7 @@ func ManageProfile() {
 		} else if input == 5 {
 			running = false
 		} else {
-			fmt.Println("[HELP] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
+			fmt.Println("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
 		}
 	}
 }
