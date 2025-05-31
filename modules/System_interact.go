@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// TODO: Interact func for simulating user interaction with AI
 func Interact(text string) {
 	var i int = 0
 	for {
@@ -18,6 +19,9 @@ func Interact(text string) {
 	fmt.Println()
 }
 
+// TODO: Delay func for simulating a delay
 func Delay() {
 	time.Sleep(1 * time.Second)
 }
+
+// TODO: Simulasi ges
