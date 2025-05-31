@@ -26,7 +26,7 @@ func ManageEducation() {
 
 		if command == 1 {
 			if data.EducationCount >= 1000000 {
-				fmt.Println("[System] Pendidikan sudah mencapai batas maksimum")
+				Interact("[System] Pendidikan sudah mencapai batas maksimum")
 			} else {
 				SuggestionEducation()
 				fmt.Print("[>>] Universitas: ")
@@ -45,12 +45,12 @@ func ManageEducation() {
 				data.Educations[data.EducationCount] = newEducation
 				data.EducationCount += 1
 
-				fmt.Println("[System] Pendidikan berhasil ditambahkan")
+				Interact("[System] Pendidikan berhasil ditambahkan")
 				Clear()
 			}
 		} else if command == 2 {
 			if data.EducationCount == 0 {
-				fmt.Println("[System] Belum ada data pendidikan untuk diubah")
+				Interact("[System] Belum ada data pendidikan untuk diubah")
 			} else {
 				fmt.Println("╔═══════╦════════════════════════════════════╦══════════════╦══════╗")
 				fmt.Println("║  No.  ║           School/University        ║    Degree    ║ Year ║")
@@ -65,14 +65,14 @@ func ManageEducation() {
 				fmt.Scan(&index)
 
 				if index < 1 || index > data.EducationCount {
-					fmt.Println("[System] Nomor tidak valid")
+					Interact("[System] Nomor tidak valid")
 				} else {
 					SuggestionEducation()
-					fmt.Print("[>>] School/University Baru: ")
+					fmt.Print("[>>] Universitas Baru: ")
 					fmt.Scan(&school)
-					fmt.Print("[>>] Degree Baru (D1/D2/D3/D4/S1/S2/S3): ")
+					fmt.Print("[>>] Derajat Baru: ")
 					fmt.Scan(&degree)
-					fmt.Print("[>>] Major Baru: ")
+					fmt.Print("[>>] Gelar Baru: ")
 					fmt.Scan(&major)
 					fmt.Print("[>>] Year of Graduation Baru: ")
 					fmt.Scan(&year)
@@ -81,13 +81,13 @@ func ManageEducation() {
 					data.Educations[index-1].Degree = degree + "_" + major
 					data.Educations[index-1].Year = year
 
-					fmt.Println("[System] Data pendidikan berhasil diubah")
+					Interact("[System] Data pendidikan berhasil diubah")
 					Clear()
 				}
 			}
 		} else if command == 3 {
 			if data.EducationCount == 0 {
-				fmt.Println("[System] Belum ada data pendidikan yang dimasukkan")
+				Interact("[System] Belum ada data pendidikan yang dimasukkan")
 			} else {
 				fmt.Println("╔═══════╦════════════════════════════════════╦══════════════╦══════╗")
 				fmt.Println("║  No.  ║           School/University        ║    Degree    ║ Year ║")
@@ -101,7 +101,7 @@ func ManageEducation() {
 
 		} else if command == 4 {
 			if data.EducationCount == 0 {
-				fmt.Println("[System] Belum ada data pendidikan untuk dihapus")
+				Interact("[System] Belum ada data pendidikan untuk dihapus")
 			} else {
 				fmt.Println("╔═══════╦════════════════════════════════════╦══════════════╦══════╗")
 				fmt.Println("║  No.  ║           School/University        ║    Degree    ║ Year ║")
@@ -116,22 +116,22 @@ func ManageEducation() {
 				fmt.Scan(&index)
 
 				if index < 1 || index > data.EducationCount {
-					fmt.Println("[System] Nomor tidak valid")
+					Interact("[System] Nomor tidak valid")
 				} else {
 					for i = index - 1; i < data.EducationCount-1; i++ {
 						data.Educations[i] = data.Educations[i+1]
 					}
 					data.EducationCount -= 1
-					fmt.Println("[System] Data pendidikan berhasil dihapus")
+					Interact("[System] Data pendidikan berhasil dihapus")
 				}
 				Clear()
 			}
 		} else if command == 5 {
-			fmt.Println("[System] Sesi input pendidikan selesai")
+			Interact("[System] Sesi input pendidikan selesai")
 			running = false
 
 		} else {
-			fmt.Println("[System] Pilihan tidak dikenali. Masukkan angka <1 - 5>")
+			Interact("[System] Pilihan tidak dikenali. Masukkan angka <1 - 5>")
 		}
 	}
 }

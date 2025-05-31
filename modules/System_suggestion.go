@@ -49,7 +49,7 @@ func SuggestionExperience() {
 	fmt.Println("║     - Local_High_School                                              ║")
 	fmt.Println("║     - Marketing_Firm                                                 ║")
 	fmt.Println("║ Catatan: Gunakan underscore (_) untuk spasi pada kata lebih dari satu║")
-	fmt.Println("║ Catatan: Gunakan huruf kecil                                        ║")
+	fmt.Println("║ Catatan: Gunakan huruf kecil                                         ║")
 	fmt.Println("╚══════════════════════════════════════════════════════════════════════╝")
 }
 

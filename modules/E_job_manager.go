@@ -32,7 +32,7 @@ func ManageJob() {
 		} else if input == 4 {
 			running = false
 		} else {
-			fmt.Println("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
+			Interact("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
 		}
 	}
 }

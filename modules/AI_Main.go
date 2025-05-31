@@ -5,29 +5,44 @@ import (
 	"fmt"
 )
 
+var kata, aboutme, sertifikat, nama, alamat, hp, email string
+var selesai bool = false
+
 func MainAI() {
 	var i int
 	var user string
 	//SuggestionAI()
 
 	Clear()
+	fmt.Println()
+	fmt.Println(" ██        ██  ██████  ████████ ")
+	fmt.Println("  ██      ██   ██  ██     ██	   ")
+	fmt.Println("   ██    ██    ██████     ██    ")
+	fmt.Println("    ██  ██     ██         ██    ")
+	fmt.Println("      ██       ██	  ██    ")
+
+	fmt.Println()
+	fmt.Println(">> Vitae Pre-Trained Transformer")
+	fmt.Println(">> Your AI Assistant for Smart Resumes, Job Reccomendation and Cover Letter Creation")
+	Interact(">> Ketik 'resume' untuk bantuan membuat resume atau ketik 'suratkerja' untuk bantuan membuat surat lamaran kerja")
+	fmt.Println()
 	fmt.Print(">> ")
 	fmt.Scan(&user)
 	// Clear()
 	// TODO: AI resume sec
 	if user == "resume" || user == "RESUME" || user == "Resume" {
 		fmt.Println("----------------------------------------------------------------------------------------------")
-		fmt.Println(">> Tentu! untuk membuat resume yang efektif, aku butuh informasi dasar terlebih dahulu")
-		fmt.Println(">> Silahkan isi data berikut: ")
+		Interact(">> Tentu! untuk membuat resume yang efektif, aku butuh informasi dasar terlebih dahulu")
+		Interact(">> Silahkan isi data berikut: ")
 		fmt.Println("----------------------------------------------------------------------------------------------")
-		fmt.Println("[A] Informasi Pribadi: ")
+		Interact("[A] Informasi Pribadi: ")
 		fmt.Printf("	[X] Nama: \n	[X] Alamat: \n	[X] No. HP: \n	[X] Email: \n")
-		fmt.Println("[B] Jelaskan tentang dirimu: ")
-		fmt.Println("	[X] About Me: ")
+		Interact("[B] Jelaskan tentang dirimu: ")
+		Interact("	[X] About Me: ")
 		// TODO: TAKE EDUCATION DATA
-		fmt.Println("[C] Pendidikan: ")
+		Interact("[C] Pendidikan: ")
 		if data.EducationCount == 0 {
-			fmt.Println("	[System] Anda belum mengisi data pendidikan. Silakan isi melalui menu utama!")
+			Interact("	[System] Anda belum mengisi data pendidikan. Silakan isi melalui menu utama!")
 		} else {
 			for i = 0; i < data.EducationCount; i++ {
 				fmt.Printf("	[System] Sekolah/Universitas: %s\n	[System] Jenjang: %s\n	[System] Tahun Lulus: %d\n",
@@ -36,9 +51,9 @@ func MainAI() {
 		}
 
 		// TODO: TAKE SKILLS DATA
-		fmt.Println("[D] Keterampilan: ")
+		Interact("[D] Keterampilan: ")
 		if data.SkillCount == 0 {
-			fmt.Println("	[System] Anda belum mengisi data keterampilan. Silakan isi melalui menu utama!")
+			Interact("	[System] Anda belum mengisi data keterampilan. Silakan isi melalui menu utama!")
 		} else {
 			i = 0
 			for i < data.SkillCount {
@@ -48,9 +63,9 @@ func MainAI() {
 		}
 
 		// TODO: PENGALAMAN KERJA
-		fmt.Println("[E] Pengalaman Kerja: ")
+		Interact("[E] Pengalaman Kerja: ")
 		if data.ExperienceCount == 0 {
-			fmt.Println("	[System] Anda belum mengisi data pengalaman kerja. Silakan isi melalui menu utama!")
+			Interact("	[System] Anda belum mengisi data pengalaman kerja. Silakan isi melalui menu utama!")
 		} else {
 			i = 0
 			for i < data.ExperienceCount {
@@ -60,7 +75,7 @@ func MainAI() {
 		}
 
 		// TODO: CERTIFICATION SEC
-		fmt.Println("[F] Sertifikat: ")
+		Interact("[F] Sertifikat: ")
 
 		// TODO: END SEC
 		fmt.Println()
@@ -69,7 +84,7 @@ func MainAI() {
 		fmt.Println()
 
 		// TODO: USER INPUT SEC
-		var nama, alamat, hp, email string
+		// var nama, alamat, hp, email string
 
 		fmt.Print(">> Nama: ")
 		fmt.Scan(&nama)
@@ -81,11 +96,11 @@ func MainAI() {
 		fmt.Scan(&email)
 		fmt.Println()
 
-		var kata, aboutme string
-		var selesai bool = false
+		// var kata, aboutme string
+		// var selesai bool = false
 
-		fmt.Println(">> Tentang Saya: ")
-		fmt.Println("   [System] Akhiri dengan tanda '.' untuk mengakhiri")
+		Interact(">> Tentang Saya: ")
+		Interact("   [System] Akhiri dengan klik 'enter' lalu ketik '.' untuk mengakhiri")
 		for !selesai {
 			fmt.Scan(&kata)
 
@@ -100,26 +115,26 @@ func MainAI() {
 			}
 		}
 
-		var sertifikat string
+		// var sertifikat string
 		fmt.Print(">> Sertifikat: ")
 		fmt.Scan(&sertifikat)
 
 		// TODO: RESUME PRINT SECTION
 		fmt.Printf("\n\n")
-		fmt.Println(">> Berikut ini adalah resume yang berhasil saya susun berdasarkan data yang Anda berikan.")
-		fmt.Println(">> Silakan periksa di bawah ini. Jika ada yang ingin direvisi, Anda bisa kembali kapan saja.")
+		Interact(">> Berikut ini adalah resume yang berhasil saya susun berdasarkan data yang kamu berikan.")
+		Interact(">> Silakan periksa di bawah ini. Jika ada yang ingin direvisi, Anda bisa kembali kapan saja.")
 		fmt.Printf("\n\n")
 		fmt.Println("==================================================================")
 		fmt.Printf("Nama: %s\nAlamat: %s\n\nTelp: %s | Email: %s\n", nama, alamat, hp, email)
 
-		fmt.Println("------------------------------------------------------------")
-		fmt.Println("Tentang Saya: ")
-		fmt.Println(aboutme)
+		fmt.Println("------------------------------------------------------------------")
+		Interact("Tentang Saya: ")
+		Interact(aboutme)
 
-		fmt.Println("------------------------------------------------------------")
-		fmt.Println("KETERAMPILAN:")
+		fmt.Println("------------------------------------------------------------------")
+		Interact("KETERAMPILAN:")
 		if data.SkillCount == 0 {
-			fmt.Println("  [System] Belum ada keterampilan")
+			Interact("  [System] Belum ada keterampilan")
 		} else {
 			for i = 0; i < data.SkillCount; i++ {
 				fmt.Printf("  - %s\n", data.Skills[i].Name)
@@ -129,24 +144,24 @@ func MainAI() {
 		fmt.Println("------------------------------------------------------------------")
 
 		if data.EducationCount == 0 && data.ExperienceCount == 0 {
-			fmt.Println("Pendidikan:")
-			fmt.Println("  [System] Belum ada pendidikan")
-			fmt.Println("Pengalaman Kerja:")
-			fmt.Println("  [System] Belum ada pengalaman kerja")
+			Interact("Pendidikan:")
+			Interact("  [System] Belum ada pendidikan")
+			Interact("Pengalaman Kerja:")
+			Interact("  [System] Belum ada pengalaman kerja")
 		} else if data.EducationCount == 0 {
-			fmt.Println("PENDIDIKAN:")
-			fmt.Println("  [System] Belum ada pendidikan")
-			fmt.Println("Pengalaman Kerja:")
+			Interact("PENDIDIKAN:")
+			Interact("  [System] Belum ada pendidikan")
+			Interact("Pengalaman Kerja:")
 			for i = 0; i < data.ExperienceCount; i++ {
 				fmt.Printf("  - %s di %s\n", data.Experiences[i].Title, data.Experiences[i].Company)
 			}
 		} else if data.ExperienceCount == 0 {
-			fmt.Println("Pendidikan:")
+			Interact("Pendidikan:")
 			for i = 0; i < data.EducationCount; i++ {
 				fmt.Printf("  - %s, %s (%d)\n", data.Educations[i].School, data.Educations[i].Degree, data.Educations[i].Year)
 			}
-			fmt.Println("Pengalaman Kerja:")
-			fmt.Println("  [System] Belum ada pengalaman kerja")
+			Interact("Pengalaman Kerja:")
+			Interact("  [System] Belum ada pengalaman kerja")
 		} else {
 			fmt.Printf("%-38s| %-38s\n", ">> Pendidikan: ", ">> Pengalaman Kerja: ")
 
@@ -172,11 +187,11 @@ func MainAI() {
 		}
 
 		fmt.Println("------------------------------------------------------------------")
-		fmt.Println("Sertifikat:")
+		Interact("Sertifikat:")
 		if sertifikat != "" {
 			fmt.Printf("  - %s\n", sertifikat)
 		} else {
-			fmt.Println("  [System] Tidak ada sertifikat")
+			Interact("  [System] Tidak ada sertifikat")
 		}
 
 		fmt.Printf("\n\n")
@@ -191,97 +206,306 @@ func MainAI() {
 		//ManageEducation()
 	} else if user == "suratkerja" || user == "SuratKerja" || user == "Surat_Kerja" {
 		fmt.Println()
-		fmt.Println(">> Tentu! Sebelum aku membuat surat lamaran kerja, aku mau kasih contoh formatnya dulu, coba kamu baca ya!")
-		fmt.Println(">> Silahkan isi data berikut: ")
+		Interact(">> Tentu! Sebelum aku membuat surat lamaran kerja, aku mau kasih contoh formatnya dulu, coba kamu baca ya!")
 
-		fmt.Println("-------------------------------------------------------------")
-		fmt.Println("                        SURAT LAMARAN PEKERJAAN              ")
-		fmt.Println("-------------------------------------------------------------")
-		fmt.Println("Jakarta, 30 Mei 2025")
+		Interact("-------------------------------------------------------------")
+		Interact("                    SURAT LAMARAN PEKERJAAN                  ")
+		Interact("-------------------------------------------------------------")
+		Interact("Jakarta, 30 Mei 2025")
 		fmt.Println()
 
-		fmt.Println("Hal       : Lamaran Pekerjaan")
-		fmt.Println("Lampiran  : 1 (satu) berkas")
+		Interact("Hal       : Lamaran Pekerjaan")
+		Interact("Lampiran  : 1 (satu) berkas")
 		fmt.Println()
 
-		fmt.Println("Kepada Yth.")
-		fmt.Println("Bapak/Ibu HRD")
-		fmt.Println("PT Maju Jaya Abadi, Jakarta Pusat")
-		fmt.Println("Jl. Merdeka No. 123")
+		Interact("Kepada Yth.")
+		Interact("Bapak/Ibu HRD")
+		Interact("PT Maju Jaya Abadi, Jakarta Pusat")
+		Interact("Jl. Merdeka No. 123")
 		fmt.Println()
 
-		fmt.Println("Dengan hormat,")
-		fmt.Println("Berdasarkan informasi lowongan kerja yang saya peroleh dari situs JobStreet pada tanggal 28 Mei 2025,")
-		fmt.Println("saya bermaksud mengajukan lamaran untuk posisi \033[1mSoftware Engineer\033[0m di PT Maju Jaya Abadi.")
-		fmt.Println("Saya sangat tertarik dengan visi perusahaan Bapak/Ibu dalam menghadirkan solusi teknologi inovatif.")
+		Interact("Dengan hormat,")
+		Interact("Berdasarkan informasi lowongan kerja yang saya peroleh dari situs JobStreet pada tanggal 28 Mei 2025,")
+		Interact("saya bermaksud mengajukan lamaran untuk posisi Fullstack Developer di PT Telkom.")
+		Interact("Saya sangat tertarik dengan visi perusahaan Bapak/Ibu dalam menghadirkan solusi teknologi inovatif.")
 		fmt.Println()
 
-		fmt.Println("Berikut data diri saya:")
-		fmt.Println("-------------------------------------------------------------")
+		Interact("Berikut data diri saya:")
+		Interact("-------------------------------------------------------------")
 		fmt.Printf("%-20s: %s\n", "Nama", "Zona")
 		fmt.Printf("%-20s: %s\n", "Tempat/Tgl Lahir", "Surakarta, 7 April 2006")
 		fmt.Printf("%-20s: %s\n", "Pendidikan Terakhir", "S1 Teknik Informatika – Universitas Telkom")
 		fmt.Printf("%-20s: %s\n", "Alamat", "Jl. Kenanga No. 45, Jakarta Timur")
 		fmt.Printf("%-20s: %s\n", "Telepon", "0812-3456-7890")
 		fmt.Printf("%-20s: %s\n", "Email", "zona@email.com")
-		fmt.Println("-------------------------------------------------------------")
+		Interact("-------------------------------------------------------------")
 		fmt.Println()
 
-		fmt.Println("Saya memiliki pengalaman 2 tahun sebagai Backend Developer di PT Teknologi Cerdas,")
-		fmt.Println("dengan keahlian utama dalam REST API (Go, Node.js), PostgreSQL, dan arsitektur microservices.")
-		fmt.Println("Saya terbiasa bekerja dalam tim, mampu belajar cepat, dan beradaptasi dengan lingkungan kerja.")
+		Interact("Saya memiliki pengalaman 2 tahun sebagai Backend Developer di PT Teknologi Cerdas,")
+		Interact("dengan keahlian utama dalam REST API (Go, Node.js), PostgreSQL, dan arsitektur microservices.")
+		Interact("Saya terbiasa bekerja dalam tim, mampu belajar cepat, dan beradaptasi dengan lingkungan kerja.")
 		fmt.Println()
 
-		fmt.Println("Sebagai bahan pertimbangan, saya lampirkan:")
-		fmt.Println("  1. Daftar Riwayat Hidup (CV)")
-		fmt.Println("  2. Fotokopi Ijazah Terakhir")
-		fmt.Println("  3. Fotokopi Transkrip Nilai")
-		fmt.Println("  4. Sertifikat Keahlian")
-		fmt.Println("  5. Pas Foto Terbaru")
+		Interact("Sebagai bahan pertimbangan, saya lampirkan:")
+		Interact("  1. Daftar Riwayat Hidup (CV)")
+		Interact("  2. Fotokopi Ijazah Terakhir")
+		Interact("  3. Fotokopi Transkrip Nilai")
+		Interact("  4. Sertifikat Keahlian")
+		Interact("  5. Pas Foto Terbaru")
 		fmt.Println()
 
-		fmt.Println("Demikian surat lamaran ini saya buat. Saya berharap dapat mengikuti tahapan seleksi berikutnya.")
-		fmt.Println("Atas perhatian dan kesempatan yang diberikan, saya ucapkan terima kasih.")
+		Interact("Demikian surat lamaran ini saya buat. Saya berharap dapat mengikuti tahapan seleksi berikutnya.")
+		Interact("Atas perhatian dan kesempatan yang diberikan, saya ucapkan terima kasih.")
 		fmt.Println()
 
-		fmt.Println("Hormat saya,")
+		Interact("Hormat saya,")
 		fmt.Printf("\n\n")
-		fmt.Println("Zona")
-		fmt.Println("-------------------------------------------------------------")
+		Interact("Zona")
+		Interact("-------------------------------------------------------------")
 		fmt.Printf("\n\n")
-		fmt.Println(">> Surat lamaran kerja di atas adalah contoh format yang umum digunakan")
-		fmt.Println(">> Jika anda ingin membuat surat lamaran pekerjaan versi anda, saya dengan senang hati akan membantu!")
+		Interact(">> Surat lamaran kerja di atas adalah contoh format yang umum digunakan")
+		Interact(">> Jika kamu ingin membuat surat lamaran pekerjaan versi kamu, aku dengan senang hati bakal bantu!")
 		fmt.Println()
-		fmt.Println(">> Apakah anda ingin membuat surat lamaran kerja sekarang?")
-		fmt.Println(">> [System] Ketik 'ya' untuk melanjutkan atau 'tidak' untuk kembali ke menu utama")
+		Interact(">> Apakah kamu ingin membuat surat lamaran kerja sekarang?")
+		Interact(">> Ketik 'ya' untuk melanjutkan atau 'tidak' untuk kembali ke menu utama")
 
 		var userInput string
 		fmt.Print(">> ")
 		fmt.Scan(&userInput)
 		if userInput == "ya" || userInput == "Ya" || userInput == "YA" {
 			fmt.Println()
-			fmt.Println(">> Perhatikan data yang anda isi sebelumnya!")
-			ShowAllUserData()
-
+			Interact("Isi data diri kamu ya supaya aku bisa bantu buat surat lamaran kerjanya")
 			fmt.Println()
-			fmt.Println("Saya membutuhkan data lebih lanjut berkaitan dengan data diri anda: ")
-			fmt.Println(">> [Input] Tempat, Tanggal Bulan Tahun: ")
-			fmt.Println(">> [HELP] Jakarta, 30 Mei 2025")
+			fmt.Println("-------------------------------------------------------------")
+			fmt.Printf("%30s\n", "SURAT LAMARAN PEKERJAAN")
+			fmt.Println("-------------------------------------------------------------")
 
-			var tempat, bulan string
-			var tanggal, tahun int
+			fmt.Println("______, __ ____ ____")
+			var tempatS, bulanS string
+			var tanggalS, tahunS int
 
 			fmt.Print(">> ")
-			fmt.Scan(&tempat, &tanggal, &bulan, &tahun)
+			fmt.Scan(&tempatS, &tanggalS, &bulanS, &tahunS)
+			fmt.Println()
 
-			// fmt.Printf("%s %d %s %d", tempat, tanggal, bulan, tahun)
+			fmt.Println("Hal       : Lamaran Pekerjaan")
+			fmt.Println("Lampiran  : 1 (satu) berkas")
+			fmt.Println()
 
+			fmt.Println("Kepada Yth.")
+			fmt.Println("Bapak/Ibu HRD")
+
+			fmt.Println("PT _______, _______")
+			var namaPT, alamatPT string
+			fmt.Print(">> ")
+			fmt.Scan(&namaPT, &alamatPT)
+
+			fmt.Println("Jl. _____ No. __")
+			var namaJalan string
+			var noJalan int
+			fmt.Print(">> ")
+			fmt.Scan(&namaJalan, &noJalan)
+
+			fmt.Println("Dengan hormat,")
+			fmt.Println("Berdasarkan informasi lowongan kerja yang saya peroleh dari situs _______ pada tanggal __ ____ ____,")
+			var situs, bulanA string
+			var tanggalA, tahunA int
+			fmt.Print(">> ")
+			fmt.Scan(&situs, &tanggalA, &bulanA, &tahunA)
+
+			fmt.Printf("saya bermaksud mengajukan lamaran untuk posisi ________ di PT %s\n.", namaPT)
+			fmt.Print(">> ")
+			var posisiPekerjaan string
+			fmt.Scan(&posisiPekerjaan)
+
+			Interact("Saya sangat tertarik dengan visi perusahaan Bapak/Ibu dalam menghadirkan solusi teknologi inovatif.")
+			fmt.Println()
+
+			fmt.Println("-------------------------------------------------------------")
+			var namaLengkap, tempatLahir, bulanLahir, alamatJ, alamatK, email string
+			var tanggalLahir, tahunLahir, noJ, noHp int
+			fmt.Println("Nama                : _______")
+			fmt.Print(">> ")
+			fmt.Scan(&namaLengkap)
+
+			fmt.Println("Tempat/Tgl Lahir    : _______, __ ______ ____")
+			fmt.Print(">> ")
+			fmt.Scan(&tempatLahir, &tanggalLahir, &bulanLahir, &tahunLahir)
+
+			// fmt.Println("Pendidikan Terakhir : __ __________ - ______")
+			if data.EducationCount > 0 {
+				var last = data.Educations[data.EducationCount-1]
+				fmt.Printf("Pendidikan Terakhir : %s - %s\n", last.Degree, last.Degree)
+			} else {
+				fmt.Println("Pendidikan Terakhir : -")
+			}
+
+			fmt.Println("Alamat              : Jl. _____ No. __, _____")
+			fmt.Print(">> ")
+			fmt.Scan(&alamatJ, &noJ, &alamatK)
+
+			fmt.Println("Telepon             : _______________")
+			fmt.Print(">> ")
+			fmt.Scan(&noHp)
+
+			fmt.Println("Email               : __________@email.com")
+			fmt.Print(">> ")
+			fmt.Scan(&email)
+			fmt.Println("-------------------------------------------------------------")
+			fmt.Println()
+
+			if data.ExperienceCount > 0 {
+				var lastExp = data.Experiences[data.ExperienceCount-1]
+				var pengalaman int
+
+				fmt.Printf("Saya memiliki pengalaman __ tahun sebagai %s di PT %s,\n", lastExp.Title, lastExp.Company)
+				fmt.Print(">> ")
+				fmt.Scan(&pengalaman)
+
+				//fmt.Printf("Saya memiliki pengalaman %d tahun sebagai %s di %s,\n", pengalaman, last.Title, last.Company)
+			} else {
+				fmt.Println("")
+			}
+
+			if data.SkillCount > 0 {
+				Interact("dengan keahlian utama dalam ")
+
+				var i int
+				for i = 0; i < data.SkillCount; i++ {
+					Interact(data.Skills[i].Name)
+
+					if i == data.SkillCount-2 {
+						fmt.Print(" dan ")
+					} else if i < data.SkillCount-2 {
+						fmt.Print(", ")
+					}
+				}
+				fmt.Println()
+			} else {
+				fmt.Println("")
+			}
+
+			Interact("Saya terbiasa bekerja dalam tim, mampu belajar cepat, dan beradaptasi dengan lingkungan kerja.")
+			fmt.Println()
+
+			fmt.Println("Sebagai bahan pertimbangan, saya lampirkan:")
+			fmt.Println("  1. Daftar Riwayat Hidup (CV)")
+			fmt.Println("  2. Fotokopi Ijazah Terakhir")
+			fmt.Println("  3. Fotokopi Transkrip Nilai")
+			fmt.Println("  4. Sertifikat Keahlian")
+			fmt.Println("  5. Pas Foto Terbaru")
+			fmt.Println()
+
+			Interact("Demikian surat lamaran ini saya buat. Saya berharap dapat mengikuti tahapan seleksi berikutnya.")
+			Interact("Atas perhatian dan kesempatan yang diberikan, saya ucapkan terima kasih.")
+			fmt.Println()
+
+			fmt.Println("Hormat saya,")
+			fmt.Println()
+			fmt.Printf("%s\n", namaLengkap)
+			fmt.Println("-------------------------------------------------------------")
+
+			Interact(">> Terima kasih telah mengisi data diri kamu! Berikut ini adalah surat lamaran kerja yang telah aku buat berdasarkan data yang kamu berikan.")
+
+			Interact("-------------------------------------------------------------")
+			Interact("                    SURAT LAMARAN PEKERJAAN                  ")
+			Interact("-------------------------------------------------------------")
+			fmt.Printf("%s %d %s %d", tempatS, tanggalS, bulanS, tahunS)
+			fmt.Println()
+
+			Interact("Hal       : Lamaran Pekerjaan")
+			Interact("Lampiran  : 1 (satu) berkas")
+			fmt.Println()
+
+			Interact("Kepada Yth.")
+			Interact("Bapak/Ibu HRD")
+			fmt.Printf("PT %s, %s\n", namaPT, alamatPT)
+			fmt.Printf("Jl. %s No. %d\n", namaJalan, noJalan)
+
+			Interact("Dengan hormat,")
+			fmt.Printf("Berdasarkan informasi lowongan kerja yang saya peroleh dari situs %s pada tanggal %d %s %d", situs, tanggalA, bulanA, tahunA)
+			fmt.Printf("saya bermaksud mengajukan lamaran untuk posisi %s di PT %s.", posisiPekerjaan, namaPT)
+			Interact("Saya sangat tertarik dengan visi perusahaan Bapak/Ibu dalam menghadirkan solusi teknologi inovatif.")
+			fmt.Println()
+
+			Interact("Berikut data diri saya:")
+			Interact("-------------------------------------------------------------")
+			fmt.Printf("%-20s: %s\n", "Nama", namaLengkap)
+			fmt.Printf("%-20s: %s, %d %s %d\n", "Tempat/Tgl Lahir", tempatLahir, tanggalLahir, bulanLahir, tahunLahir)
+			// fmt.Printf("%-20s: %s\n", "Pendidikan Terakhir", "S1 Teknik Informatika – Universitas Telkom")
+			if data.EducationCount > 0 {
+				var last = data.Educations[data.EducationCount-1]
+				fmt.Printf("Pendidikan Terakhir : %s - %s\n", last.Degree, last.Degree)
+			} else {
+				fmt.Println("Pendidikan Terakhir : -")
+			}
+
+			fmt.Printf("%-20s: %s %d %s\n", "Alamat", alamatJ, noJ, alamatK)
+			fmt.Printf("%-20s: %d\n", "Telepon", noHp)
+			fmt.Printf("%-20s: %s\n", "Email", email)
+			Interact("-------------------------------------------------------------")
+			fmt.Println()
+
+			if data.ExperienceCount > 0 {
+				var lastExp = data.Experiences[data.ExperienceCount-1]
+				var pengalaman int
+
+				fmt.Printf("Saya memiliki pengalaman __ tahun sebagai %s di PT %s,\n", lastExp.Title, lastExp.Company)
+				fmt.Print(">> ")
+				fmt.Scan(&pengalaman)
+
+				//fmt.Printf("Saya memiliki pengalaman %d tahun sebagai %s di %s,\n", pengalaman, last.Title, last.Company)
+			} else {
+				fmt.Println("")
+			}
+
+			if data.SkillCount > 0 {
+				Interact("dengan keahlian utama dalam ")
+
+				var i int
+				for i = 0; i < data.SkillCount; i++ {
+					Interact(data.Skills[i].Name)
+
+					if i == data.SkillCount-2 {
+						fmt.Print(" dan ")
+					} else if i < data.SkillCount-2 {
+						fmt.Print(", ")
+					}
+				}
+				fmt.Println()
+			} else {
+				fmt.Println("")
+			}
+
+			Interact("Saya terbiasa bekerja dalam tim, mampu belajar cepat, dan beradaptasi dengan lingkungan kerja.")
+			fmt.Println()
+
+			Interact("Sebagai bahan pertimbangan, saya lampirkan:")
+			Interact("  1. Daftar Riwayat Hidup (CV)")
+			Interact("  2. Fotokopi Ijazah Terakhir")
+			Interact("  3. Fotokopi Transkrip Nilai")
+			Interact("  4. Sertifikat Keahlian")
+			Interact("  5. Pas Foto Terbaru")
+			fmt.Println()
+
+			Interact("Demikian surat lamaran ini saya buat. Saya berharap dapat mengikuti tahapan seleksi berikutnya.")
+			Interact("Atas perhatian dan kesempatan yang diberikan, saya ucapkan terima kasih.")
+			fmt.Println()
+
+			Interact("Hormat saya,")
+			fmt.Printf("\n\n")
+			fmt.Printf("%s\n", namaLengkap)
+			Interact("-------------------------------------------------------------")
+
+			fmt.Printf("\n\n")
+			Interact(">> Surat lamaran kerja di atas hanyalah rekomendasi dari aku! Kamu bisa mengubahnya sesuai dengan kreatifitas kamu")
+			Delay()
+			fmt.Printf(">> Terima kasih telah menggunakan layanan VPT, semoga sukses dalam mencari pekerjaan ya %s", namaLengkap)
 		} else if userInput == "tidak" || userInput == "Tidak" || userInput == "TIDAK" {
 			BackToMenu()
 		}
-
 	} else {
 		fmt.Println()
-		fmt.Println("[System] ketik 'resume' untuk bantuan membuat resume atau ketik 'suratkerja' untuk bantuan membuat surat lamaran kerja")
+		Interact("[System] ketik 'resume' untuk bantuan membuat resume atau ketik 'suratkerja' untuk bantuan membuat surat lamaran kerja")
 	}
 }

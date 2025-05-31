@@ -11,6 +11,7 @@ import (
 func main() {
 	var menu int
 
+	modules.Clear()
 	// SOURCE: https://patorjk.com/software/taag/#p=display&f=ANSI%20Regular&t=VPT
 	// ANSI Reguler Font
 	// SOURCE for UI: https://openai.com/index/chatgpt
@@ -22,8 +23,8 @@ func main() {
 	fmt.Println("██ ██   ████    ██    ██   ██  ██████  ██████   ██████   ██████ ██ ██   ████  ███████          ██       ██	   ██    ")
 
 	fmt.Println()
-	fmt.Println(">> Vitae Pre-Trained Transformer")
-	fmt.Println(">> Your AI Assistant for Smart Resumes & Cover Letter Creation")
+	modules.Interact(">> Vitae Pre-Trained Transformer")
+	modules.Interact(">> Your AI Assistant for Smart Resumes & Cover Letter Creation")
 	fmt.Println()
 
 	// fmt.Println("╔═══════════════════════════════════════════════════════════════╗")
@@ -35,21 +36,27 @@ func main() {
 	// fmt.Println("╚═══════════════════════════════════════════════════════════════╝")
 
 	// SOURCE: https://symbl.cc/en/unicode/blocks/box-drawing/
+	modules.Delay()
 	fmt.Println("╔══════════════════════════════════════════════════════════════════╗")
 	fmt.Println("║                      [!!]    NOTICE    [!!]                      ║")
 	fmt.Println("╠══════════════════════════════════════════════════════════════════╣")
+	modules.Delay()
 	fmt.Println("║ This system is a specialized assistant designed ONLY to help     ║")
+	modules.Delay()
 	fmt.Println("║ you build smart resumes and job-specific cover letters           ║")
 	fmt.Println("║                                                                  ║")
+	modules.Delay()
 	fmt.Println("║ [X] This is NOT a general chatbot                                ║")
+	modules.Delay()
 	fmt.Println("║ [V] Use the menu options to interact effectively                 ║")
 	fmt.Println("╚══════════════════════════════════════════════════════════════════╝")
 	fmt.Println()
 
 	for {
+		modules.Delay()
 		fmt.Println("╔═══════════════════════════════════════════════════════════════════════════════════════════╗")
-		fmt.Println("║               V I R T U A L  P R E - T R A I N E D  T R A N S F O R M E R                 ║")
-		fmt.Println("║                 AI Assistant for Smart Resumes & Cover Letter Creation                    ║")
+		fmt.Println("║               V I T A E  P R E - T R A I N E D  T R A N S F O R M E R                     ║")
+		fmt.Println("║               AI Assistant for Smart Resumes & Cover Letter Creation                      ║")
 		fmt.Println("╠═══════════════════════════════════════════════════════════════════════════════════════════╣")
 		fmt.Println("║ [1] Manage Profile                                         | Kelola Profil                ║")
 		fmt.Println("║ [2] Manage Job                                             | Kelola Pekerjaan             ║")
@@ -78,11 +85,11 @@ func main() {
 			modules.Help()
 			modules.BackToMenu()
 		} else if menu == 0 {
-			fmt.Println(">> Thank you for using Vitae Pre-Trained Transformer!")
-			fmt.Println(">> Exiting the system...")
+			modules.Interact(">> Thank you for using Vitae Pre-Trained Transformer!")
+			modules.Interact(">> Exiting the system...")
 			break
 		} else {
-			fmt.Println("[System] Pilihan tidak valid. Silakan pilih menu yang tersedia")
+			modules.Interact("[System] Pilihan tidak valid. Silakan pilih menu yang tersedia")
 		}
 
 		// } else if menu == 6 {

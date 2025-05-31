@@ -16,7 +16,7 @@ func ManageSkill() {
 		fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                          [Skill Manager]                           ║")
 		fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
-		fmt.Println("║ 1. [Add]     Tambah skill baru <max 50>                            ║")
+		fmt.Println("║ 1. [Add]     Tambah skill baru                                     ║")
 		fmt.Println("║ 2. [Edit]    Ubah skill yang sudah dimasukkan                      ║")
 		fmt.Println("║ 3. [List]    Lihat semua skill saat ini                            ║")
 		fmt.Println("║ 4. [Delete]  Hapus salah satu skill                                ║")
@@ -27,32 +27,37 @@ func ManageSkill() {
 
 		if command == 1 {
 			if data.SkillCount >= 50 {
-				fmt.Println("[System] Skill sudah mencapai batas maksimum")
+				Interact("[System] Skill sudah mencapai batas maksimum")
 			} else {
 				SuggestionSkill()
 				fmt.Println("Ketikkan beberapa skill satu per satu. Ketik 'done' jika sudah selesai")
-				for data.SkillCount < 50 && !selesai {
+				for {
 					fmt.Print("Masukkan nama skill >>> ")
 					fmt.Scan(&nameSkill)
 
 					if nameSkill == "done" {
-						selesai = true
+						break
+					} else {
+						newSkill.Name = nameSkill
+						data.Skills[data.SkillCount] = newSkill
+						data.SkillCount++
+
+						if data.SkillCount == 50 {
+							Interact("[System] Sudah mencapai maksimum 50 skill")
+							break
+						}
 					}
 
-					newSkill.Name = nameSkill
-					data.Skills[data.SkillCount] = newSkill
-					data.SkillCount = data.SkillCount + 1
-
-					if data.SkillCount == 50 {
-						fmt.Println("[System] Sudah mencapai maksimum 50 skill")
+					if selesai {
+						break
 					}
 				}
-				fmt.Println("[System] Skill berhasil ditambahkan")
+				Interact("[System] Skill berhasil ditambahkan")
 				Clear()
 			}
 		} else if command == 2 {
 			if data.SkillCount == 0 {
-				fmt.Println("[System] Belum ada skill untuk diubah")
+				Interact("[System] Belum ada skill untuk diubah")
 			} else {
 				fmt.Println("╔═══════╦════════════════════╗")
 				fmt.Println("║  No.  ║      Skill         ║")
@@ -63,6 +68,7 @@ func ManageSkill() {
 					fmt.Printf("║  %-4d ║ %-18s ║\n", i+1, skillName)
 					i += 1
 				}
+
 				fmt.Println("╚═══════╩════════════════════╝")
 
 				SuggestionSkill()
@@ -70,18 +76,18 @@ func ManageSkill() {
 				fmt.Print("Masukkan nomor skill yang ingin diubah (1-", data.SkillCount, "): ")
 				fmt.Scan(&index)
 				if index < 1 || index > data.SkillCount {
-					fmt.Println("[System] Nomor skill tidak valid")
+					Interact("[System] Nomor skill tidak valid")
 				} else {
 					fmt.Print("Masukkan skill baru >>> ")
 					fmt.Scan(&nameSkill)
 					data.Skills[index-1].Name = nameSkill
-					fmt.Println("[System] Skill berhasil diubah")
+					Interact("[System] Skill berhasil diubah")
 					Clear()
 				}
 			}
 		} else if command == 3 {
 			if data.SkillCount == 0 {
-				fmt.Println("[System] Belum ada skill yang dimasukkan.")
+				Interact("[System] Belum ada skill yang dimasukkan.")
 			} else {
 				fmt.Println("╔═══════╦════════════════════╗")
 				fmt.Println("║  No.  ║      Skill         ║")
@@ -96,7 +102,7 @@ func ManageSkill() {
 			}
 		} else if command == 4 {
 			if data.SkillCount == 0 {
-				fmt.Println("[System] Belum ada skill untuk dihapus")
+				Interact("[System] Belum ada skill untuk dihapus")
 			} else {
 				fmt.Println("╔═══════╦════════════════════╗")
 				fmt.Println("║  No.  ║      Skill         ║")
@@ -112,7 +118,7 @@ func ManageSkill() {
 				fmt.Print("Masukkan nomor skill yang ingin dihapus (1-", data.SkillCount, "): ")
 				fmt.Scan(&index)
 				if index < 1 || index > data.SkillCount {
-					fmt.Println("[System] Nomor skill tidak valid")
+					Interact("[System] Nomor skill tidak valid")
 				} else {
 					i = index - 1
 					for i < data.SkillCount-1 {
@@ -120,15 +126,15 @@ func ManageSkill() {
 						i += 1
 					}
 					data.SkillCount = data.SkillCount - 1
-					fmt.Println("[System] Skill berhasil dihapus")
+					Interact("[System] Skill berhasil dihapus")
 				}
 				Clear()
 			}
 		} else if command == 5 {
-			fmt.Println("[System] Sesi input skill selesai")
+			Interact("[System] Sesi input skill selesai")
 			running = false
 		} else {
-			fmt.Println("[System] Pilihan tidak dikenali. Masukkan angka <1 - 5>")
+			Interact("[System] Pilihan tidak dikenali. Masukkan angka <1 - 5>")
 		}
 	}
 }

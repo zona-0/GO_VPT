@@ -17,7 +17,7 @@ func ManageProfile() {
 		fmt.Println("║ 4. Show User Data                                                  ║")
 		fmt.Println("║ 5. Done                                                            ║")
 		fmt.Println("╚════════════════════════════════════════════════════════════════════╝")
-		fmt.Print("Pilih menu: ")
+		fmt.Print(">> Pilih menu: ")
 		fmt.Scan(&input)
 
 		if input == 1 {
@@ -35,7 +35,7 @@ func ManageProfile() {
 		} else if input == 5 {
 			running = false
 		} else {
-			fmt.Println("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
+			Interact("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
 		}
 	}
 }

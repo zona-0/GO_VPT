@@ -10,7 +10,7 @@ func ShowAllUserData() {
 	var edu data.Education
 
 	fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
-	fmt.Println("║                        [ RINGKASAN USER DATA	 ]                     ║")
+	fmt.Println("║                        [ RINGKASAN USER DATA	 ]                   ║")
 	fmt.Println("╚════════════════════════════════════════════════════════════════════╝")
 
 	// TODO: Show skill data

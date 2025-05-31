@@ -36,14 +36,14 @@ func SearchJob() {
 		} else if choose == 6 {
 			running = false
 		} else {
-			fmt.Println("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
+			Interact("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
 		}
 	}
 }
 
 func searchByIndustry() {
 	if jobCount == 0 {
-		fmt.Println("[System] Belum ada data lowongan untuk dicari")
+		Interact("[System] Belum ada data lowongan untuk dicari")
 	}
 
 	var industryCode int
@@ -72,7 +72,7 @@ func searchByIndustry() {
 
 func searchJobBinary() {
 	if jobCount == 0 {
-		fmt.Println("[System] Tidak ada lowongan yang tersedia untuk dicari")
+		Interact("[System] Tidak ada lowongan yang tersedia untuk dicari")
 		fmt.Println()
 		BackToMenu()
 	}
@@ -131,7 +131,7 @@ func searchJobBinary() {
 
 		fmt.Println("╚═════════╩════════════════════════╩═════════════════╩══════════════╝")
 	} else {
-		fmt.Println("[System] Tidak ada lowongan dengan judul tersebut")
+		Interact("[System] Tidak ada lowongan dengan judul tersebut")
 	}
 }
 

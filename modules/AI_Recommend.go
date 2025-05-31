@@ -13,12 +13,18 @@ func RecommendJob() {
 		educationScore int
 	var name, title, school, degree, major, company string
 
-	fmt.Println("╔════════════════════════════════════════════════════╗")
-	fmt.Println("║               AI CAREER SUGGESTION                 ║")
-	fmt.Println("╠════════════════════════════════════════════════════╣")
-	fmt.Println("║ [SYSTEM] Analyzing profile: Skills, Experience,    ║")
-	fmt.Println("║         and Education to generate recommendations  ║")
-	fmt.Println("╚════════════════════════════════════════════════════╝")
+	Clear()
+	fmt.Println()
+	fmt.Println(" ██        ██  ██████  ████████ ")
+	fmt.Println("  ██      ██   ██  ██     ██	   ")
+	fmt.Println("   ██    ██    ██████     ██    ")
+	fmt.Println("    ██  ██     ██         ██    ")
+	fmt.Println("      ██       ██	  ██    ")
+
+	fmt.Println()
+	Interact(">> Vitae Pre-Trained Transformer")
+	Interact(">> Your AI Assistant for Smart Resumes, Job Reccomendation and Cover Letter Creation")
+	fmt.Println()
 
 	for i = 0; i < data.SkillCount; i++ {
 		name = data.Skills[i].Name
@@ -345,512 +351,508 @@ func RecommendJob() {
 		}
 	}
 
-	fmt.Println("═════════════════════════════════════════════════════════════════════════════")
-	fmt.Println(">> Saran AI:")
-	fmt.Println("═════════════════════════════════════════════════════════════════════════════")
-
 	total = backend + frontend + analyst + writer + teacher + marketing + designer + devops + mobile +
 		security + management + finance + customer_service + game + video + law + health + admin +
 		logistics + hr + psychology + chef + events + cashier + operator + fnb + creator + educationScore
 
 	if total == 0 {
 		fmt.Println()
-		fmt.Println("[!!] Tidak ada rekomendasi. Silakan lengkapi data profil Anda")
+		Interact("[VPT] Tidak ada rekomendasi. Silakan lengkapi data profil Anda")
 	} else {
 		fmt.Println()
-		fmt.Println("[!!] AI telah menganalisis profil Anda. Berdasarkan skill, pengalaman, dan pendidikan,")
-		fmt.Println("[!!] berikut jalur karier dan perusahaan terbaik yang direkomendasikan untuk Anda:")
+		Interact("[VPT] Saya telah menganalisis profil Anda. Berdasarkan skill, pengalaman, dan pendidikan,")
+		Interact("[VPT] berikut jalur karier dan perusahaan terbaik yang direkomendasikan untuk Anda:")
 		fmt.Println()
 
 		// TODO: Backend Sec
 		if backend >= 5 {
-			fmt.Println("[Perusahaan Besar] Backend Developer di Tokopedia, Gojek, Bukalapak")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", backend)
-			fmt.Println("[••] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Backend Developer di Tokopedia, Gojek, Bukalapak")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", backend)
+			Interact("[VPT] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
 			fmt.Println()
 		} else if backend >= 3 {
-			fmt.Println("[Perusahaan Menengah] Backend Developer di Ruangguru, Qasir, Mamikos")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", backend)
-			fmt.Println("[••] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Backend Developer di Ruangguru, Qasir, Mamikos")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", backend)
+			Interact("[VPT] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
 			fmt.Println()
 		} else if backend > 0 {
-			fmt.Println("[Startup] Backend Developer di LocalTech, NextDev")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", backend)
-			fmt.Println("[••] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Backend Developer di LocalTech, NextDev")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", backend)
+			Interact("[VPT] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
 			fmt.Println()
 		}
 
 		// TODO: Frontend Sec
 		if frontend >= 5 {
-			fmt.Println("[Perusahaan Besar] Frontend Developer di Traveloka, Blibli, Gojek")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", frontend)
-			fmt.Println("[••] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Frontend Developer di Traveloka, Blibli, Gojek")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", frontend)
+			Interact("[VPT] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
 			fmt.Println()
 		} else if frontend >= 3 {
-			fmt.Println("[Perusahaan Menengah] Frontend Developer di KlikDokter, Sayurbox")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", frontend)
-			fmt.Println("[••] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Frontend Developer di KlikDokter, Sayurbox")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", frontend)
+			Interact("[VPT] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
 			fmt.Println()
 		} else if frontend > 0 {
-			fmt.Println("[Startup] Frontend Developer di CodeCraft, DevStart")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", frontend)
-			fmt.Println("[••] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Frontend Developer di CodeCraft, DevStart")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", frontend)
+			Interact("[VPT] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
 			fmt.Println()
 		}
 
 		// TODO: Data Analyst
 		if analyst >= 5 {
-			fmt.Println("[Perusahaan Besar] Data Analyst di Telkom Indonesia, Shopee, Bank BCA")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", analyst)
-			fmt.Println("[••] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Data Analyst di Telkom Indonesia, Shopee, Bank BCA")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", analyst)
+			Interact("[VPT] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau")
 			fmt.Println()
 		} else if analyst >= 3 {
-			fmt.Println("[Perusahaan Menengah] Data Analyst di Xendit, Sociolla")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", analyst)
-			fmt.Println("[••] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Data Analyst di Xendit, Sociolla")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", analyst)
+			Interact("[VPT] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
 			fmt.Println()
 		} else if analyst > 0 {
-			fmt.Println("[Startup] Data Analyst di AnalytIQ, StatLab")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", analyst)
-			fmt.Println("[••] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Data Analyst di AnalytIQ, StatLab")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", analyst)
+			Interact("[VPT] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
 			fmt.Println()
 		}
 
 		// TODO: Content Writer / Editor
 		if writer >= 5 {
-			fmt.Println("[Perusahaan Besar] Content Writer / Editor di Kumparan, IDN Media, Zenius")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", writer)
-			fmt.Println("[••] Saran: Bangun portofolio dan perkuat penulisan SEO")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Content Writer / Editor di Kumparan, IDN Media, Zenius")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", writer)
+			Interact("[VPT] Saran: Bangun portofolio dan perkuat penulisan SEO")
 			fmt.Println()
 		} else if writer >= 3 {
-			fmt.Println("[Perusahaan Menengah] Content Writer / Editor di Hipwee, FemaleDaily")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", writer)
-			fmt.Println("[••] Saran: Bangun portofolio dan perkuat penulisan SEO")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Content Writer / Editor di Hipwee, FemaleDaily")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", writer)
+			Interact("[VPT] Saran: Bangun portofolio dan perkuat penulisan SEO")
 			fmt.Println()
 		} else if writer > 0 {
-			fmt.Println("[Startup] Content Writer / Editor di BlogHive, LocalStory")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", writer)
-			fmt.Println("[••] Saran: Bangun portofolio dan perkuat penulisan SEO")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Content Writer / Editor di BlogHive, LocalStory")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", writer)
+			Interact("[VPT] Saran: Bangun portofolio dan perkuat penulisan SEO")
 			fmt.Println()
 		}
 
 		// TODO: Teacher / Lecturer
 		if teacher >= 5 {
-			fmt.Println("[Perusahaan Besar] Guru / Dosen di Binus, Universitas Indonesia, Ruangguru")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", teacher)
-			fmt.Println("[••] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Guru / Dosen di Binus, Universitas Indonesia, Ruangguru")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", teacher)
+			Interact("[VPT] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 			fmt.Println()
 		} else if teacher >= 3 {
-			fmt.Println("[Perusahaan Menengah] Guru / Dosen di HarukaEdu, Zenius")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", teacher)
-			fmt.Println("[••] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Guru / Dosen di HarukaEdu, Zenius")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", teacher)
+			Interact("[VPT] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 			fmt.Println()
 		} else if teacher > 0 {
-			fmt.Println("[Startup] Guru / Dosen di KelasKita, EduStart")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", teacher)
-			fmt.Println("[••] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Guru / Dosen di KelasKita, EduStart")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", teacher)
+			Interact("[VPT] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 			fmt.Println()
 		}
 
 		// TODO: Marketing Specialist
 		if marketing >= 5 {
-			fmt.Println("[Perusahaan Besar] Marketing Specialist di Grab, Shopee, TikTok Indonesia")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", marketing)
-			fmt.Println("[••] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Marketing Specialist di Grab, Shopee, TikTok Indonesia")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", marketing)
+			Interact("[VPT] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 			fmt.Println()
 		} else if marketing >= 3 {
-			fmt.Println("[Perusahaan Menengah] Marketing Specialist di Evermos, Sirclo")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", marketing)
-			fmt.Println("[••] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Marketing Specialist di Evermos, Sirclo")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", marketing)
+			Interact("[VPT] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 			fmt.Println()
 		} else if marketing > 0 {
-			fmt.Println("[Startup] Marketing Specialist di PromoPilot, StartSell")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", marketing)
-			fmt.Println("[••] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Marketing Specialist di PromoPilot, StartSell")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", marketing)
+			Interact("[VPT] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 			fmt.Println()
 		}
 
 		// TODO: Graphic Designer
 		if designer >= 5 {
-			fmt.Println("[Perusahaan Besar] Graphic Designer di Tokopedia, Bukalapak, Netflix ID")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", designer)
-			fmt.Println("[••] Saran: Perbaiki portofolio Behance/Dribbble Anda")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Graphic Designer di Tokopedia, Bukalapak, Netflix ID")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", designer)
+			Interact("[VPT] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 			fmt.Println()
 		} else if designer >= 3 {
-			fmt.Println("[Perusahaan Menengah] Graphic Designer di Jakmall, Warung Pintar")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", designer)
-			fmt.Println("[••] Saran: Perbaiki portofolio Behance/Dribbble Anda")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Graphic Designer di Jakmall, Warung Pintar")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", designer)
+			Interact("[VPT] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 			fmt.Println()
 		} else if designer > 0 {
-			fmt.Println("[Startup] Graphic Designer di PixelCraft, LokalDesign")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", designer)
-			fmt.Println("[••] Saran: Perbaiki portofolio Behance/Dribbble Anda")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Graphic Designer di PixelCraft, LokalDesign")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", designer)
+			Interact("[VPT] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 			fmt.Println()
 		}
 
 		// TODO: DevOps Engineer
 		if devops >= 5 {
-			fmt.Println("[Perusahaan Besar] DevOps Engineer di Blibli, Gojek, JNE")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", devops)
-			fmt.Println("[••] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai DevOps Engineer di Blibli, Gojek, JNE")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", devops)
+			Interact("[VPT] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 			fmt.Println()
 		} else if devops >= 3 {
-			fmt.Println("[Perusahaan Menengah] DevOps Engineer di Alterra, Nodeflux")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", devops)
-			fmt.Println("[••] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai DevOps Engineer di Alterra, Nodeflux")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", devops)
+			Interact("[VPT] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 			fmt.Println()
 		} else if devops > 0 {
-			fmt.Println("[Startup] DevOps Engineer di InfraEdge, LiteOps")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", devops)
-			fmt.Println("[••] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai DevOps Engineer di InfraEdge, LiteOps")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", devops)
+			Interact("[VPT] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 			fmt.Println()
 		}
 
 		// TODO: Mobile App Developer
 		if mobile >= 5 {
-			fmt.Println("[Perusahaan Besar] Mobile App Developer di Traveloka, TikTok, Tokopedia")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", mobile)
-			fmt.Println("[••] Saran: Bangun proyek Flutter/React Native")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Mobile App Developer di Traveloka, TikTok, Tokopedia")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", mobile)
+			Interact("[VPT] Saran: Bangun proyek Flutter/React Native")
 			fmt.Println()
 		} else if mobile >= 3 {
-			fmt.Println("[Perusahaan Menengah] Mobile App Developer di Kulina, MySkill")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", mobile)
-			fmt.Println("[••] Saran: Bangun proyek Flutter/React Native")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Mobile App Developer di Kulina, MySkill")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", mobile)
+			Interact("[VPT] Saran: Bangun proyek Flutter/React Native")
 			fmt.Println()
 		} else if mobile > 0 {
-			fmt.Println("[Startup] Mobile App Developer di AppHero, NextMob")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", mobile)
-			fmt.Println("[••] Saran: Bangun proyek Flutter/React Native")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Mobile App Developer di AppHero, NextMob")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", mobile)
+			Interact("[VPT] Saran: Bangun proyek Flutter/React Native")
 			fmt.Println()
 		}
 
 		// TODO: Cybersecurity Specialist
 		if security >= 5 {
-			fmt.Println("[Perusahaan Besar] Cybersecurity Specialist di Bank Indonesia, Tokopedia, Kominfo")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", security)
-			fmt.Println("[••] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Cybersecurity Specialist di Bank Indonesia, Tokopedia, Kominfo")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", security)
+			Interact("[VPT] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 			fmt.Println()
 		} else if security >= 3 {
-			fmt.Println("[Perusahaan Menengah] Cybersecurity Specialist di Vaksincom, Privy ID")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", security)
-			fmt.Println("[••] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Cybersecurity Specialist di Vaksincom, Privy ID")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", security)
+			Interact("[VPT] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 			fmt.Println()
 		} else if security > 0 {
-			fmt.Println("[Startup] Cybersecurity Specialist di SecuStart, ByteSecure")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", security)
-			fmt.Println("[••] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Cybersecurity Specialist di SecuStart, ByteSecure")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", security)
+			Interact("[VPT] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 			fmt.Println()
 		}
 
 		// TODO: Project Manager
 		if management >= 5 {
-			fmt.Println("[Perusahaan Besar] Project Manager di Telkomsel, Pertamina, BRI")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", management)
-			fmt.Println("[••] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Project Manager di Telkomsel, Pertamina, BRI")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", management)
+			Interact("[VPT] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 			fmt.Println()
 		} else if management >= 3 {
-			fmt.Println("[Perusahaan Menengah] Project Manager di HappyFresh, Pinhome")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", management)
-			fmt.Println("[••] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Project Manager di HappyFresh, Pinhome")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", management)
+			Interact("[VPT] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 			fmt.Println()
 		} else if management > 0 {
-			fmt.Println("[Startup] Project Manager di ManageOne, AgileStudio")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", management)
-			fmt.Println("[••] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Project Manager di ManageOne, AgileStudio")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", management)
+			Interact("[VPT] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 			fmt.Println()
 		}
 
 		// TODO: Financial Analyst
 		if finance >= 5 {
-			fmt.Println("[Perusahaan Besar] Financial Analyst di Bank Mandiri, OJK, PwC")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", finance)
-			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Financial Analyst di Bank Mandiri, OJK, PwC")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", finance)
+			Interact("[VPT] Saran: Asah skill Excel dan financial modeling")
 			fmt.Println()
 		} else if finance >= 3 {
-			fmt.Println("[Perusahaan Menengah] Financial Analyst di Bibit, TernakUang")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", finance)
-			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Financial Analyst di Bibit, TernakUang")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", finance)
+			Interact("[VPT] Saran: Asah skill Excel dan financial modeling")
 			fmt.Println()
 		} else if finance > 0 {
-			fmt.Println("[Startup] Financial Analyst di FinPilot, BudgetBuddy")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", finance)
-			fmt.Println("[••] Saran: Asah skill Excel dan financial modeling")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Financial Analyst di FinPilot, BudgetBuddy")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", finance)
+			Interact("[VPT] Saran: Asah skill Excel dan financial modeling")
 			fmt.Println()
 		}
 
 		// TODO: Customer Service
 		if customer_service >= 5 {
-			fmt.Println("[Perusahaan Besar] Customer Service di Shopee, Tokopedia, Traveloka")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", customer_service)
-			fmt.Println("[••] Saran: Tingkatkan kemampuan komunikasi dan empati")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Customer Service di Shopee, Tokopedia, Traveloka")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", customer_service)
+			Interact("[VPT] Saran: Tingkatkan kemampuan komunikasi dan empati")
 			fmt.Println()
 		} else if customer_service >= 3 {
-			fmt.Println("[Perusahaan Menengah] Customer Service di Sirclo, Evermos")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", customer_service)
-			fmt.Println("[••] Saran: Tingkatkan kemampuan komunikasi dan empati")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Customer Service di Sirclo, Evermos")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", customer_service)
+			Interact("[VPT] Saran: Tingkatkan kemampuan komunikasi dan empati")
 			fmt.Println()
 		} else if customer_service > 0 {
-			fmt.Println("[Startup] Customer Service di HelpLine, FastDesk")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", customer_service)
-			fmt.Println("[••] Saran: Tingkatkan kemampuan komunikasi dan empati")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Customer Service di HelpLine, FastDesk")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", customer_service)
+			Interact("[VPT] Saran: Tingkatkan kemampuan komunikasi dan empati")
 			fmt.Println()
 		}
 
 		// TODO: Game Developer
 		if game >= 5 {
-			fmt.Println("[Perusahaan Besar] Game Developer di ArenaNet ID, Agate Studio, Garena")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", game)
-			fmt.Println("[••] Saran: Kuasai Unity atau Unreal dan buat game kecil")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Game Developer di ArenaNet ID, Agate Studio, Garena")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", game)
+			Interact("[VPT] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 			fmt.Println()
 		} else if game >= 3 {
-			fmt.Println("[Perusahaan Menengah] Game Developer di Toge Productions, Digital Happiness")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", game)
-			fmt.Println("[••] Saran: Kuasai Unity atau Unreal dan buat game kecil")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Game Developer di Toge Productions, Digital Happiness")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", game)
+			Interact("[VPT] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 			fmt.Println()
 		} else if game > 0 {
-			fmt.Println("[Startup] Game Developer di PixelPlay, IndieDev")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", game)
-			fmt.Println("[••] Saran: Kuasai Unity atau Unreal dan buat game kecil")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Game Developer di PixelPlay, IndieDev")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", game)
+			Interact("[VPT] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 			fmt.Println()
 		}
 
 		//TODO:  Video Editor
 		if video >= 5 {
-			fmt.Println("[Perusahaan Besar] Video Editor di NET TV, Narasi, IDN Media")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", video)
-			fmt.Println("[••] Saran: Buat showreel dan pelajari motion graphics")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Video Editor di NET TV, Narasi, IDN Media")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", video)
+			Interact("[VPT] Saran: Buat showreel dan pelajari motion graphics")
 			fmt.Println()
 		} else if video >= 3 {
-			fmt.Println("[Perusahaan Menengah] Video Editor di Kreator.ID, LokalTV")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", video)
-			fmt.Println("[••] Saran: Buat showreel dan pelajari motion graphics")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Video Editor di Kreator.ID, LokalTV")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", video)
+			Interact("[VPT] Saran: Buat showreel dan pelajari motion graphics")
 			fmt.Println()
 		} else if video > 0 {
-			fmt.Println("[Startup] Video Editor di VideoVibe, ClipStart")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", video)
-			fmt.Println("[••] Saran: Buat showreel dan pelajari motion graphics")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Video Editor di VideoVibe, ClipStart")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", video)
+			Interact("[VPT] Saran: Buat showreel dan pelajari motion graphics")
 			fmt.Println()
 		}
 
 		//TODO:  Legal Advisor
 		if law >= 5 {
-			fmt.Println("[Perusahaan Besar] Legal Advisor di Mahkamah Agung, Kantor Hukum Ternama")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", law)
-			fmt.Println("[••] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Legal Advisor di Mahkamah Agung, Kantor Hukum Ternama")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", law)
+			Interact("[VPT] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 			fmt.Println()
 		} else if law >= 3 {
-			fmt.Println("[Perusahaan Menengah] Legal Advisor di Startup Hukum Lokal")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", law)
-			fmt.Println("[••] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Legal Advisor di Startup Hukum Lokal")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", law)
+			Interact("[VPT] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 			fmt.Println()
 		} else if law > 0 {
-			fmt.Println("[Startup] Legal Advisor di LegalEase, LawEntry")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", law)
-			fmt.Println("[••] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Legal Advisor di LegalEase, LawEntry")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", law)
+			Interact("[VPT] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 			fmt.Println()
 		}
 
 		//TODO: Healthcare Worker
 		if health >= 5 {
-			fmt.Println("[Perusahaan Besar] Tenaga Kesehatan di RSUPN, Siloam, Halodoc")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", health)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Tenaga Kesehatan di RSUPN, Siloam, Halodoc")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", health)
+			Interact("[VPT] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 			fmt.Println()
 		} else if health >= 3 {
-			fmt.Println("[Perusahaan Menengah] Tenaga Kesehatan di Good Doctor, ProSehat")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", health)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Tenaga Kesehatan di Good Doctor, ProSehat")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", health)
+			Interact("[VPT] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 			fmt.Println()
 		} else if health > 0 {
-			fmt.Println("[Startup] Tenaga Kesehatan di HealthStart, KlinikKita")
-			fmt.Printf("[!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", health)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Tenaga Kesehatan di HealthStart, KlinikKita")
+			fmt.Printf("[System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", health)
+			Interact("[VPT] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 			fmt.Println()
 		}
 
 		//TODO: Administrative Staff
 		if admin >= 5 {
-			fmt.Println("[Perusahaan Besar] Staf Administrasi di Pertamina, PLN, Bank Mandiri")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", admin)
-			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Staf Administrasi di Pertamina, PLN, Bank Mandiri")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", admin)
+			Interact("[VPT] Saran: Perkuat skill MS Office dan organisasi")
 			fmt.Println()
 		} else if admin >= 3 {
-			fmt.Println("[Perusahaan Menengah] Staf Administrasi di DANA, OVO")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", admin)
-			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Staf Administrasi di DANA, OVO")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", admin)
+			Interact("[VPT] Saran: Perkuat skill MS Office dan organisasi")
 			fmt.Println()
 		} else if admin > 0 {
-			fmt.Println("[Startup] Staf Administrasi di OfficeHub, AdminPro")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", admin)
-			fmt.Println("[••] Saran: Perkuat skill MS Office dan organisasi")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Staf Administrasi di OfficeHub, AdminPro")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", admin)
+			Interact("[VPT] Saran: Perkuat skill MS Office dan organisasi")
 			fmt.Println()
 		}
 
 		//TODO: Logistics Coordinator
 		if logistics >= 5 {
-			fmt.Println("[Perusahaan Besar] Koordinator Logistik di JNE, TIKI, Gojek")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", logistics)
-			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Koordinator Logistik di JNE, TIKI, Gojek")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", logistics)
+			Interact("[VPT] Saran: Fokus pada skill manajemen rantai pasok")
 			fmt.Println()
 		} else if logistics >= 3 {
-			fmt.Println("[Perusahaan Menengah] Koordinator Logistik di Deliveree, Lalamove")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", logistics)
-			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Koordinator Logistik di Deliveree, Lalamove")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", logistics)
+			Interact("[VPT] Saran: Fokus pada skill manajemen rantai pasok")
 			fmt.Println()
 		} else if logistics > 0 {
-			fmt.Println("[Startup] Koordinator Logistik di FastLog, QuickShip")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", logistics)
-			fmt.Println("[••] Saran: Fokus pada skill manajemen rantai pasok")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Koordinator Logistik di FastLog, QuickShip")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", logistics)
+			Interact("[VPT] Saran: Fokus pada skill manajemen rantai pasok")
 			fmt.Println()
 		}
 
 		//TODO:  HR Specialist
 		if hr >= 5 {
-			fmt.Println("[Perusahaan Besar] HR Specialist di Unilever, Telkom Indonesia, Danone")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", hr)
-			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai HR Specialist di Unilever, Telkom Indonesia, Danone")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", hr)
+			Interact("[VPT] Saran: Kembangkan skill interview dan hubungan karyawan")
 			fmt.Println()
 		} else if hr >= 3 {
-			fmt.Println("[Perusahaan Menengah] HR Specialist di Modalku, Kredivo")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", hr)
-			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai HR Specialist di Modalku, Kredivo")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", hr)
+			Interact("[VPT] Saran: Kembangkan skill interview dan hubungan karyawan")
 			fmt.Println()
 		} else if hr > 0 {
-			fmt.Println("[Startup] HR Specialist di PeopleOps, HRStart")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", hr)
-			fmt.Println("[••] Saran: Kembangkan skill interview dan hubungan karyawan")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai HR Specialist di PeopleOps, HRStart")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", hr)
+			Interact("[VPT] Saran: Kembangkan skill interview dan hubungan karyawan")
 			fmt.Println()
 		}
 
 		//TODO:  Psychologist / Counselor
 		if psychology >= 5 {
-			fmt.Println("[Perusahaan Besar] Psikolog / Konselor di RSJ, Klinik Pratama, Sekolah")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", psychology)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi konseling dan pengalaman")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Psikolog / Konselor di RSJ, Klinik Pratama, Sekolah")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", psychology)
+			Interact("[VPT] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 			fmt.Println()
 		} else if psychology >= 3 {
-			fmt.Println("[Perusahaan Menengah] Psikolog / Konselor di Klinik Prima, Sekolah Alam")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", psychology)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi konseling dan pengalaman")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Psikolog / Konselor di Klinik Prima, Sekolah Alam")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", psychology)
+			Interact("[VPT] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 			fmt.Println()
 		} else if psychology > 0 {
-			fmt.Println("[Startup] Psikolog / Konselor di MindCare, SafeTalk")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", psychology)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi konseling dan pengalaman")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Psikolog / Konselor di MindCare, SafeTalk")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", psychology)
+			Interact("[VPT] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 			fmt.Println()
 		}
 
 		//TODO: Chef / Cook
 		if chef >= 5 {
-			fmt.Println("[Perusahaan Besar] Koki / Juru Masak di Hotel Mulia, Ritz Carlton, Resto Lokal")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", chef)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Koki / Juru Masak di Hotel Mulia, Ritz Carlton, Resto Lokal")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", chef)
+			Interact("[VPT] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 			fmt.Println()
 		} else if chef >= 3 {
-			fmt.Println("[Perusahaan Menengah] Koki / Juru Masak di Hotel Santika, Bistro Lokal")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", chef)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Koki / Juru Masak di Hotel Santika, Bistro Lokal")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", chef)
+			Interact("[VPT] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 			fmt.Println()
 		} else if chef > 0 {
-			fmt.Println("[Startup] Koki / Juru Masak di FoodieStart, HomeKitchen")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", chef)
-			fmt.Println("[••] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Koki / Juru Masak di FoodieStart, HomeKitchen")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", chef)
+			Interact("[VPT] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 			fmt.Println()
 		}
 
 		//TODO:  Event Organizer
 		if events >= 5 {
-			fmt.Println("[Perusahaan Besar] Event Organizer di Dyandra, Rajawali Corpora")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", events)
-			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Event Organizer di Dyandra, Rajawali Corpora")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", events)
+			Interact("[VPT] Saran: Tampilkan portofolio event dan skill negosiasi")
 			fmt.Println()
 		} else if events >= 3 {
-			fmt.Println("[Perusahaan Menengah] Event Organizer di EO Lokal, PartyUp")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", events)
-			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Event Organizer di EO Lokal, PartyUp")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", events)
+			Interact("[VPT] Saran: Tampilkan portofolio event dan skill negosiasi")
 			fmt.Println()
 		} else if events > 0 {
-			fmt.Println("[Startup] Event Organizer di SmallEvents, FestStart")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", events)
-			fmt.Println("[••] Saran: Tampilkan portofolio event dan skill negosiasi")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Event Organizer di SmallEvents, FestStart")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", events)
+			Interact("[VPT] Saran: Tampilkan portofolio event dan skill negosiasi")
 			fmt.Println()
 		}
 
 		//TODO: Cashier
 		if cashier >= 5 {
-			fmt.Println("[Perusahaan Besar] Kasir di Indomaret, Alfamart, Circle K")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", cashier)
-			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Kasir di Indomaret, Alfamart, Circle K")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", cashier)
+			Interact("[VPT] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 			fmt.Println()
 		} else if cashier >= 3 {
-			fmt.Println("[Perusahaan Menengah] Kasir di Minimart Lokal, Toko Sembako")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", cashier)
-			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Kasir di Minimart Lokal, Toko Sembako")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", cashier)
+			Interact("[VPT] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 			fmt.Println()
 		} else if cashier > 0 {
-			fmt.Println("[Startup] Kasir di LocalStore, QuickMart")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", cashier)
-			fmt.Println("[••] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Kasir di LocalStore, QuickMart")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", cashier)
+			Interact("[VPT] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 			fmt.Println()
 		}
 
 		//TODO: Machine Operator
 		if operator >= 5 {
-			fmt.Println("[Perusahaan Besar] Operator Mesin di Indofood, Unilever, Astra")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", operator)
-			fmt.Println("[••] Saran: Tonjolkan sertifikasi penanganan mesin")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Operator Mesin di Indofood, Unilever, Astra")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", operator)
+			Interact("[VPT] Saran: Tonjolkan sertifikasi penanganan mesin")
 			fmt.Println()
 		} else if operator >= 3 {
-			fmt.Println("[Perusahaan Menengah] Operator Mesin di LocalFactory, PlantX")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", operator)
-			fmt.Println("[••] Saran: Tonjolkan sertifikasi penanganan mesin")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Operator Mesin di LocalFactory, PlantX")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", operator)
+			Interact("[VPT] Saran: Tonjolkan sertifikasi penanganan mesin")
 			fmt.Println()
 		} else if operator > 0 {
-			fmt.Println("[Startup] Operator Mesin di SmallPlant, MachPro")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", operator)
-			fmt.Println("[••] Saran: Tonjolkan sertifikasi penanganan mesin")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Operator Mesin di SmallPlant, MachPro")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", operator)
+			Interact("[VPT] Saran: Tonjolkan sertifikasi penanganan mesin")
 			fmt.Println()
 		}
 
 		//TODO: Food & Beverage Staff section
 		if fnb >= 5 {
-			fmt.Println("[Perusahaan Besar] Staf F&B di Hotel Indonesia Kempinski, Marriott")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", fnb)
-			fmt.Println("[••] Saran: Tonjolkan skill pelayanan dan sertifikasi")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Staf F&B di Hotel Indonesia Kempinski, Marriott")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", fnb)
+			Interact("[VPT] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 			fmt.Println()
 		} else if fnb >= 3 {
-			fmt.Println("[Perusahaan Menengah] Staf F&B di Local Cafe, Bistro X")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", fnb)
-			fmt.Println("[••] Saran: Tonjolkan skill pelayanan dan sertifikasi")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Staf F&B di Local Cafe, Bistro X")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", fnb)
+			Interact("[VPT] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 			fmt.Println()
 		} else if fnb > 0 {
-			fmt.Println("[Startup] Staf F&B di QuickBite, FoodStart")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", fnb)
-			fmt.Println("[••] Saran: Tonjolkan skill pelayanan dan sertifikasi")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Staf F&B di QuickBite, FoodStart")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", fnb)
+			Interact("[VPT] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 			fmt.Println()
 		}
 
 		//TODO: Content Creator / Influencer section
 		if creator >= 5 {
-			fmt.Println("[Perusahaan Besar] Content Creator / Influencer di YouTube, TikTok, Instagram")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 75%% - 100%%\n", creator)
-			fmt.Println("[••] Saran: Bangun konten konsisten dan basis pengikut")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Content Creator / Influencer di YouTube, TikTok, Instagram")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 75%% - 100%%\n", creator)
+			Interact("[VPT] Saran: Bangun konten konsisten dan basis pengikut")
 			fmt.Println()
 		} else if creator >= 3 {
-			fmt.Println("[Perusahaan Menengah] Content Creator / Influencer di Media Lokal, Blog")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 50%% - 75%%\n", creator)
-			fmt.Println("[••] Saran: Bangun konten konsisten dan basis pengikut")
+			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Content Creator / Influencer di Media Lokal, Blog")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 50%% - 75%%\n", creator)
+			Interact("[VPT] Saran: Bangun konten konsisten dan basis pengikut")
 			fmt.Println()
 		} else if creator > 0 {
-			fmt.Println("[Startup] Content Creator / Influencer di IndieVlog, MiniBlog")
-			fmt.Printf("     [!!!] Poin: %d/10 | Peluang diterima: 15%% - 50%%\n", creator)
-			fmt.Println("[••] Saran: Bangun konten konsisten dan basis pengikut")
+			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Content Creator / Influencer di IndieVlog, MiniBlog")
+			fmt.Printf("     [System] Poin: %d/10 dan Peluang diterima: 15%% - 50%%\n", creator)
+			Interact("[VPT] Saran: Bangun konten konsisten dan basis pengikut")
 			fmt.Println()
 		}
 
 		fmt.Println("═════════════════════════════════════════════════════════════════════════════")
-		fmt.Println("[INFO] Ini adalah saran berbasis AI. Terus tingkatkan profil Anda,")
-		fmt.Println("       dan VPT akan memperbarui peluang Anda secara real-time!")
+		Interact("[INFO] Ini adalah saran berbasis AI. Terus tingkatkan profil Anda,")
+		Interact("       dan VPT akan memperbarui peluang Anda secara real-time!")
 		fmt.Println("═════════════════════════════════════════════════════════════════════════════")
 	}
 }

@@ -45,14 +45,14 @@ func JobMenu() {
 			running = false
 			// sortJobMenu()
 		} else {
-			fmt.Println("[System] Pilihan tidak valid")
+			Interact("[System] Pilihan tidak valid")
 		}
 	}
 }
 
 func addJobListing() {
 	if jobCount >= maxJobs {
-		fmt.Println("[System] Kapasitas lowongan penuh, tidak bisa tambah")
+		Interact("[System] Kapasitas lowongan penuh, tidak bisa tambah")
 	} else {
 		var title string
 		var salary, industry int
@@ -62,7 +62,7 @@ func addJobListing() {
 		Header()
 		fmt.Println(">> Kode Industri: ")
 		fmt.Println("[Suggestion] Gunakan 3 angka (Contoh: 241, 294, 129)")
-		fmt.Println("[System] Angka tidak boleh mengandung unsur '0'")
+		Interact("[System] Angka tidak boleh mengandung unsur '0'")
 		fmt.Println()
 		endSec()
 		fmt.Print(">> Input: ")
@@ -74,21 +74,21 @@ func addJobListing() {
 		jobListings[jobCount].Industry = industry
 		jobListings[jobCount].Salary = salary
 		jobCount++
-		fmt.Println("[System] Lowongan berhasil ditambahkan")
+		Interact("[System] Lowongan berhasil ditambahkan")
 		Clear()
 	}
 }
 
 func deleteJobListing() {
 	if jobCount == 0 {
-		fmt.Println("[System] Tidak ada lowongan untuk dihapus")
+		Interact("[System] Tidak ada lowongan untuk dihapus")
 	} else {
 		listJobListings()
 		var idx, i int
 		fmt.Print("Masukkan nomor lowongan yang ingin dihapus: ")
 		fmt.Scan(&idx)
 		if idx < 1 || idx > jobCount {
-			fmt.Println("[System] Nomor tidak valid.")
+			Interact("[System] Nomor tidak valid.")
 		} else {
 			i = idx - 1
 			for i < jobCount-1 {
@@ -100,14 +100,14 @@ func deleteJobListing() {
 			jobListings[jobCount-1].Salary = 0
 
 			jobCount--
-			fmt.Println("[System] Lowongan berhasil dihapus")
+			Interact("[System] Lowongan berhasil dihapus")
 		}
 	}
 }
 
 func editJobListing() {
 	if jobCount == 0 {
-		fmt.Println("[System] Tidak ada lowongan untuk diedit.")
+		Interact("[System] Tidak ada lowongan untuk diedit.")
 	} else {
 		listJobListings()
 		var idx int
@@ -115,7 +115,7 @@ func editJobListing() {
 		fmt.Scan(&idx)
 
 		if idx < 1 || idx > jobCount {
-			fmt.Println("[System] Nomor tidak valid")
+			Interact("[System] Nomor tidak valid")
 		} else {
 			idx = idx - 1
 			var title, choice string
@@ -140,10 +140,10 @@ func editJobListing() {
 				fmt.Scan(&salary)
 				jobListings[idx].Salary = salary
 			} else {
-				fmt.Println("[System] Gaji tidak diubah")
+				Interact("[System] Gaji tidak diubah")
 			}
 
-			fmt.Println("[System] Lowongan berhasil diperbarui")
+			Interact("[System] Lowongan berhasil diperbarui")
 		}
 	}
 }
@@ -153,7 +153,7 @@ func listJobListings() {
 	var i int
 
 	if jobCount == 0 {
-		fmt.Println("[System] Belum ada data lowongan")
+		Interact("[System] Belum ada data lowongan")
 	} else {
 		fmt.Println("╔═════════╦════════════════════════╦═════════════════╦══════════════╗")
 		fmt.Println("║   No    ║        Title           ║    Industri     ║     Gaji     ║")
@@ -174,7 +174,7 @@ func listJobListings() {
 // func sortJobMenu() {
 // 	var choose int
 // 	if jobCount == 0 {
-// 		fmt.Println("[System] Belum ada data lowongan untuk diurutkan")
+// 		Interact("[System] Belum ada data lowongan untuk diurutkan")
 // 		BackToMenu()
 // 	}
 
