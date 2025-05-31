@@ -88,7 +88,7 @@ func deleteJobListing() {
 		fmt.Print("Masukkan nomor lowongan yang ingin dihapus: ")
 		fmt.Scan(&idx)
 		if idx < 1 || idx > jobCount {
-			Interact("[System] Nomor tidak valid.")
+			Interact("[System] Nomor tidak valid")
 		} else {
 			i = idx - 1
 			for i < jobCount-1 {

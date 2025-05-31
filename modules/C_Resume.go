@@ -121,7 +121,7 @@ func CreateResume() {
 			}
 		}
 
-		fmt.Println("\n------------------------------------------------------------------")
+		fmt.Println("------------------------------------------------------------------")
 
 		if data.EducationCount == 0 && data.ExperienceCount == 0 {
 			fmt.Println("Pendidikan:")
@@ -167,7 +167,7 @@ func CreateResume() {
 			}
 		}
 
-		fmt.Println("\n------------------------------------------------------------------")
+		fmt.Println("------------------------------------------------------------------")
 		fmt.Println("Sertifikat:")
 		if sertifikat != "" {
 			fmt.Printf("  - %s\n", sertifikat)

@@ -6,6 +6,7 @@ func SearchJob() {
 	var choose int
 	var running bool = true
 
+	// TODO: Searching sec
 	for running {
 		fmt.Println("╔══════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                   [MENU] Pencarian Lowongan                  ║")
@@ -30,6 +31,7 @@ func SearchJob() {
 			SortBySalary()
 			listJobListings()
 		} else if choose == 4 {
+			// Under Development
 			listJobListings()
 		} else if choose == 5 {
 			listJobListings()
@@ -41,6 +43,7 @@ func SearchJob() {
 	}
 }
 
+// TODO: Kata kunci industri / Binary Search
 func searchByIndustry() {
 	if jobCount == 0 {
 		Interact("[System] Belum ada data lowongan untuk dicari")
@@ -70,6 +73,7 @@ func searchByIndustry() {
 	fmt.Println("╚═════════╩════════════════════════╩═════════════════╩══════════════╝")
 }
 
+// TODO: Search berdasarkan Posisi Pekerjaan
 func searchJobBinary() {
 	if jobCount == 0 {
 		Interact("[System] Tidak ada lowongan yang tersedia untuk dicari")
@@ -135,6 +139,7 @@ func searchJobBinary() {
 	}
 }
 
+// TODO: Insertion Sort
 func sortJobTitle() {
 	var i, j int
 	var temp JobListing

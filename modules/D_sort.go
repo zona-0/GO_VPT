@@ -1,5 +1,6 @@
 package modules
 
+// TODO: Insertion Sort for sorting job listings by salary
 func SortBySalary() {
 	var i, j, maxIdx int
 	var temp JobListing

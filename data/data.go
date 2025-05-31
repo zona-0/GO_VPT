@@ -1,5 +1,6 @@
 package data
 
+// TODO: Structs data sec
 // TODO: Skill struct sec
 type Skill struct {
 	Name string
