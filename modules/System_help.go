@@ -4,13 +4,13 @@ import "fmt"
 
 func Help() {
 	Clear()
-	Interact("[System] W E L C O M E")
+	Interact(">> [System] W E L C O M E")
 	fmt.Printf("\n\n")
 	fmt.Println("╔════════════════════════════════════════════════════════════════════════╗")
 	fmt.Println("║                     Vitae PreTrained Transformer                       ║")
 	fmt.Println("║       AI Assistant for Smart Resumes & Cover Letter Creation           ║")
 	fmt.Println("╠════════════════════════════════════════════════════════════════════════╣")
-	Interact(" [System] This is help menu for user!")
+	Interact(" >> [System] This is help menu for user!")
 
 	// TODO: Commands section
 	Interact(" [Skills]   Pada saat menambahkan skill, ketik 'done' untuk berhenti atau selesai")

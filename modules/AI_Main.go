@@ -42,10 +42,10 @@ func MainAI() {
 		// TODO: TAKE EDUCATION DATA
 		Interact("[C] Pendidikan: ")
 		if data.EducationCount == 0 {
-			Interact("	[System] Anda belum mengisi data pendidikan. Silakan isi melalui menu utama!")
+			Interact("	>> [System] Anda belum mengisi data pendidikan. Silakan isi melalui menu utama!")
 		} else {
 			for i = 0; i < data.EducationCount; i++ {
-				fmt.Printf("	[System] Sekolah/Universitas: %s\n	[System] Jenjang: %s\n	[System] Tahun Lulus: %d\n",
+				fmt.Printf("	>> [V] Sekolah/Universitas: %s\n	>> [V] Jenjang: %s\n	>> [V] Tahun Lulus: %d\n",
 					data.Educations[i].School, data.Educations[i].Degree, data.Educations[i].Year)
 			}
 		}
@@ -53,11 +53,11 @@ func MainAI() {
 		// TODO: TAKE SKILLS DATA
 		Interact("[D] Keterampilan: ")
 		if data.SkillCount == 0 {
-			Interact("	[System] Anda belum mengisi data keterampilan. Silakan isi melalui menu utama!")
+			Interact("	>> [System] Anda belum mengisi data keterampilan. Silakan isi melalui menu utama!")
 		} else {
 			i = 0
 			for i < data.SkillCount {
-				fmt.Printf("	[System] %d. %s\n", i+1, data.Skills[i].Name)
+				fmt.Printf("	>> [V] %d. %s\n", i+1, data.Skills[i].Name)
 				i += 1
 			}
 		}
@@ -65,11 +65,11 @@ func MainAI() {
 		// TODO: PENGALAMAN KERJA
 		Interact("[E] Pengalaman Kerja: ")
 		if data.ExperienceCount == 0 {
-			Interact("	[System] Anda belum mengisi data pengalaman kerja. Silakan isi melalui menu utama!")
+			Interact("	>> [System] Anda belum mengisi data pengalaman kerja. Silakan isi melalui menu utama!")
 		} else {
 			i = 0
 			for i < data.ExperienceCount {
-				fmt.Printf("	[System] %d. %s %s\n", i+1, data.Experiences[i].Title, data.Experiences[i].Company)
+				fmt.Printf("	>> [V] %d. %s %s\n", i+1, data.Experiences[i].Title, data.Experiences[i].Company)
 				i += 1
 			}
 		}
@@ -100,7 +100,7 @@ func MainAI() {
 		// var selesai bool = false
 
 		Interact(">> Tentang Saya: ")
-		Interact("   [System] Akhiri dengan klik 'enter' lalu ketik '.' untuk mengakhiri")
+		Interact("   >> [System] Akhiri dengan klik 'enter' lalu ketik '.' untuk mengakhiri")
 		for !selesai {
 			fmt.Scan(&kata)
 
@@ -134,7 +134,7 @@ func MainAI() {
 		fmt.Println("------------------------------------------------------------------")
 		Interact("KETERAMPILAN:")
 		if data.SkillCount == 0 {
-			Interact("  [System] Belum ada keterampilan")
+			Interact("  >> [X] Belum ada keterampilan")
 		} else {
 			for i = 0; i < data.SkillCount; i++ {
 				fmt.Printf("  - %s\n", data.Skills[i].Name)
@@ -145,12 +145,12 @@ func MainAI() {
 
 		if data.EducationCount == 0 && data.ExperienceCount == 0 {
 			Interact("Pendidikan:")
-			Interact("  [System] Belum ada pendidikan")
+			Interact("  >> [X] Belum ada pendidikan")
 			Interact("Pengalaman Kerja:")
-			Interact("  [System] Belum ada pengalaman kerja")
+			Interact("  >> [X] Belum ada pengalaman kerja")
 		} else if data.EducationCount == 0 {
 			Interact("PENDIDIKAN:")
-			Interact("  [System] Belum ada pendidikan")
+			Interact("  >> [X] Belum ada pendidikan")
 			Interact("Pengalaman Kerja:")
 			for i = 0; i < data.ExperienceCount; i++ {
 				fmt.Printf("  - %s di %s\n", data.Experiences[i].Title, data.Experiences[i].Company)
@@ -161,7 +161,7 @@ func MainAI() {
 				fmt.Printf("  - %s, %s (%d)\n", data.Educations[i].School, data.Educations[i].Degree, data.Educations[i].Year)
 			}
 			Interact("Pengalaman Kerja:")
-			Interact("  [System] Belum ada pengalaman kerja")
+			Interact("  >> [X] Belum ada pengalaman kerja")
 		} else {
 			fmt.Printf("%-38s| %-38s\n", ">> Pendidikan: ", ">> Pengalaman Kerja: ")
 
@@ -191,7 +191,7 @@ func MainAI() {
 		if sertifikat != "" {
 			fmt.Printf("  - %s\n", sertifikat)
 		} else {
-			Interact("  [System] Tidak ada sertifikat")
+			Interact("  >> [X] Tidak ada sertifikat")
 		}
 
 		fmt.Printf("\n\n")
@@ -506,6 +506,6 @@ func MainAI() {
 		}
 	} else {
 		fmt.Println()
-		Interact("[System] ketik 'resume' untuk bantuan membuat resume atau ketik 'suratkerja' untuk bantuan membuat surat lamaran kerja")
+		Interact(">> [System] ketik 'resume' untuk bantuan membuat resume atau ketik 'suratkerja' untuk bantuan membuat surat lamaran kerja")
 	}
 }

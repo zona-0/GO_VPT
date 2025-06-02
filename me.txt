@@ -1,3 +1,7 @@
 TO DO LIST:
-    1. Relevansi || Selection Sort
-    2. Repair UI AI
+    1. Relevansi (sort by relevance / percent)  ==> Use point system AI_recommend * 100%
+            use if input == val (type: string) {
+                output point as percent (type: integer)
+            }
+    2. Repair output of AI_recommend
+    3. Repair UI AI

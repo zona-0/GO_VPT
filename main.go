@@ -89,7 +89,7 @@ func main() {
 			modules.Interact(">> Exiting the system...")
 			break
 		} else {
-			modules.Interact("[System] Pilihan tidak valid. Silakan pilih menu yang tersedia")
+			modules.Interact(">> [System] Pilihan tidak valid. Silakan pilih menu yang tersedia")
 		}
 
 		// } else if menu == 6 {

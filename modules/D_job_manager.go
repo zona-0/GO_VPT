@@ -14,7 +14,7 @@ func ManageJob() {
 		fmt.Println("║ 1. [Menu]   Setting data lowongan pekerjaan                        ║")
 		fmt.Println("║ 2. [Search] Cari data lowongan pekerjaan                           ║")
 		fmt.Println("║ 3. [Show]   List data pekerjaan                                    ║")
-		fmt.Println("║ 4. [Done]   Selesai dan simpan                                     ║")
+		fmt.Println("║ 4. [Done]   Selesai                                                ║")
 		fmt.Println("╚════════════════════════════════════════════════════════════════════╝")
 		fmt.Print(">> Pilih menu: ")
 		fmt.Scan(&input)
@@ -32,9 +32,7 @@ func ManageJob() {
 		} else if input == 4 {
 			running = false
 		} else {
-			Interact("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
+			Interact(">> [System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
 		}
 	}
 }
-
-// Git

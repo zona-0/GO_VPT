@@ -38,7 +38,7 @@ func SearchJob() {
 		} else if choose == 6 {
 			running = false
 		} else {
-			Interact("[System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
+			Interact(">> [System] Pilihan anda tidak ada di menu. Pilihlah menu yang tersedia dari angka 1 sampai 5")
 		}
 	}
 }
@@ -46,18 +46,18 @@ func SearchJob() {
 // TODO: Kata kunci industri / Binary Search
 func searchByIndustry() {
 	if jobCount == 0 {
-		Interact("[System] Belum ada data lowongan untuk dicari")
+		Interact(">> [System] Belum ada data lowongan untuk dicari")
 	}
 
-	var industryCode int
-	fmt.Print("Masukkan Kode Industri yang dicari: ")
+	var industryCode, i int
+	fmt.Print(">> Masukkan Kode Industri yang dicari: ")
 	fmt.Scan(&industryCode)
 
 	var found bool = false
 	fmt.Println("╔═════════╦════════════════════════╦═════════════════╦══════════════╗")
 	fmt.Println("║   No    ║        Title           ║    Industri     ║     Gaji     ║")
 	fmt.Println("╠═════════╬════════════════════════╬═════════════════╬══════════════╣")
-	for i := 0; i < jobCount; i++ {
+	for i = 0; i < jobCount; i++ {
 		if jobListings[i].Industry == industryCode {
 			fmt.Printf("║  %-6d ║ %-22s ║ %-15d ║ Rp %-9d ║\n",
 				i+1,
@@ -76,8 +76,8 @@ func searchByIndustry() {
 // TODO: Search berdasarkan Posisi Pekerjaan
 func searchJobBinary() {
 	if jobCount == 0 {
-		Interact("[System] Tidak ada lowongan yang tersedia untuk dicari")
-		fmt.Println()
+		Interact(">> [System] Tidak ada lowongan yang tersedia untuk dicari")
+		// fmt.Println()
 		BackToMenu()
 	}
 
@@ -135,7 +135,7 @@ func searchJobBinary() {
 
 		fmt.Println("╚═════════╩════════════════════════╩═════════════════╩══════════════╝")
 	} else {
-		Interact("[System] Tidak ada lowongan dengan judul tersebut")
+		Interact(">> [System] Tidak ada lowongan dengan judul tersebut")
 	}
 }
 

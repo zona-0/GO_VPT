@@ -24,6 +24,6 @@ func Clear() {
 	cmd.Stdout = os.Stdout
 	err = cmd.Run()
 	if err != nil {
-		fmt.Println("[System] Gagal membersihkan layar:", err)
+		fmt.Println(">> [System] Gagal membersihkan layar:", err)
 	}
 }

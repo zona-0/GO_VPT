@@ -18,11 +18,11 @@ func ShowAllUserData() {
 	fmt.Println("║                           [ SKILL USER ]                           ║")
 	fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
 	if data.SkillCount == 0 {
-		fmt.Println("║              [System] Belum ada data sk1ill                        ║")
+		fmt.Println("║              >> [System] Belum ada data sk1ill                        ║")
 	} else {
 		i = 0
 		for i < data.SkillCount {
-			fmt.Printf("║  %-1d. %-58s ║\n", i+1, data.Skills[i].Name)
+			fmt.Printf("║  %-1d. %-60s ║\n", i+1, data.Skills[i].Name)
 			i += 1
 		}
 	}
@@ -33,7 +33,7 @@ func ShowAllUserData() {
 	fmt.Println("║                        [ PENGALAMAN KERJA ]                        ║")
 	fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
 	if data.ExperienceCount == 0 {
-		fmt.Println("║              [System] Belum ada pengalaman kerja                   ║")
+		fmt.Println("║              >> [System] Belum ada pengalaman kerja                   ║")
 	} else {
 		fmt.Println("║  No.  ║        Jabatan         ║         Perusahaan                ║")
 		fmt.Println("╠═══════╬════════════════════════╬═══════════════════════════════════╣")
@@ -52,7 +52,7 @@ func ShowAllUserData() {
 	fmt.Println("║                        [ RIWAYAT PENDIDIKAN ]                      ║")
 	fmt.Println("╠════════════════════════════════════════════════════════════════════╣")
 	if data.EducationCount == 0 {
-		fmt.Println("║              [System] Belum ada data pendidikan                    ║")
+		fmt.Println("║              >> [System] Belum ada data pendidikan                    ║")
 	} else {
 		fmt.Println("║  No.  ║       Sekolah/Universitas        ║     Gelar     ║ Tahun   ║")
 		fmt.Println("╠═══════╬══════════════════════════════════╬═══════════════╬═════════╣")
