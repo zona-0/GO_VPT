@@ -1,5 +1,6 @@
 package modules
 
+//TODO: Disable function string sec
 // var i int
 // func toLowerChar(c byte) byte {
 // 	if c >= 'A' && c <= 'Z' {
@@ -23,9 +24,9 @@ package modules
 // 		return input
 // 	}
 
-// 	var result string 
+// 	var result string
 // 	var ch byte = input[0]
-	
+
 // 	if ch >= 'a' && ch <= 'z' {
 // 		ch = ch - 32
 // 	}

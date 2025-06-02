@@ -390,17 +390,17 @@ func RecommendJob() {
 		// TODO: Backend Sec
 		if backend*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Backend Developer di Tokopedia, Gojek, Bukalapak")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", backend)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", backend*cPersen)
 			Interact("[VPT] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
 			fmt.Println()
 		} else if backend*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Backend Developer di Ruangguru, Qasir, Mamikos")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", backend)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", backend*cPersen)
 			Interact("[VPT] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
 			fmt.Println()
 		} else if backend*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Backend Developer di LocalTech, NextDev")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", backend)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", backend*cPersen)
 			Interact("[VPT] Saran: Tonjolkan pengalaman Anda dengan sistem skala besar dan microservices")
 			fmt.Println()
 		}
@@ -408,17 +408,17 @@ func RecommendJob() {
 		// TODO: Frontend Sec
 		if frontend*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Frontend Developer di Traveloka, Blibli, Gojek")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", frontend)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", frontend*cPersen)
 			Interact("[VPT] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
 			fmt.Println()
 		} else if frontend*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Frontend Developer di KlikDokter, Sayurbox")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", frontend)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", frontend*cPersen)
 			Interact("[VPT] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
 			fmt.Println()
 		} else if frontend*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Frontend Developer di CodeCraft, DevStart")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", frontend)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", frontend*cPersen)
 			Interact("[VPT] Saran: Tingkatkan skill UI/UX dan gunakan React/Vue di portofolio Anda")
 			fmt.Println()
 		}
@@ -426,17 +426,17 @@ func RecommendJob() {
 		// TODO: Data Analyst
 		if analyst*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Data Analyst di Telkom Indonesia, Shopee, Bank BCA")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", analyst)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", analyst*cPersen)
 			Interact("[VPT] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau")
 			fmt.Println()
 		} else if analyst*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Data Analyst di Xendit, Sociolla")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", analyst)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", analyst*cPersen)
 			Interact("[VPT] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
 			fmt.Println()
 		} else if analyst*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Data Analyst di AnalytIQ, StatLab")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", analyst)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", analyst*cPersen)
 			Interact("[VPT] Saran: Latihan SQL dan dashboard dengan Power BI atau Tableau.")
 			fmt.Println()
 		}
@@ -444,17 +444,17 @@ func RecommendJob() {
 		// TODO: Content Writer / Editor
 		if writer*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Content Writer / Editor di Kumparan, IDN Media, Zenius")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", writer)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", writer*cPersen)
 			Interact("[VPT] Saran: Bangun portofolio dan perkuat penulisan SEO")
 			fmt.Println()
 		} else if writer*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Content Writer / Editor di Hipwee, FemaleDaily")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", writer)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", writer*cPersen)
 			Interact("[VPT] Saran: Bangun portofolio dan perkuat penulisan SEO")
 			fmt.Println()
 		} else if writer*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Content Writer / Editor di BlogHive, LocalStory")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", writer)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", writer*cPersen)
 			Interact("[VPT] Saran: Bangun portofolio dan perkuat penulisan SEO")
 			fmt.Println()
 		}
@@ -462,17 +462,17 @@ func RecommendJob() {
 		// TODO: Teacher / Lecturer
 		if teacher*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Guru / Dosen di Binus, Universitas Indonesia, Ruangguru")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", teacher)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", teacher*cPersen)
 			Interact("[VPT] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 			fmt.Println()
 		} else if teacher*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Guru / Dosen di HarukaEdu, Zenius")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", teacher)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", teacher*cPersen)
 			Interact("[VPT] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 			fmt.Println()
 		} else if teacher*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Guru / Dosen di KelasKita, EduStart")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", teacher)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", teacher*cPersen)
 			Interact("[VPT] Saran: Tampilkan materi ajar dan dapatkan sertifikasi")
 			fmt.Println()
 		}
@@ -480,17 +480,17 @@ func RecommendJob() {
 		// TODO: Marketing Specialist
 		if marketing*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Marketing Specialist di Grab, Shopee, TikTok Indonesia")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", marketing)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", marketing*cPersen)
 			Interact("[VPT] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 			fmt.Println()
 		} else if marketing*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Marketing Specialist di Evermos, Sirclo")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", marketing)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", marketing*cPersen)
 			Interact("[VPT] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 			fmt.Println()
 		} else if marketing*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Marketing Specialist di PromoPilot, StartSell")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", marketing)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", marketing*cPersen)
 			Interact("[VPT] Saran: Tunjukkan kampanye media sosial dan pengetahuan analitik")
 			fmt.Println()
 		}
@@ -498,17 +498,17 @@ func RecommendJob() {
 		// TODO: Graphic Designer
 		if designer*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Graphic Designer di Tokopedia, Bukalapak, Netflix ID")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", designer)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", designer*cPersen)
 			Interact("[VPT] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 			fmt.Println()
 		} else if designer*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Graphic Designer di Jakmall, Warung Pintar")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", designer)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", designer*cPersen)
 			Interact("[VPT] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 			fmt.Println()
 		} else if designer*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Graphic Designer di PixelCraft, LokalDesign")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", designer)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", designer*cPersen)
 			Interact("[VPT] Saran: Perbaiki portofolio Behance/Dribbble Anda")
 			fmt.Println()
 		}
@@ -516,17 +516,17 @@ func RecommendJob() {
 		// TODO: DevOps Engineer
 		if devops*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai DevOps Engineer di Blibli, Gojek, JNE")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", devops)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", devops*cPersen)
 			Interact("[VPT] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 			fmt.Println()
 		} else if devops*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai DevOps Engineer di Alterra, Nodeflux")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", devops)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", devops*cPersen)
 			Interact("[VPT] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 			fmt.Println()
 		} else if devops*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai DevOps Engineer di InfraEdge, LiteOps")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", devops)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", devops*cPersen)
 			Interact("[VPT] Saran: Tunjukkan pipeline CI/CD dan infrastructure as code")
 			fmt.Println()
 		}
@@ -534,17 +534,17 @@ func RecommendJob() {
 		// TODO: Mobile App Developer
 		if mobile*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Mobile App Developer di Traveloka, TikTok, Tokopedia")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", mobile)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", mobile*cPersen)
 			Interact("[VPT] Saran: Bangun proyek Flutter/React Native")
 			fmt.Println()
 		} else if mobile*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Mobile App Developer di Kulina, MySkill")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", mobile)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", mobile*cPersen)
 			Interact("[VPT] Saran: Bangun proyek Flutter/React Native")
 			fmt.Println()
 		} else if mobile*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Mobile App Developer di AppHero, NextMob")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", mobile)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", mobile*cPersen)
 			Interact("[VPT] Saran: Bangun proyek Flutter/React Native")
 			fmt.Println()
 		}
@@ -552,17 +552,17 @@ func RecommendJob() {
 		// TODO: Cybersecurity Specialist
 		if security*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Cybersecurity Specialist di Bank Indonesia, Tokopedia, Kominfo")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", security)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", security*cPersen)
 			Interact("[VPT] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 			fmt.Println()
 		} else if security*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Cybersecurity Specialist di Vaksincom, Privy ID")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", security)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", security*cPersen)
 			Interact("[VPT] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 			fmt.Println()
 		} else if security*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Cybersecurity Specialist di SecuStart, ByteSecure")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", security)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", security*cPersen)
 			Interact("[VPT] Saran: Ambil sertifikasi keamanan siber dan ikut CTF")
 			fmt.Println()
 		}
@@ -570,17 +570,17 @@ func RecommendJob() {
 		// TODO: Project Manager
 		if management*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Project Manager di Telkomsel, Pertamina, BRI")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", management)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", management*cPersen)
 			Interact("[VPT] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 			fmt.Println()
 		} else if management*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Project Manager di HappyFresh, Pinhome")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", management)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", management*cPersen)
 			Interact("[VPT] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 			fmt.Println()
 		} else if management*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Project Manager di ManageOne, AgileStudio")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", management)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", management*cPersen)
 			Interact("[VPT] Saran: Tonjolkan perencanaan proyek, kepemimpinan, dan metode agile")
 			fmt.Println()
 		}
@@ -588,17 +588,17 @@ func RecommendJob() {
 		// TODO: Financial Analyst
 		if finance*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Financial Analyst di Bank Mandiri, OJK, PwC")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", finance)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", finance*cPersen)
 			Interact("[VPT] Saran: Asah skill Excel dan financial modeling")
 			fmt.Println()
 		} else if finance*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Financial Analyst di Bibit, TernakUang")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", finance)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", finance*cPersen)
 			Interact("[VPT] Saran: Asah skill Excel dan financial modeling")
 			fmt.Println()
 		} else if finance*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Financial Analyst di FinPilot, BudgetBuddy")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", finance)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", finance*cPersen)
 			Interact("[VPT] Saran: Asah skill Excel dan financial modeling")
 			fmt.Println()
 		}
@@ -606,17 +606,17 @@ func RecommendJob() {
 		// TODO: Customer Service
 		if customer_service*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Customer Service di Shopee, Tokopedia, Traveloka")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", customer_service)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", customer_service*cPersen)
 			Interact("[VPT] Saran: Tingkatkan kemampuan komunikasi dan empati")
 			fmt.Println()
 		} else if customer_service*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Customer Service di Sirclo, Evermos")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", customer_service)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", customer_service*cPersen)
 			Interact("[VPT] Saran: Tingkatkan kemampuan komunikasi dan empati")
 			fmt.Println()
 		} else if customer_service*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Customer Service di HelpLine, FastDesk")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", customer_service)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", customer_service*cPersen)
 			Interact("[VPT] Saran: Tingkatkan kemampuan komunikasi dan empati")
 			fmt.Println()
 		}
@@ -624,17 +624,17 @@ func RecommendJob() {
 		// TODO: Game Developer
 		if game*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Game Developer di ArenaNet ID, Agate Studio, Garena")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", game)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", game*cPersen)
 			Interact("[VPT] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 			fmt.Println()
 		} else if game*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Game Developer di Toge Productions, Digital Happiness")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", game)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", game*cPersen)
 			Interact("[VPT] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 			fmt.Println()
 		} else if game*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Game Developer di PixelPlay, IndieDev")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", game)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", game*cPersen)
 			Interact("[VPT] Saran: Kuasai Unity atau Unreal dan buat game kecil")
 			fmt.Println()
 		}
@@ -642,17 +642,17 @@ func RecommendJob() {
 		//TODO:  Video Editor
 		if video*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Video Editor di NET TV, Narasi, IDN Media")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", video)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", video*cPersen)
 			Interact("[VPT] Saran: Buat showreel dan pelajari motion graphics")
 			fmt.Println()
 		} else if video*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Video Editor di Kreator.ID, LokalTV")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", video)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", video*cPersen)
 			Interact("[VPT] Saran: Buat showreel dan pelajari motion graphics")
 			fmt.Println()
 		} else if video*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Video Editor di VideoVibe, ClipStart")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", video)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", video*cPersen)
 			Interact("[VPT] Saran: Buat showreel dan pelajari motion graphics")
 			fmt.Println()
 		}
@@ -660,17 +660,17 @@ func RecommendJob() {
 		//TODO:  Legal Advisor
 		if law*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Legal Advisor di Mahkamah Agung, Kantor Hukum Ternama")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", law)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", law*cPersen)
 			Interact("[VPT] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 			fmt.Println()
 		} else if law*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Legal Advisor di Startup Hukum Lokal")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", law)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", law*cPersen)
 			Interact("[VPT] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 			fmt.Println()
 		} else if law*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Legal Advisor di LegalEase, LawEntry")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", law)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", law*cPersen)
 			Interact("[VPT] Saran: Perdalam pengetahuan regulasi dan penulisan hukum")
 			fmt.Println()
 		}
@@ -678,17 +678,17 @@ func RecommendJob() {
 		//TODO: Healthcare Worker
 		if health*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Tenaga Kesehatan di RSUPN, Siloam, Halodoc")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", health)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", health*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 			fmt.Println()
 		} else if health*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Tenaga Kesehatan di Good Doctor, ProSehat")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", health)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", health*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 			fmt.Println()
 		} else if health*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Tenaga Kesehatan di HealthStart, KlinikKita")
-			fmt.Printf(">> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", health)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", health*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi dan pengalaman merawat pasien")
 			fmt.Println()
 		}
@@ -696,17 +696,17 @@ func RecommendJob() {
 		//TODO: Administrative Staff
 		if admin*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Staf Administrasi di Pertamina, PLN, Bank Mandiri")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", admin)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", admin*cPersen)
 			Interact("[VPT] Saran: Perkuat skill MS Office dan organisasi")
 			fmt.Println()
 		} else if admin*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Staf Administrasi di DANA, OVO")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", admin)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", admin*cPersen)
 			Interact("[VPT] Saran: Perkuat skill MS Office dan organisasi")
 			fmt.Println()
 		} else if admin*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Staf Administrasi di OfficeHub, AdminPro")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", admin)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", admin*cPersen)
 			Interact("[VPT] Saran: Perkuat skill MS Office dan organisasi")
 			fmt.Println()
 		}
@@ -714,17 +714,17 @@ func RecommendJob() {
 		//TODO: Logistics Coordinator
 		if logistics*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Koordinator Logistik di JNE, TIKI, Gojek")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", logistics)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", logistics*cPersen)
 			Interact("[VPT] Saran: Fokus pada skill manajemen rantai pasok")
 			fmt.Println()
 		} else if logistics*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Koordinator Logistik di Deliveree, Lalamove")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", logistics)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", logistics*cPersen)
 			Interact("[VPT] Saran: Fokus pada skill manajemen rantai pasok")
 			fmt.Println()
 		} else if logistics*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Koordinator Logistik di FastLog, QuickShip")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", logistics)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", logistics*cPersen)
 			Interact("[VPT] Saran: Fokus pada skill manajemen rantai pasok")
 			fmt.Println()
 		}
@@ -732,17 +732,17 @@ func RecommendJob() {
 		//TODO:  HR Specialist
 		if hr*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai HR Specialist di Unilever, Telkom Indonesia, Danone")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", hr)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", hr*cPersen)
 			Interact("[VPT] Saran: Kembangkan skill interview dan hubungan karyawan")
 			fmt.Println()
 		} else if hr*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai HR Specialist di Modalku, Kredivo")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", hr)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", hr*cPersen)
 			Interact("[VPT] Saran: Kembangkan skill interview dan hubungan karyawan")
 			fmt.Println()
 		} else if hr*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai HR Specialist di PeopleOps, HRStart")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", hr)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", hr*cPersen)
 			Interact("[VPT] Saran: Kembangkan skill interview dan hubungan karyawan")
 			fmt.Println()
 		}
@@ -750,17 +750,17 @@ func RecommendJob() {
 		//TODO:  Psychologist / Counselor
 		if psychology*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Psikolog / Konselor di RSJ, Klinik Pratama, Sekolah")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", psychology)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", psychology*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 			fmt.Println()
 		} else if psychology*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Psikolog / Konselor di Klinik Prima, Sekolah Alam")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", psychology)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", psychology*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 			fmt.Println()
 		} else if psychology*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Psikolog / Konselor di MindCare, SafeTalk")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", psychology)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", psychology*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi konseling dan pengalaman")
 			fmt.Println()
 		}
@@ -768,17 +768,17 @@ func RecommendJob() {
 		//TODO: Chef / Cook
 		if chef*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Koki / Juru Masak di Hotel Mulia, Ritz Carlton, Resto Lokal")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", chef)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", chef*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 			fmt.Println()
 		} else if chef*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Koki / Juru Masak di Hotel Santika, Bistro Lokal")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", chef)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", chef*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 			fmt.Println()
 		} else if chef*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Koki / Juru Masak di FoodieStart, HomeKitchen")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", chef)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", chef*cPersen)
 			Interact("[VPT] Saran: Tampilkan sertifikasi kuliner dan menu andalan")
 			fmt.Println()
 		}
@@ -786,17 +786,17 @@ func RecommendJob() {
 		//TODO:  Event Organizer
 		if events*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Event Organizer di Dyandra, Rajawali Corpora")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", events)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", events*cPersen)
 			Interact("[VPT] Saran: Tampilkan portofolio event dan skill negosiasi")
 			fmt.Println()
 		} else if events*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Event Organizer di EO Lokal, PartyUp")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", events)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", events*cPersen)
 			Interact("[VPT] Saran: Tampilkan portofolio event dan skill negosiasi")
 			fmt.Println()
 		} else if events*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Event Organizer di SmallEvents, FestStart")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", events)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", events*cPersen)
 			Interact("[VPT] Saran: Tampilkan portofolio event dan skill negosiasi")
 			fmt.Println()
 		}
@@ -804,17 +804,17 @@ func RecommendJob() {
 		//TODO: Cashier
 		if cashier*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Kasir di Indomaret, Alfamart, Circle K")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", cashier)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", cashier*cPersen)
 			Interact("[VPT] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 			fmt.Println()
 		} else if cashier*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Kasir di Minimart Lokal, Toko Sembako")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", cashier)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", cashier*cPersen)
 			Interact("[VPT] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 			fmt.Println()
 		} else if cashier*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Kasir di LocalStore, QuickMart")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", cashier)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", cashier*cPersen)
 			Interact("[VPT] Saran: Fokus pada ketelitian dan skill layanan pelanggan")
 			fmt.Println()
 		}
@@ -822,17 +822,17 @@ func RecommendJob() {
 		//TODO: Machine Operator
 		if operator*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Operator Mesin di Indofood, Unilever, Astra")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", operator)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", operator*cPersen)
 			Interact("[VPT] Saran: Tonjolkan sertifikasi penanganan mesin")
 			fmt.Println()
 		} else if operator*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Operator Mesin di LocalFactory, PlantX")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", operator)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", operator*cPersen)
 			Interact("[VPT] Saran: Tonjolkan sertifikasi penanganan mesin")
 			fmt.Println()
 		} else if operator*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Operator Mesin di SmallPlant, MachPro")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", operator)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", operator*cPersen)
 			Interact("[VPT] Saran: Tonjolkan sertifikasi penanganan mesin")
 			fmt.Println()
 		}
@@ -840,17 +840,17 @@ func RecommendJob() {
 		//TODO: Food & Beverage Staff section
 		if fnb*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Staf F&B di Hotel Indonesia Kempinski, Marriott")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", fnb)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", fnb*cPersen)
 			Interact("[VPT] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 			fmt.Println()
 		} else if fnb*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Staf F&B di Local Cafe, Bistro X")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", fnb)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", fnb*cPersen)
 			Interact("[VPT] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 			fmt.Println()
 		} else if fnb*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Staf F&B di QuickBite, FoodStart")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", fnb)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", fnb*cPersen)
 			Interact("[VPT] Saran: Tonjolkan skill pelayanan dan sertifikasi")
 			fmt.Println()
 		}
@@ -858,17 +858,17 @@ func RecommendJob() {
 		//TODO: Content Creator / Influencer section
 		if creator*cPersen >= 300 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Besar sebagai Content Creator / Influencer di YouTube, TikTok, Instagram")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", creator)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 75%% - 100%%\n", creator*cPersen)
 			Interact("[VPT] Saran: Bangun konten konsisten dan basis pengikut")
 			fmt.Println()
 		} else if creator*cPersen >= 150 {
 			Interact("[VPT] Saya merekomendasikan anda di Perusahaan Menengah sebagai Content Creator / Influencer di Media Lokal, Blog")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", creator)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 50%% - 75%%\n", creator*cPersen)
 			Interact("[VPT] Saran: Bangun konten konsisten dan basis pengikut")
 			fmt.Println()
 		} else if creator*cPersen > 50 {
 			Interact("[VPT] Saya merekomendasikan anda di perusahaan Standar sebagai Content Creator / Influencer di IndieVlog, MiniBlog")
-			fmt.Printf("     >> [System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", creator)
+			fmt.Printf("[System] Poin: %d/100 dan Peluang diterima: 15%% - 50%%\n", creator*cPersen)
 			Interact("[VPT] Saran: Bangun konten konsisten dan basis pengikut")
 			fmt.Println()
 		}

@@ -19,16 +19,17 @@ func SortBySalary() {
 	}
 }
 
-// func SortByReleveance() {
-// 	var i, j int
-// 	var key JobListing
+func SortByReleveance() {
+	var i, j int
+	var temp JobListing
 
-// 	for i = 0; i < jobCount; i++ {
-// 		key = jobListings[i]
-
-// 		for j = i - 1; j >= 0 && jobListings[j].Relevance < key.Relevance; j++ {
-// 			jobListings[j+1] = jobListings[j]
-// 		}
-// 		jobListings[j+1] = key
-// 	}
-// }
+	for i = 0; i < jobCount-1; i++ {
+		for j = 0; j < jobCount-i-1; j++ {
+			if jobListings[j].Relevance < jobListings[j+1].Relevance {
+				temp = jobListings[j]
+				jobListings[j] = jobListings[j+1]
+				jobListings[j+1] = temp
+			}
+		}
+	}
+}

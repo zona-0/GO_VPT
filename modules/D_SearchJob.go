@@ -31,7 +31,7 @@ func SearchJob() {
 			SortBySalary()
 			listJobListings()
 		} else if choose == 4 {
-			// Under Development
+			SortByReleveance()
 			listJobListings()
 		} else if choose == 5 {
 			listJobListings()
@@ -77,7 +77,6 @@ func searchByIndustry() {
 func searchJobBinary() {
 	if jobCount == 0 {
 		Interact(">> [System] Tidak ada lowongan yang tersedia untuk dicari")
-		// fmt.Println()
 		BackToMenu()
 	}
 
@@ -153,20 +152,3 @@ func sortJobTitle() {
 		}
 	}
 }
-
-// func sortJobTitle() {
-// 	var i int
-// 	for i < jobCount-1 {
-// 		var j int = i + 1
-// 		for j < jobCount {
-// 			if jobListings[i].Title > jobListings[j].Title {
-// 				var temp JobListing
-// 				temp = jobListings[i]
-// 				jobListings[i] = jobListings[j]
-// 				jobListings[j] = temp
-// 			}
-// 			j++
-// 		}
-// 		i++
-// 	}
-// }

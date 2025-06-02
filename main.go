@@ -8,6 +8,7 @@ import (
 // Copyright © 2025 Zona
 // dont use this code without permission!
 
+// TODO: Main func
 func main() {
 	var menu int
 
@@ -91,22 +92,6 @@ func main() {
 		} else {
 			modules.Interact(">> [System] Pilihan tidak valid. Silakan pilih menu yang tersedia")
 		}
-
-		// } else if menu == 6 {
-		// 	modules.CreateResume() // TO BE UPDATE
-		// 	modules.BackToMenu()
-		// } else if menu == 7 {
-		// 	modules.ManageJob()
-		// 	modules.BackToMenu()
-		// } else if menu == 8 {
-		// 	modules.SearchJob()
-		// } else if menu == 99 {
-		// 	modules.Help()
-		// 	modules.BackToMenu()
-		// } else if menu == 0 {
-		// 	fmt.Println("Ty")
-		// 	break
-		// }
 		fmt.Println()
 	}
 }

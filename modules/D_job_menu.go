@@ -1,14 +1,15 @@
 package modules
 
 import (
+	"CAREER-EDGE/data"
 	"fmt"
 )
 
 const maxJobs = 100
 
 type JobListing struct {
-	Title            string
-	Salary, Industry int
+	Title                       string
+	Salary, Industry, Relevance int
 }
 
 var jobListings [maxJobs]JobListing
@@ -152,6 +153,40 @@ func editJobListing() {
 	}
 }
 
+func calculateRelevanceForJob(job JobListing) int {
+	var score int
+	var i int
+
+	for i = 0; i < data.SkillCount; i++ {
+		if data.Skills[i].Name == job.Title {
+			score += 20
+		}
+	}
+	for i = 0; i < data.ExperienceCount; i++ {
+		if data.Experiences[i].Title == job.Title {
+			score += 30
+		}
+	}
+
+	for i = 0; i < data.ExperienceCount; i++ {
+		score += 5
+	}
+
+	for i = 0; i < data.EducationCount; i++ {
+		if data.Educations[i].Major == "komputer" {
+			if job.Title == "backend" || job.Title == "frontend" || job.Title == "fullstack" {
+				score += 10
+			}
+		}
+	}
+
+	if score > 100 {
+		score = 100
+	}
+
+	return score
+}
+
 // TODO: List job name, industry code, and salary
 func listJobListings() {
 	Clear()
@@ -160,36 +195,20 @@ func listJobListings() {
 	if jobCount == 0 {
 		Interact(">> [System] Belum ada data lowongan")
 	} else {
-		fmt.Println("╔═════════╦════════════════════════╦═════════════════╦══════════════╗")
-		fmt.Println("║   No    ║        Title           ║    Industri     ║     Gaji     ║")
-		// fmt.Println("║   No    ║        Title           ║    Industri     ║     Gaji     ║	Relevansi  ║")
-		fmt.Println("╠═════════╬════════════════════════╬═════════════════╬══════════════╣")
+		fmt.Println("╔═════════╦════════════════════════╦═════════════════╦══════════════╦══════════════╗")
+		fmt.Println("║   No    ║        Title           ║    Industri     ║     Gaji     ║  Relevansi   ║")
+		fmt.Println("╠═════════╬════════════════════════╬═════════════════╬══════════════╬══════════════╣")
 		i = 0
 		for i < jobCount {
-			fmt.Printf("║  %-6d ║ %-22s ║ %-15d ║ Rp %-9d ║\n",
+			jobListings[i].Relevance = calculateRelevanceForJob(jobListings[i])
+			fmt.Printf("║  %-6d ║ %-22s ║ %-15d ║ Rp %-9d ║ %-9d%%   ║\n",
 				i+1,
 				jobListings[i].Title,
 				jobListings[i].Industry,
-				jobListings[i].Salary)
+				jobListings[i].Salary,
+				jobListings[i].Relevance)
 			i++
 		}
-		fmt.Println("╚═════════╩════════════════════════╩═════════════════╩══════════════╝")
+		fmt.Println("╚═════════╩════════════════════════╩═════════════════╩══════════════╩══════════════╝")
 	}
 }
-
-// func sortJobMenu() {
-// 	var choose int
-// 	if jobCount == 0 {
-// 		Interact(">> [System] Belum ada data lowongan untuk diurutkan")
-// 		BackToMenu()
-// 	}
-
-// 	fmt.Scan(&choose)
-// 	if choose == 55 {
-// 		SortBySalary()
-// 	} else if choose == 56 {
-// 		// SortByReleveance()
-// 	}
-
-// 	listJobListings()
-// }
