@@ -4,4 +4,4 @@ TO DO LIST:
                 output point as percent (type: integer)
             }
     2. Repair output of AI_recommend
-    3. Repair UI AI
+    3. Repair UI AI & output skill user
