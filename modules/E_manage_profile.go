@@ -8,6 +8,7 @@ func ManageProfile() {
 
 	Clear()
 	for running {
+		VPT()
 		fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                         [Profile Manager]                          ║")
 		fmt.Println("╠════════════════════════════════════════════════════════════════════╣")

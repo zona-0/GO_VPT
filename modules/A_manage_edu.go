@@ -12,6 +12,7 @@ func ManageEducation() {
 	var running bool = true
 
 	for running {
+		VPT()
 		fmt.Println("╔══════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                      [Education Manager]                     ║")
 		fmt.Println("╠══════════════════════════════════════════════════════════════╣")

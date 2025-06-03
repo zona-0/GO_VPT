@@ -9,6 +9,8 @@ func ShowAllUserData() {
 	var i int
 	var edu data.Education
 
+	VPT()
+
 	fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
 	fmt.Println("║                        [ RINGKASAN USER DATA	 ]                   ║")
 	fmt.Println("╚════════════════════════════════════════════════════════════════════╝")

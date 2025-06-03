@@ -14,12 +14,7 @@ func MainAI() {
 	//SuggestionAI()
 
 	Clear()
-	fmt.Println()
-	fmt.Println(" ██        ██  ██████  ████████ ")
-	fmt.Println("  ██      ██   ██  ██     ██	   ")
-	fmt.Println("   ██    ██    ██████     ██    ")
-	fmt.Println("    ██  ██     ██         ██    ")
-	fmt.Println("      ██       ██	  ██    ")
+	VPT()
 
 	fmt.Println()
 	fmt.Println(">> Vitae Pre-Trained Transformer")

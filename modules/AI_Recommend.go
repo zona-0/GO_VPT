@@ -14,12 +14,7 @@ func RecommendJob() {
 	var name, title, school, degree, major, company string
 
 	Clear()
-	fmt.Println()
-	fmt.Println(" ██        ██  ██████  ████████ ")
-	fmt.Println("  ██      ██   ██  ██     ██	   ")
-	fmt.Println("   ██    ██    ██████     ██    ")
-	fmt.Println("    ██  ██     ██         ██    ")
-	fmt.Println("      ██       ██	  ██    ")
+	VPT()
 
 	fmt.Println()
 	Interact(">> Vitae Pre-Trained Transformer")

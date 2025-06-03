@@ -7,7 +7,8 @@ func BackToMenu() {
 	fmt.Println()
 	Interact(">> [System] Type 'pback' to return to the main menu")
 	for {
-		fmt.Scanln(&backMenu)
+		fmt.Print(">> ")
+		fmt.Scan(&backMenu)
 		if backMenu == "pback" {
 			break
 		} else {

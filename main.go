@@ -28,14 +28,6 @@ func main() {
 	modules.Interact(">> Your AI Assistant for Smart Resumes & Cover Letter Creation")
 	fmt.Println()
 
-	// fmt.Println("╔═══════════════════════════════════════════════════════════════╗")
-	// fmt.Println("║                 <>   SYSTEM INITIALIZATION    <>              ║")
-	// fmt.Println("╠═══════════════════════════════════════════════════════════════╣")
-	// fmt.Println("║ >> Initializing Systems...                                    ║")
-	// fmt.Println("║ >> Loading modules: Resume Engine, CoverLetter Generator...   ║")
-	// fmt.Println("║ >> Welcome to your personal career assistant                  ║")
-	// fmt.Println("╚═══════════════════════════════════════════════════════════════╝")
-
 	// SOURCE: https://symbl.cc/en/unicode/blocks/box-drawing/
 	modules.Delay()
 	fmt.Println("╔══════════════════════════════════════════════════════════════════╗")
@@ -55,6 +47,7 @@ func main() {
 
 	for {
 		modules.Delay()
+		// modules.VPT()
 		fmt.Println("╔═══════════════════════════════════════════════════════════════════════════════════════════╗")
 		fmt.Println("║               V I T A E  P R E - T R A I N E D  T R A N S F O R M E R                     ║")
 		fmt.Println("║               AI Assistant for Smart Resumes & Cover Letter Creation                      ║")

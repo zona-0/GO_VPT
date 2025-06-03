@@ -12,6 +12,7 @@ func ManageExperience() {
 	var running bool = true
 
 	for running {
+		VPT()
 		fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                      [Experience Manager]                          ║")
 		fmt.Println("╠════════════════════════════════════════════════════════════════════╣")

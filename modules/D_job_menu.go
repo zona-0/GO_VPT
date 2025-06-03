@@ -22,6 +22,7 @@ func JobMenu() {
 
 	Clear()
 	for running {
+		VPT()
 		// Clear()
 		fmt.Println("╔══════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                   [MENU] Lowongan Pekerjaan                  ║")

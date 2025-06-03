@@ -13,6 +13,7 @@ func ManageSkill() {
 	var selesai bool = false
 
 	for running {
+		VPT()
 		fmt.Println("╔════════════════════════════════════════════════════════════════════╗")
 		fmt.Println("║                          [Skill Manager]                           ║")
 		fmt.Println("╠════════════════════════════════════════════════════════════════════╣")

@@ -2,6 +2,16 @@ package modules
 
 import "fmt"
 
+func VPT() {
+	fmt.Println()
+	fmt.Println(" ██        ██  ██████  ████████ ")
+	fmt.Println("  ██      ██   ██  ██     ██	   ")
+	fmt.Println("   ██    ██    ██████     ██    ")
+	fmt.Println("    ██  ██     ██         ██    ")
+	fmt.Println("      ██       ██	  ██    ")
+	fmt.Println()
+}
+
 func Header() {
 	fmt.Println("╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
 }
