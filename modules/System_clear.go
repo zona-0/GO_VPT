@@ -11,6 +11,7 @@ import (
 // 	//fmt.Println("\033[H\033[2J") //VSCODE
 // }
 
+// TODO: Clear screen sec
 func Clear() {
 	var cmd *exec.Cmd
 	var err error

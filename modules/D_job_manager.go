@@ -2,6 +2,7 @@ package modules
 
 import "fmt"
 
+// TODO: Manage job menu s
 func ManageJob() {
 	var input int
 	var running bool = true

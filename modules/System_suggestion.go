@@ -2,6 +2,7 @@ package modules
 
 import "fmt"
 
+// TODO: Output design func
 func VPT() {
 	fmt.Println()
 	fmt.Println(" ██        ██  ██████  ████████ ")

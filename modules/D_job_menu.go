@@ -154,7 +154,8 @@ func editJobListing() {
 	}
 }
 
-func calculateRelevanceForJob(job JobListing) int {
+// TODO: Calculate relevance Job
+func calculateRelevanceJob(job JobListing) int {
 	var score int
 	var i int
 
@@ -201,7 +202,7 @@ func listJobListings() {
 		fmt.Println("╠═════════╬════════════════════════╬═════════════════╬══════════════╬══════════════╣")
 		i = 0
 		for i < jobCount {
-			jobListings[i].Relevance = calculateRelevanceForJob(jobListings[i])
+			jobListings[i].Relevance = calculateRelevanceJob(jobListings[i])
 			fmt.Printf("║  %-6d ║ %-22s ║ %-15d ║ Rp %-9d ║ %-9d%%   ║\n",
 				i+1,
 				jobListings[i].Title,

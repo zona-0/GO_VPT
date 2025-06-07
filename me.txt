@@ -5,3 +5,5 @@ TO DO LIST:
             }
     2. Repair output of AI_recommend
     3. Repair UI AI & output skill user
+
+The source code is in main while Im working on the user interface

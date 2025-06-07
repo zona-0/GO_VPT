@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// TODO: Manage education sec
 func ManageEducation() {
 	var command, index, i, year int
 	var school, degree, major string
@@ -44,7 +45,7 @@ func ManageEducation() {
 				newEducation.Year = year
 
 				data.Educations[data.EducationCount] = newEducation
-				data.EducationCount += 1
+				data.EducationCount++
 
 				Interact(">> [System] Pendidikan berhasil ditambahkan")
 				Clear()

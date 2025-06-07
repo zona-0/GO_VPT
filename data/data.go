@@ -1,5 +1,6 @@
 package data
 
+// This is global function
 // TODO: Structs data sec
 // TODO: Skill struct sec
 type Skill struct {
@@ -8,9 +9,7 @@ type Skill struct {
 
 // TODO: exp struct sec
 type Experience struct {
-	Title       string
-	Company     string
-	Description string
+	Title, Company, Description string
 }
 
 // TODO: educations struct sec
@@ -21,12 +20,12 @@ type Education struct {
 
 // TODO: Skill sec
 var Skills [100]Skill
-var SkillCount int = 0
+var SkillCount int
 
 // TODO: Exp sec
 var Experiences [100]Experience
-var ExperienceCount int = 0
+var ExperienceCount int
 
 // TODO: Educations sec
 var Educations [100]Education
-var EducationCount int = 0
+var EducationCount int

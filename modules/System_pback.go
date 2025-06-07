@@ -2,6 +2,7 @@ package modules
 
 import "fmt"
 
+// TODO: This function is used to return to the main menu
 func BackToMenu() {
 	var backMenu string
 	fmt.Println()

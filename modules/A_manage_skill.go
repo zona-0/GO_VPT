@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// TODO: Manage skill menu sec
 func ManageSkill() {
 	var command, index, i int
 	var nameSkill string

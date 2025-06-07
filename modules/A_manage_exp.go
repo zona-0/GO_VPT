@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// TODO: Manage experience menu sec
 func ManageExperience() {
 	var command, index, i int
 	var title, company string

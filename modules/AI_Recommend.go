@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// TODO: This AI based feature recommends jobs to users using a dynamic calculation system
 func RecommendJob() {
 	var i, j,
 		backend, frontend, analyst, writer, teacher, marketing, designer, devops, mobile, security, management, finance, customer_service,

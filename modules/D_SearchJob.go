@@ -43,7 +43,7 @@ func SearchJob() {
 	}
 }
 
-// TODO: Kata kunci industri / Binary Search
+// TODO: Kata kunci industri / Sequential Search
 func searchByIndustry() {
 	if jobCount == 0 {
 		Interact(">> [System] Belum ada data lowongan untuk dicari")
@@ -80,7 +80,17 @@ func searchJobBinary() {
 		BackToMenu()
 	}
 
-	sortJobTitle()
+	var i, j int
+	var temp JobListing
+	for i = 0; i < jobCount-1; i++ {
+		for j = i + 1; j < jobCount; j++ {
+			if jobListings[i].Title > jobListings[j].Title {
+				temp = jobListings[i]
+				jobListings[i] = jobListings[j]
+				jobListings[j] = temp
+			}
+		}
+	}
 
 	var keyword string
 	fmt.Println("Masukan judul lowongan yang dicari: ")
@@ -92,15 +102,14 @@ func searchJobBinary() {
 	var mid int = -1
 
 	for left <= right {
-		var m int = (right + left) / 2
-		if jobListings[m].Title == keyword {
-			mid = m
+		var mid int = (right + left) / 2
+		if jobListings[mid].Title == keyword {
 			found = true
 			left = right + 1
-		} else if jobListings[m].Title < keyword {
-			left = m + 1
+		} else if jobListings[mid].Title < keyword {
+			left = mid + 1
 		} else {
-			right = m - 1
+			right = mid - 1
 		}
 	}
 
@@ -139,16 +148,16 @@ func searchJobBinary() {
 }
 
 // TODO: Insertion Sort
-func sortJobTitle() {
-	var i, j int
-	var temp JobListing
-	for i = 0; i < jobCount-1; i++ {
-		for j = i + 1; j < jobCount; j++ {
-			if jobListings[i].Title > jobListings[j].Title {
-				temp = jobListings[i]
-				jobListings[i] = jobListings[j]
-				jobListings[j] = temp
-			}
-		}
-	}
-}
+// func sortJobTitle() {
+// 	var i, j int
+// 	var temp JobListing
+// 	for i = 0; i < jobCount-1; i++ {
+// 		for j = i + 1; j < jobCount; j++ {
+// 			if jobListings[i].Title > jobListings[j].Title {
+// 				temp = jobListings[i]
+// 				jobListings[i] = jobListings[j]
+// 				jobListings[j] = temp
+// 			}
+// 		}
+// 	}
+// }

@@ -23,5 +23,3 @@ func Interact(text string) {
 func Delay() {
 	time.Sleep(1 * time.Second)
 }
-
-// TODO: Simulasi ges

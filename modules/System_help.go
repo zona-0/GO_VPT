@@ -2,6 +2,8 @@ package modules
 
 import "fmt"
 
+// TODO: Help menu
+// Many applications use a help menu
 func Help() {
 	Clear()
 	VPT()

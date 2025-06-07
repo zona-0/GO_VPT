@@ -2,6 +2,7 @@ package modules
 
 import "fmt"
 
+// TODO: Manage profile menu
 func ManageProfile() {
 	var input int
 	var running bool = true

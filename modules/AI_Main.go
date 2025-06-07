@@ -8,6 +8,7 @@ import (
 var kata, aboutme, sertifikat, nama, alamat, hp, email string
 var selesai bool = false
 
+// TODO: Main AI logic for resume and cover letter generation
 func MainAI() {
 	var i int
 	var user string

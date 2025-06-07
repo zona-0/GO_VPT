@@ -5,7 +5,6 @@ import (
 	"fmt"
 )
 
-// Copyright © 2025 Zona
 // dont use this code without permission!
 
 // TODO: Main func
